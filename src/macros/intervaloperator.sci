@@ -36,7 +36,7 @@ endfunction
 
 function I4Stest()
 
-	exec(CURRENT_PATH+"/Tests/I4Stest.sce");
+	exec(CURRENT_PATH+"/tests/I4Stest.sce");
 
 endfunction
 
@@ -794,6 +794,12 @@ function m=width(x)
 
 endfunction
 
+function m=wid(x)
+
+   m=width(x)
+
+endfunction
+
 //supbound & infbound of an interval
 
 function m=sup(x)
@@ -864,6 +870,12 @@ function c=intersection(a,b)
     error('impossible operation',20005);
 
   end
+
+endfunction
+
+function c=intersec(a,b)
+    
+    c=intersection(a,b)
 
 endfunction
 
@@ -2738,6 +2750,7 @@ function c=%interM_log10(a)
 		end
 	end
 	
+
 	[resinf,ressup,flag] = sciunary(a.inf,a.sup,'4');
 
 	FlagReading(flag);
@@ -3577,6 +3590,8 @@ function X = I4Slinearsolve(varargin)
 			
 	elseif ( lengthM(varargin) >= 4 & typeof(varargin(4)) == "string" ..
 		& typeof(varargin(3)) == "interM" )
+
+        I4Sconst = tlist(["I4Sconst","Max_Loop","Fac_improve"], 10, 0.9);
 
 		mc = varargin(4);
 	
