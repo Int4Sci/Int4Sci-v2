@@ -33,14 +33,25 @@
 
 
 src_c_path = get_absolute_file_path('builder_c.sce');                           
-                                                                                
-CFLAGS = "-I" + src_c_path + " -I"+CURRENT_PATH+"/includes "+ " -I"+CURRENT_PATH+"/Profil/include " ;                                                          
-                                                                                
-LDFLAGS = " -L"+CURRENT_PATH+"/Profil/lib "+...   
-    " -lstdc++ -lProfilPackages -lProfil -llr -lBias";                           
-LDFLAGS = "-g"+ LDFLAGS +" -lm";                                           
-                                                                                
-                                                                                
+
+	if getos() == "Windows" then
+    //** ----------- Windows section  -----------------
+		src_c_path = strsubst(src_c_path,'\','/');
+		CURRENT_PATH = strsubst(CURRENT_PATH,'\','/');                                                                                
+		CFLAGS = "-I""" + src_c_path + """ -I"""+CURRENT_PATH+"/includes"""+ " -I"""+CURRENT_PATH+"/Profil/include""" ;                                                          
+																					
+		LDFLAGS = " -L"""+CURRENT_PATH+"/Profil/lib"""+...   
+			" -lstdc++ -lProfilPackages -lProfil -llr -lBias";                           
+		LDFLAGS = "-g"+ LDFLAGS +" -lm";  
+	else
+    //** ---------- Linux/MacOS/Unix section ---------------------			
+		CFLAGS = "-I" + src_c_path + " -I"+CURRENT_PATH+"/includes "+ " -I"+CURRENT_PATH+"/Profil/include " ;                                                          
+																						
+		LDFLAGS = " -L"+CURRENT_PATH+"/Profil/lib "+...   
+			" -lstdc++ -lProfilPackages -lProfil -llr -lBias";                           
+		LDFLAGS = "-g"+ LDFLAGS +" -lm";         
+	end                                  
+                                                                                                                                                                
 tbx_build_src(['scioperator','scipower','sciunary'], ['Biasoperator.c'], 'c', ...
 src_c_path, '', LDFLAGS, CFLAGS);                                 
                                                                                 

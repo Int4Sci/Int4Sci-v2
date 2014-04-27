@@ -34,15 +34,32 @@
 
 src_cpp_path = get_absolute_file_path('builder_cpp.sce');
 
-CFLAGS = "-I" + src_cpp_path + ..
-         " -I"+CURRENT_PATH+"/includes " + ..
-         " -I"+CURRENT_PATH+"/Profil/include " + ..
-	 " -I"+CURRENT_PATH+"/Profil/include/lr ";
+	if getos() == "Windows" then
+    //** ----------- Windows section  -----------------
+		src_cpp_path = strsubst(src_cpp_path,'\','/');
+		CURRENT_PATH = strsubst(CURRENT_PATH,'\','/');
 
-LDFLAGS = "-g "+ ..                  
-          " -L"+CURRENT_PATH+"/Profil/lib "+...
-          " -lProfilPackages -lProfil -llr -lBias -lm";
+		CFLAGS = "-I""" + src_cpp_path + ..
+			""" -I"""+CURRENT_PATH+"/includes""" + ..
+			" -I"""+CURRENT_PATH+"/Profil/include""" + ..
+			" -I"""+CURRENT_PATH+"/Profil/include/lr""";
 
+		LDFLAGS = "-g "+ ..                  
+			" -L"""+CURRENT_PATH+"/Profil/lib"""+...
+			" -lProfilPackages -lProfil -llr -lBias -lm";
+
+	else
+    //** ---------- Linux/MacOS/Unix section ---------------------
+		CFLAGS = "-I" + src_cpp_path + ..
+			" -I"+CURRENT_PATH+"/includes " + ..
+			" -I"+CURRENT_PATH+"/Profil/include " + ..
+			" -I"+CURRENT_PATH+"/Profil/include/lr ";
+
+		LDFLAGS = "-g "+ ..                  
+			" -L"+CURRENT_PATH+"/Profil/lib "+...
+			" -lProfilPackages -lProfil -llr -lBias -lm";
+	end
+	
 tbx_build_src([ 'sciILSR', 'sciI4Svarsend', 'sciI4Svarget'], [ 'ProfilILSR.cpp'], 'cpp', src_cpp_path, '', LDFLAGS, CFLAGS);
 
 clear tbx_build_src;
