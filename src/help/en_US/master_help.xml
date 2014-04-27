@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a0cdbe676a561d43282d69335347d1b86 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Arith_Func.xml">
+<!ENTITY a641201075fc2773187425efc357f7775 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Arith_Op.xml">
+<!ENTITY a51be963a01c8cfe34952aa5f6e1c0227 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Authors.xml">
+<!ENTITY aa9575fce3a2bc1e892476adf6845b9ab SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Basic_Func.xml">
+<!ENTITY ac9232a6665a938fdc7afb71eee8cae76 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Basic_Tools.xml">
+<!ENTITY a30a5239b39d3715438e4160efe212148 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Bibliography.xml">
+<!ENTITY a88f1894f580a8e7da43555faf8ecf07b SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Error.xml">
+<!ENTITY ad68c4017ce50e4afb49322e9a92797c5 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Functions.xml">
+<!ENTITY a2cd1e65f5eb033e0dcd93ba5f24d56f0 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Poly.xml">
+<!ENTITY ae202d68832669dd00438d4f0a11ab10f SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4Slinearsolve.xml">
+<!ENTITY af2e9891857c6a618ac4fa8c2a079052c SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/interval.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='int4sci_manual'>
+    <title>Int4Sci</title>
+  </info>
+
+<part xml:id='section_dd5e08ec50fb2bf523768e8605e0575d'>
+<title>Int4Sci</title>
+&a0cdbe676a561d43282d69335347d1b86;
+&a641201075fc2773187425efc357f7775;
+&a51be963a01c8cfe34952aa5f6e1c0227;
+&aa9575fce3a2bc1e892476adf6845b9ab;
+&ac9232a6665a938fdc7afb71eee8cae76;
+&a30a5239b39d3715438e4160efe212148;
+&a88f1894f580a8e7da43555faf8ecf07b;
+&ad68c4017ce50e4afb49322e9a92797c5;
+&a2cd1e65f5eb033e0dcd93ba5f24d56f0;
+&ae202d68832669dd00438d4f0a11ab10f;
+&af2e9891857c6a618ac4fa8c2a079052c;
+</part>
+</book>

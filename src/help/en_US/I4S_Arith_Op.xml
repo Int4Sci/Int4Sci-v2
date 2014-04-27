@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Int4Sci
+ * Copyright (C) INRIA - David Daney
+ -->
+<refentry version="5.0-subset Scilab" xml:id="scilab_sum" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+<info>
+  <pubdate>10-Feb-2007</pubdate></info>
+
+<refnamediv>
+     <refname> I4S_Arith_Op </refname>
+     <refpurpose>  List all interval arithmetic operations available </refpurpose>
+</refnamediv>
+ 
+  
+
+<refsection><title>Operations list</title>
+  <para>
+  <literal>Addition</literal>
+ </para><para>
+  <literal>Substraction</literal>
+ </para><para>
+  <literal>Multiplication</literal>
+ </para><para>
+  <literal>Division</literal>
+ </para><para>
+  <literal>Power</literal>
+ </para><para>
+  <literal>Root</literal>
+ </para><para>
+  <literal>Generalized arithmetic</literal>
+ </para>
+</refsection>
+
+
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = x + z</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term> y </term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term> x,z </term><listitem><para>real/interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+
+
+<refsection><title>Description</title><itemizedlist><listitem><para>This operation allows to add an interval matrix or vector with a same size interval or real matrix/vector. Such an addition is defined 
+([Hansen03], [Moore66]) by an addition of the inferior bounds and an other one of the superior bounds:</para><para> <literal> y = x + z </literal> with <literal> x = |xi,xs| </literal> and <literal> z = |zi,zs|</literal> gives <literal> y = |xi+zi,xs+zs|</literal>.</para><para> <literal> y = x + z </literal> with <literal> x </literal> real and <literal> z = |zi,zs|</literal> gives <literal> y = |x+zi,x+zs|</literal>.</para><para> Such an addition is here extended elementwise for same size interval matrices and vectors.</para><para>
+ A Scilab characteristic is the application of basic arithmetic operations between matrices/vectors and single variables 
+(by making the operation between each component of the matrix/vector input and the single varaible). The addition for intervals 
+or for intervals/reals available on Int4Sci can also deal with such operations.
+</para><para> All these operations are executed by the addition functions for intervals given by the library BIAS [Rump99].</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+
+#(2,3) + 3;
+9 + #(-5,6);
+#(0,2) + #(3,4);
+
+A = [1,2,3;3,4,5];
+B = [2,3,4;4,5,6];
+C = interval(A,B);
+D = interval(-A,B);
+
+#(0,2) + C;
+C + 4;
+
+C + D;
+C + D.inf;
+
+]]></programlisting></refsection>
+
+
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = x - z</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term> y </term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term> x,z </term><listitem><para>real/interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+
+
+<refsection><title>Description</title><itemizedlist><listitem><para>This operation allows to substract an interval matrix or vector to a same size interval or real matrix/vector. Such a substraction is defined 
+([Hansen03], [Moore66]) as the addition with the opposite interval :</para><para> <literal> y = x - z </literal> with <literal> x = |xi,xs| </literal> and <literal> z = |zi,zs|</literal> is equivalent to  <literal> y = x + (-z)</literal> 
+with <literal> - z </literal> such as  <literal> -z = |-zs,-zi| </literal>.</para><para>Substraction can also be done between intervals and reals :</para><para> <literal> y = x - z </literal> with <literal> x = |xi,xs| </literal> and <literal> z </literal> real gives <literal> y = |xi-z,xs-z| </literal>.
+</para><para> <literal> y = x - z </literal> with <literal> x  </literal> real and <literal> z = |zi,zs| </literal> gives <literal> y = |x-zi,x-zs| </literal>.
+</para><para> Such a substraction is here extended elementwise for same size interval matrices and vectors.</para><para>
+The substraction for intervals 
+or for intervals/reals available on Int4Sci can also deal with operations including a single variable and matrix/vector variable.
+</para><para> All these operations are executed by the addition functions given by the library BIAS [Rump99].</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+
+#(2,3) - 3;
+9 - #(-5,6);
+#(0,2) - #(3,4);
+
+A = [1,2,3;3,4,5];
+B = [2,3,4;4,5,6];
+C = interval(A,B);
+D = interval(-A,B);
+
+#(0,2) - C;
+C - 4;
+
+C - D;
+C - D.inf;
+
+]]></programlisting></refsection>
+
+
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = x * z
+y = x .* z
+y = x .*. z</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term> y </term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term> x,z </term><listitem><para>real/interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+
+
+<refsection><title>Description</title><itemizedlist><listitem><para>A basic multiplication is defined for two single intervals [Moore66], [Hansen03] :</para><para> <literal> y = x * z </literal> with <literal> x = |xi,xs| </literal> and <literal> z = |zi,zs|</literal> gives  <literal> y = |min(B), max(B)|</literal> 
+with <literal> B </literal> the set  <literal> B = { xi*zi, xi*zs, xs*zi, xs*zs} </literal>.</para><para>An interval can also be multiplicated by a real :</para><para> <literal> y = x * z </literal> with <literal> x = |xi,xs| </literal> and <literal> z </literal> real gives <literal> y = |xi*z,xs*z| </literal>, which is comutative.
+</para><para> These operations are the base of the three multiplications implemented on this interface :</para><para>
+- <literal>*</literal> is the matrix/matrix multiplication and the multiplication defined above with single elements. It's then possible to multiplicate
+ two interval matrices, <literal>A</literal> by 
+<literal>B</literal> for example ( <literal>A</literal> with a number of columns equal to the number of rows of <literal>B</literal> ), following the same rules
+ than a real matrices multiplication ( scalar product of each row of <literal>A</literal> by each column of <literal>B</literal>) with interval arithmetic
+operations (addition and multiplication defined above).  <literal>*</literal> is available too for interval matrix/vector multiplication and real 
+matrix/interval matrix multiplication (based on the real/interval multiplication defined just above). Finally, a matrix/vector of intervals
+ can be multiplicated elementwise by a single interval with <literal>*</literal> (and so with intervals and reals).
+</para><para>- <literal>.*</literal> is the elementwise multiplication for two same size interval matrices or vectors. It's available too for an interval 
+matrix/vector and a same size real matrix/vector. <literal>.*</literal> is equivalent to <literal>*</literal> for matrix/vector multiplication with single 
+elements (as for intervals than for reals) and for multiplication defined just above.
+</para><para>- <literal>.*.</literal> is the Kroneker multiplication (see kron function for detailed definition) that is here extended for intervals and
+reals.
+</para><para> All these operations are executed by the multiplication functions given by the library BIAS [Rump99].</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+
+#(2,3) * 3;
+9 * #(-5,6);
+#(0,2) * #(3,4);
+
+A = [1,2,3;3,4,5];
+B = [2,3,4;4,5,6];
+C = interval(A,B);
+D = interval(-A,B);
+
+#(0,2) * C;
+C * 4;
+
+C * D; // matrix matrix mutiplication
+C .* D; // elementwise multiplication
+C .*. D; // Kroneker multiplication
+
+C * D.inf; // matrix matrix mutiplication for intervals and reals
+C .* D.inf; // elementwise multiplication between reals and intervals
+C .*. D.inf; // Kroneker multiplication between reals and intervals
+
+]]></programlisting></refsection>
+
+
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = x / v
+y = v / x
+s = i / r
+y = x ./ z
+y = x \ u
+y = u \ x
+s = r \ i
+y = x .\ z
+w = listdiv(v,u)</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term> y </term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term> s, i </term><listitem><para>interval square matrix </para></listitem></varlistentry><varlistentry><term>r</term><listitem><para>real square matrix</para></listitem></varlistentry><varlistentry><term> x, z </term><listitem><para>real/interval matrix or vector</para></listitem></varlistentry><varlistentry><term> v </term><listitem><para>single real or interval</para></listitem></varlistentry><varlistentry><term> w, u </term><listitem><para>single interval</para></listitem></varlistentry></variablelist></refsection>
+
+<refsection><title>Description</title><itemizedlist><listitem><para>A basic division is defined for two single intervals [Moore66], [Hansen03] :</para><para> <literal> y = x / z </literal> with <literal> x = |xi,xs| </literal> and <literal> z = |zi,zs| </literal> gives  <literal> y = x * 1/z </literal> 
+with <literal> 1/z </literal> such as  <literal> 1/z = | 1/zs, 1/zi| </literal>. If <literal>zi</literal> is zero, <literal>1/zi</literal> is assumed to be the infinite 
+value <literal>+inf</literal>. In a same way, if <literal>zs</literal> is zero, <literal>1/zs</literal> is <literal>-inf</literal>. 
+</para><para>An interval can also be divided by a real :</para><para> <literal> y = x / z </literal> with <literal> x = |xi,xs| </literal> and <literal> z </literal> real gives <literal> y = |xi/z,xs/z| </literal>.
+</para><para>Finaly, a real can be divided by an interval :</para><para> <literal> y = z / x </literal> with <literal> x = |xi,xs| </literal> and <literal> z </literal> real gives <literal> y = |z/xs,z/xi| </literal>.
+</para><para>Such operations for single intervals and reals have mathematical problems when the divider contains or is zero. Different 
+conventions exists to deal with such cases. We have choosen here those :
+</para><para> - The divsion  by an interval containing zero will return the set of real numbers represented by <literal>|-inf,inf|</literal> (Hansen convention
+ [Hansen03]).
+</para><para>- The division of an interval by zero or by the degenerate interval <literal>|0,0|</literal> doesn't exist (classical mathematic convention) and then
+ returns the empty set <literal>|Nan,Nan|</literal>.
+</para><para>- A convention for division by an interval including zero exists too : it gives an union of the division by the positive part and 
+the division by the negative part. The function <literal>listdiv</literal> has been implemented to allow such result for single intervals or a real
+ divided by an interval. For example, <literal>listdiv(1,#(-a,a))</literal> will return the list <literal>|-inf,-1/a| , |1/a,inf|</literal>.
+</para><para> With the two first conventions, we have implemented in this interface operations for interval matrices or vectors :
+</para><para> - <literal>/</literal> : For real square matrices <literal>A</literal> and <literal>B</literal>, the operation <literal>A/B </literal> consists to multiply 
+(matrix/matrix) <literal>A</literal> with the inverse matrix of <literal>B</literal>. For intervals, the inversion of an interval matrix doesn't exist.
+ So <literal>/</literal> is used to divide the components of an interval matrix or vector by a single interval and divide a single interval
+ by the components of an interval matrix or vector. The result is stored in an interval matrix or vector. The same operations are allowed between
+reals and intervals. We can notice that, as a real square matrix can be inversed, the operation <literal>A/B</literal>, with <literal>A</literal> a square
+interval matrix and <literal>B</literal> a same size real matrix, is authorized and is equivalent to <literal>A * B^(-1)</literal>.
+</para><para> - <literal>./</literal> : For two same size interval matrices or vectors <literal>A</literal> and <literal>B</literal>,  <literal>A./B </literal> is an elementwise
+ division. As allowed by classical Scilab use, this operator can be used with a single interval and an interval matrix/vector, but it's here
+equivalent to the use of the <literal>/</literal> operator. Here again, we can mix with this operator real and interval values.
+</para><para>- <literal>\</literal> : This operator is comonly used for linear system resolution. In this version, applied to intervals (or intervals and reals 
+between them), this operator is only the "inverse" of <literal>/</literal> (meaning <literal>A/B</literal> is equivalent to <literal>B\A</literal>) and keeps then
+ the same uses and restrictions than <literal>/</literal>.
+</para><para>- <literal>.\</literal> : The operation  <literal>A.\B</literal> for intervals or intervals and reals between them is equivalent to <literal>B./A</literal>.
+</para><para> Those operations are of course also working for single intervals and reals, giving the results defined above.  All are executed 
+by the division functions given by the library BIAS [Rump99].
+</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+
+#(2,3) / 3;
+9 / #(-5,6);
+#(0,2) / #(3,4);
+listdiv(#(-2,3),#(-1,1));
+
+A = [1,2,3;3,4,5];
+B = [2,3,4;4,5,6];
+C = interval(A,B);
+D = interval(-A,B);
+
+#(0,2) \ C; // equivalent to C / #(0,2)
+#(0,2) / D; // all D components include 0, the result will have only |-inf,inf| components
+C / 4;
+
+C ./ D; //elementwise division
+C .\ D; // equivalent to D ./ C
+
+E = #(ones(2,2),2) // square interval matrix with all components |1,2|
+A = [1,2;3,4]  // square real matrix
+
+E / A // equivalent to E * A^(-1)
+
+]]></programlisting></refsection>
+
+
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>u = v^ n
+y = r^ n
+y = s^ p
+y = x .^ n
+y = x .^ p</synopsis></refsynopsisdiv>
+
+<refsection><title>Parameters</title><variablelist><varlistentry><term> y, x </term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term> r </term><listitem><para> interval vector </para></listitem></varlistentry><varlistentry><term> u, v </term><listitem><para>interval square matrix or vector</para></listitem></varlistentry><varlistentry><term> n </term><listitem><para> integer </para></listitem></varlistentry><varlistentry><term> p </term><listitem><para> integer matrix or vector </para></listitem></varlistentry><varlistentry><term> s </term><listitem><para>single interval </para></listitem></varlistentry></variablelist></refsection>
+
+<refsection><title>Description</title><itemizedlist><listitem><para>Since the multiplication of intervals is defined, we can then have the definition of the power of a single interval [Hansen03]. It's available
+ here with the <literal>^</literal> and <literal>.^</literal> operators.</para><para> These operators are extended for interval matrices and vectors :
+</para><para> - <literal>^</literal> stands for interval square matrices power (with matrix multiplication), elementwise interval vectors power and single interval 
+power. A matrix of powers can be applied to a single interval; it will return a same size matrix with the interval at the power of each element
+ of the power matrix.
+</para><para> - <literal>.^</literal> stands for elementwise interval matrices and vectors power (for the power of a single integer or a same size matrix/vector
+integer). For a single interval, it has the same use than <literal>^</literal>.
+</para><para>We notice that the negative power of an interval <literal>A^n with n &lt; 0</literal> will return the inverse (with the inverse of an interval defined on the division 
+part above) of <literal>A^(-n)</literal>.
+</para><para> All these operations are executed by the multiplication and single interval power functions given by the library BIAS [Rump99]. For the square 
+matrix power, it's based on a decomposition of the power on the base 2, and then calculate the several squares and combine them between each other.</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+
+#(2,3) ^ 3;
+
+
+A = [1,2;3,4];
+B = [2,3;4,5];
+C = interval(A,B);
+
+C .^ 2 // the square of each element is calculated
+C .^ C.inf // C.inf is the matrix power
+C ^ 4 // 4th matrix power
+C^(-4) // inverse of the 4th matrix power
+#(3,4) ^ C.inf // returns a 2*2 matrix
+C(1,:)^4 // elemetwise power of the first row of C
+
+
+]]></programlisting></refsection>
+
+
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>u = v^ (1./n)
+y = s^ p
+y = x .^ (1./n)
+y = x .^ p
+y = sqrt(x)</synopsis></refsynopsisdiv>
+
+<refsection><title>Parameters</title><variablelist><varlistentry><term> y, x </term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term> r </term><listitem><para> interval vector </para></listitem></varlistentry><varlistentry><term> u, v </term><listitem><para>interval vector or single interval </para></listitem></varlistentry><varlistentry><term> n </term><listitem><para> integer </para></listitem></varlistentry><varlistentry><term> p </term><listitem><para>reals between -1 and 1 matrix or vector </para></listitem></varlistentry><varlistentry><term> s </term><listitem><para>single interval </para></listitem></varlistentry></variablelist></refsection>
+
+<refsection><title>Description</title><itemizedlist><listitem><para>With the same syntaxe, uses and restrictions of the power functions <literal>.^</literal> defined in the part just above, we can calculate the nth roots by only
+putting 1./n in the power parts of the expressions. It only deals with the positive part of the interval matrix/vector components. If an interval matrix/vectior component
+ is negative, an input problem error will be returned. For the use of <literal>A.^n</literal> with <literal>A</literal> and <literal>n</literal> with the same sizes, <literal>n</literal>
+can have components for root and power calculations. For root calculation, <literal>^</literal> will only be useful for interval vectors (returning elemntwise roots) and
+single intervals.
+</para><para>Moreover, a function <literal>sqrt</literal> has been implemented to calculate the elementwise square roots of an interval vector or matrix. All these operations are executed 
+by the root functions given by the library BIAS [Rump99].
+</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+
+#(2,3) ^ (1/.3);
+
+
+A = [1,2;3,4];
+B = [2,3;4,5];
+C = interval(A,B);
+
+C .^ (1./2) // the square root of each element is calculated
+sqrt(C) //equivalent to the line above
+C .^ (1 ./C.inf) // C.inf is the root matrix 
+
+C(1,:)^(1./5) // elemntwise 5th root
+
+n=[2,0;1./5,1./3];
+
+C.^n;
+
+
+]]></programlisting></refsection>
+
+
+
+<refsection><title>Description</title><itemizedlist><listitem><para> An other arithmetic for intervals exists : the generalized arithmetic. This one has special mathematic properties including defining a group for the
+ addition (meaning that <literal>X + opposite(X) =0</literal> for <literal>X</literal> a generalized interval and with the operation <literal>opposite </literal> consisting on inverting
+ the bounds ). Such an arithmetic is not available yet and operations with such intervals (defined with the component <literal>arith</literal> of the interval structure set
+as <literal>"generalized"</literal>, see <link linkend="interval"> interval</link> for more details) are blocked with the flag <literal>%I4S_arith</literal>.
+</para></listitem></itemizedlist></refsection>
+ <refsection><title>See Also</title><simplelist type="inline">
+	  <member> <link linkend="interval">interval</link> </member>
+          <member> <link linkend="I4S_Functions">I4S_Functions</link> </member>
+	  <member> <link linkend="I4S_Basic_Func">I4S_Basic_Func</link> </member>
+	  <member> <link linkend="I4S_Arith_Func">I4S_Arith_Func</link> </member>
+  </simplelist></refsection>
+
+
+  <refsection><title>Authors</title><variablelist><varlistentry><term>Raphael PEREIRA, David DANEY</term><listitem><para>
+   	<para>COPRIN Project</para>
+	<para>INRIA Sophia Antipolis</para>
+    </para></listitem></varlistentry></variablelist></refsection>
+
+  <refsection><title>Bibliography</title><para>
+     <para> [Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003. </para> 
+   <para> [Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
+    Robust Control and Robotics, Springer-Verlag, 2001.</para>
+   <para> [Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</para>
+   <para> [Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996. </para> 
+   <para> [Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990. </para> 
+   <para> [Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966. </para>
+    </para></refsection>
+
+</refentry>

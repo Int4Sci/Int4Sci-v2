@@ -1,0 +1,23 @@
+Known Bugs for Int4Sci
+======================
+
+November 2007
+----------------
+
+On linux : Nothing for the moment
+On Windows : After loading Int4Sci, using %nan leads to a fatal error !!
+
+February 2008
+------------------
+1st February : problem with the isempty function !
+
+22th February : no more problems with isempty.
+
+On Linux : Installation problems on DEBIAN
+On Windows : No more problems with the use of %nan after Int4Sci loading. 
+An executable version is available, that guarantees correct installation on Windows.
+
+September 2008 
+-------------------
+
+Typing help complex makes an error.

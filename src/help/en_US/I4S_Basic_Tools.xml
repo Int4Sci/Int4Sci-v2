@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Basic_Tools"><info><pubdate>30-Oct-2007</pubdate></info><refnamediv><refname>I4S_Basic_Tools</refname><refpurpose>  Lists all basic tools of Int4Sci for interval analysis</refpurpose></refnamediv>
+  
+  
+  
+  
+  
+
+  <refsynopsisdiv><title>Calling Sequence</title><synopsis>I4S_Basic_Tools</synopsis></refsynopsisdiv>
+
+  <refsection><title>Description</title><itemizedlist><listitem><para>
+      Add here a paragraph of the function description. 
+      Other paragraph can be added 
+     </para></listitem><listitem><para>
+      Add here a paragraph of the function description 
+     </para></listitem></itemizedlist></refsection>
+
+  <refsection><title>Examples</title><programlisting role="example"><![CDATA[
+   Add here scilab instructions and comments
+  ]]></programlisting></refsection>
+
+  <refsection><title>See Also</title><simplelist type="inline">
+    <member> <link linkend="addakeyhere"> add a key here</link> </member>
+    <member> <link linkend="addakeyhere"> add a key here</link> </member>
+  </simplelist></refsection>
+
+  <refsection><title>Authors</title><variablelist><varlistentry><term>enter here the author name</term><listitem><para>
+    Add here the author  references
+    </para></listitem></varlistentry></variablelist></refsection>
+
+  <refsection><title>Bibliography</title><para>
+    Add here the function bibliography if any
+    </para></refsection>
+
+  <refsection><title>Used Functions</title><para>
+     Add here the used function name and  references
+     </para></refsection>
+</refentry>

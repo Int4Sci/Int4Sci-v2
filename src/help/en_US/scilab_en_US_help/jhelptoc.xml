@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+<tocitem target="index" text="Int4Sci">
+<tocitem target="section_dd5e08ec50fb2bf523768e8605e0575d" text="Int4Sci">
+<tocitem target="I4S_Arith_Func" text="I4S_Arith_Func"/>
+<tocitem target="scilab_sum" text="I4S_Arith_Op"/>
+<tocitem target="I4S_Authors" text="I4S_Authors"/>
+<tocitem target="I4S_Basic_Func" text="I4S_Basic_Func"/>
+<tocitem target="I4S_Basic_Tools" text="I4S_Basic_Tools"/>
+<tocitem target="I4S_Bibliography" text="I4S_Bibliography"/>
+<tocitem target="I4S_Error" text="I4S_Error"/>
+<tocitem target="I4S_Functions" text="I4S_Functions"/>
+<tocitem target="I4S_Poly" text="I4S_Poly"/>
+<tocitem target="I4Slinearsolve" text="I4Slinearsolve"/>
+<tocitem target="interval" text="interval"/>
+</tocitem>
+</tocitem>
+</toc>

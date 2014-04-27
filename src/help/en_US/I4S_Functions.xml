@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Functions"><info><pubdate>10-Feb-2007</pubdate></info><refnamediv><refname>I4S_Functions</refname><refpurpose>  List all Scilab functions applied to interval analysis available with Int4Sci</refpurpose></refnamediv>
+  
+  
+  
+  
+  
+
+ <refsection><title>Functions list</title>
+  <para>
+  <literal>size</literal>
+ </para><para>
+  <literal>lengthInt</literal>
+ </para><para>
+  <literal>Transposition</literal>
+ </para><para>
+  <literal>diag</literal>
+ </para><para>
+  <literal>sum</literal>
+ </para><para>
+  <literal>norm</literal>
+ </para><para>
+  <literal>Insertion and extraction for interval matrices or vectors</literal>
+ </para><para>
+  <literal>matrix</literal>
+ </para><para>
+  <literal>Interval order</literal>
+ </para>
+</refsection>
+
+<refsection><title>size</title>
+<para>
+<literal>size</literal>: returns the size of an interval matrix or vector</para></refsection>
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = size(t [,sel])</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>1x2 integer vector or integer number</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term>sel</term><listitem><para>a scalar or a character string</para></listitem></varlistentry></variablelist></refsection>
+<refsection><title>Description</title><itemizedlist><listitem><para>This function is an overloading for intervals of the classical 
+<link linkend="size">size</link> scilab function. It returns by default an 1x2 integer vector with the numbers of row and columns of the interval matrix or vector 
+<literal>t</literal>. The interval analysis theory assumes that the size of an interval is the size of its bounds [Moore 66]. 
+<literal>size</literal> is also used with the 
+<literal>sel</literal> string to specify which dimension to get :</para><para>
+<literal>1</literal> or 
+<literal>'r'</literal>: to get the number of rows</para><para>
+<literal>2</literal> or 
+<literal>'c'</literal>: to get the number of columns</para><para>
+<literal>'*'</literal>: to get the product of rows and column numbers</para></listitem></itemizedlist></refsection>
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2,3;3,4,5];
+B=[2,3,4;4,5,6];
+C = interval(A,B);
+
+r = size(C) //returns the vector [2,3]
+r = size(C,1) //returns 2
+r = size(C,'*') //returns 6
+
+size(#(2,3)) //returns the vector [1,1]
+]]></programlisting></refsection>
+<refsection><title>lengthInt</title>
+<para>
+<literal>lengthInt</literal>: returns the length of an interval or real matrix/vector</para></refsection>
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = length(t)</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>integer number</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval or real matrix/vector</para></listitem></varlistentry></variablelist></refsection>
+<refsection><title>Description</title><itemizedlist><listitem><para>This function returns the length of an interval matrix or vector. It's also can be used as the classical 
+<link linkend="length">length</link> scilab function.</para></listitem></itemizedlist></refsection>
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2,3;3,4,5];
+B=[2,3,4;4,5,6];
+C = interval(A,B);
+
+r = lengthInt(C) //returns 6
+r = lengthInt(A) //returns 6
+
+lengthInt(#(2,3)) //returns 1
+]]></programlisting></refsection>
+<refsection><title>Transposition</title>
+<para>
+<literal>Transposition</literal>: returns the Transpose of an interval matrix or vector</para></refsection>
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = t'</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+<refsection><title>Description</title><itemizedlist><listitem><para>This function is an overload for interval matrices or vectors of the classical transposition 
+<literal>'</literal> scilab function ( cf 
+<link linkend="quote">quote</link>).</para></listitem></itemizedlist></refsection>
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2,3;3,4,5];
+B=[2,3,4;4,5,6];
+C = interval(A,B); // C is a 2*3 matrix
+
+D = C'; //D is a 3*2 matrix
+
+C = interval([1,2],[2,3]); //C is a row vector
+D= C'; // D is a column vector
+]]></programlisting></refsection>
+<refsection><title>diag</title>
+<para>
+<literal>diag</literal>: returns the diagonal of an interval matrix or creates a diagonal interval matrix based on a interval vector</para></refsection>
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>[y]=diag(t,[k])</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term>k</term><listitem><para>integer (default value 0)</para></listitem></varlistentry></variablelist></refsection>
+<refsection><title>Description</title><itemizedlist><listitem><para>This function is an overload for interval matrices or vectors of the classical 
+<link linkend="diag">diag</link> scilab function. If the input 
+<literal>t</literal> is an interval vector, the ouptut 
+<literal>y</literal> returned is an interval matrix with its 
+<literal>k</literal>th diagonal equal to 
+<literal>t</literal> and the other components set to the degenerate interval 
+<literal>|0,0|</literal>. By convention, 
+<literal>k = 0</literal> is for the main diagonal (default value), 
+<literal>k&gt;0</literal> is for upper diagonals and 
+<literal>k&lt;0</literal> for lower diagonals.In the other hand, if the input 
+<literal>t</literal> is an interval matrix, the output 
+<literal>y</literal> is a column vector storing the 
+<literal>k</literal>th diagonal of 
+<literal>t</literal>.</para></listitem></itemizedlist></refsection>
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2,3;-3,-4,-5];
+B=[2,3,4;-2,-3,-4];
+C = interval(A,B); // C is a 2*3 matrix
+
+D = diag(C); //D is [|1,2|;|-4,-3|]
+D = diag(C,1); // D is [|2,3|;|-5,-4|]
+D = diag(C,2); // D is [|3,4|]
+D = diag(C,-1); // D is [-3,-2|]
+
+C = interval([1,2],[2,3]); //C is a row vector
+D = diag(C); // D is a 2*2 interval matrix
+D = diag(C,2); // D is 4*4 interval matrix
+
+]]></programlisting></refsection>
+<refsection><title>sum</title>
+<para>
+<literal>sum</literal>: returns the sum of the components of an interval matrix or vector</para></refsection>
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = sum(t)
+y = sum(t,'r') or y = sum(t,1)
+y = sum(t,'c') or y = sum(t,2)
+y = sum(t,'m')</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>single interval or interval vector</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+<refsection><title>Description</title><itemizedlist><listitem><para>This function is an overload for interval matrices or vectors of the classical 
+<link linkend="sum">sum</link> scilab function. For an interval matrix or vector 
+<literal>t</literal>, the default action of 
+<literal>y = sum(t)</literal> is to return the sum of all 
+<literal>t</literal>'s components in the interval 
+<literal>y</literal> (cf addition of intervals in Int4Sci_Arith).</para><para>
+<literal>y=sum(t,'r')</literal> (or, equivalently, 
+<literal>y=sum(t,1)</literal> ) is the rowwise sum: 
+<literal>y(j)= sum(t(:,j))</literal> . 
+<literal>y</literal> is a row vector.</para><para>
+<literal>y=sum(t,'c')</literal>(or, equivalently, 
+<literal>y=sum(t,2)</literal>) is the columnwise sum. It returns in each entry of the column vector 
+<literal>y</literal> the sum : 
+<literal>y(i)= sum(t(i,:)) ))</literal>.</para><para>
+<literal>y=sum(t,'m')</literal> is the sum along the first non singleton dimension of 
+<literal>t</literal>.</para></listitem></itemizedlist></refsection>
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2,3;-3,-4,-5];
+B=[2,3,4;-2,-3,-4];
+C = interval(A,B); // C is a 2*3 matrix
+
+D = sum(C); // D is |-6,0|
+D = sum(C,1); // D is column vector
+D = sum(C,2); //D is a row vector
+]]></programlisting></refsection>
+<refsection><title>norm</title>
+<para>
+<literal>norm</literal>: returns the norm of an interval matrix or vector</para></refsection>
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>[y]=norm(t [,flag])</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>single interval or real value</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term>flag</term><listitem><para>string or integer</para></listitem></varlistentry></variablelist></refsection>
+<refsection><title>Description</title><itemizedlist><listitem><para>This function is an overload for interval matrices or vectors of the classical 
+<link linkend="norm">norm</link> scilab function.</para><para>For an interval matrix 
+<literal>t</literal>, there are two different norms defined [Hansen 03]:</para><variablelist><varlistentry><listitem><para>The 
+<literal>infinite norm</literal> : a real defined as the largest row magnitude sum ( 
+<literal>max(sum(mag(t),'c'))</literal> ). It's obtained by the default use of the 
+<literal>norm</literal> function or setting 
+<literal>flag</literal> as 
+<literal>'inf'</literal> or 
+<literal>%inf</literal> : 
+<literal>norm(t)</literal>, 
+<literal>norm(t,'inf')</literal> or 
+<literal>norm(t,%inf)</literal>.</para></listitem></varlistentry><varlistentry><listitem><para>The 
+<literal>1_norm</literal> : a real defined as the largest column magnitude sum ( 
+<literal>max(sum(mag(t),'r'))</literal> ). It's obtained with 
+<literal>flag</literal> equal to 1 : 
+<literal>norm(t,1)</literal>.</para></listitem></varlistentry></variablelist><para>For an interval vector 
+<literal>t</literal>, the infinite norm exists too (obtained with the same call than for interval matrices : 
+<literal>norm(t,'inf')</literal> or 
+<literal>norm(t,%inf)</literal> ) and is the largest magnitude of 
+<literal>t</literal>'s components ( 
+<literal>max(mag(t))</literal> )[Hansen 03]. The 
+<literal>1_norm</literal> is totally different : it's generalized to the 
+<literal>p_norm</literal> (called by 
+<literal>norm(t,p)</literal> with 
+<literal>p</literal> an integer) and it's defined as the interval 
+<literal>y</literal> such as:</para><variablelist><varlistentry><listitem><para>
+<literal>y=sum(t(i)^p))^(1/p)</literal> (cf power of intervals in Int4Sci_Arith). The default norm returned (called by 
+<literal>norm(t)</literal> ) is for 
+<literal>p = 2</literal>.</para></listitem></varlistentry></variablelist></listitem></itemizedlist></refsection>
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2,3;-3,-4,-5];
+B=[2,3,4;-2,-3,-4];
+C = interval(A,B); // C is a 2*3 matrix
+
+D = norm(C); // infinite norm
+//equivalent to :
+D = norm(C,'inf);
+
+D = norm(C,1); // 1_norm
+
+C= interval([1,2,3],[2,3,4]);
+
+D = norm(C); // 2_norm
+//equivalent to
+D = norm(C,2)
+
+D = norm(C,%inf) // infinite norm
+D = norm(C,56) //56_norm, which is mathematicaly useless..
+]]></programlisting></refsection>
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>//For extraction from t or v :
+a = t(i,j)
+a = v(i)
+b = t(i:j,k)
+b = t(i,j:k)
+c = t(i:j,k:l)</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>i,j,k,l</term><listitem><para> integers </para></listitem></varlistentry><varlistentry><term>a</term><listitem><para>single interval</para></listitem></varlistentry><varlistentry><term>b</term><listitem><para>interval vector</para></listitem></varlistentry><varlistentry><term>t,c</term><listitem><para>interval matrices</para></listitem></varlistentry><varlistentry><term>v</term><listitem><para>interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>//For insertion in x or s:
+x(i,j) = d
+s(i) = d
+x(i:j,k) = e or x(i,j:k) = e or x(i:j,k:l) = f</synopsis></refsynopsisdiv>
+<refsection><title>Parameters</title><variablelist><varlistentry><term>i,j,k,l</term><listitem><para>integers</para></listitem></varlistentry><varlistentry><term>d</term><listitem><para>single interval or real</para></listitem></varlistentry><varlistentry><term>e</term><listitem><para>interval or real vector</para></listitem></varlistentry><varlistentry><term>x,f</term><listitem><para>interval or real matrices</para></listitem></varlistentry><varlistentry><term>s</term><listitem><para>interval or real matrix/vector</para></listitem></varlistentry></variablelist></refsection>
+<refsection><title>Description</title><itemizedlist><listitem><para>These functionnalities are overloads for interval matrices or vectors of classical 
+<link linkend="insertion">insertion</link> and 
+<link linkend="extraction">extraction</link> scilab functions. They allow to extract/insert intervals submatrices or subvectors from/in an interval matrix or vector. It's possible too to insert a real matrix/vector in an interval matrix/vector, and vice-versa; in all the cases, it will always return a interval matrix or vector.</para><para>We can notice that the insertion of an empty submatrix
+<literal>[]</literal> at the indexes <literal>[i1,..,in],[j1,...,jm]</literal> will delete the entries with such indexes and return a column vector with the entries left. Exceptions are for a row vector (that will still remain a row vector) and a single interval that will become the <literal>|0,0|</literal> degenerate interval.
+</para><para>
+ An error is returned when the submatrix to insert does not have a conform size (cf examples just below).</para></listitem></itemizedlist></refsection>
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2;-3,-4];
+B=[2,3;-2,-3];
+C = interval(A,B); 
+
+D = C(1,1); // D is |1,2|
+D = C(1,:); // D is the C first row.
+
+C(2,2) = 3; // The (2,2) component of C is now the degenerate interval |3,3|
+C(1,1:2) = #([0,5],[0,10]); // The first row of C is now the [|0,5|,|0,10|] row vector
+C(2,2) = #([1,2],[2,3]); // An error will be returned, the size is not conform
+
+C=[1,2,3];
+C(1) = #(1,3); //C is the interval row vector [|1,3|,|2,2|,|3,3|]
+
+]]></programlisting></refsection>
+
+
+
+<refsection><title>matrix</title>
+<para>
+<literal>matrix </literal> : reshape an interval vector or matrix to a different size interval matrix
+</para>
+</refsection>
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>y=matrix(v,n,m)
+y=matrix(v,[sizes])</synopsis></refsynopsisdiv>
+
+<refsection><title>Parameters</title><variablelist><varlistentry><term>v</term><listitem><para>an interval vector or matrix</para></listitem></varlistentry><varlistentry><term> n,m </term><listitem><para>integers</para></listitem></varlistentry><varlistentry><term> sizes </term><listitem><para>vector of integers</para></listitem></varlistentry><varlistentry><term>y</term><listitem><para>an interval vector or matrix</para></listitem></varlistentry></variablelist></refsection>
+
+<refsection><title>Description</title><itemizedlist><listitem><para> This function has the same use than the classical Scilab function <link linkend="matrix">matrix</link> :</para><para>
+ For an interval vector or a matrix with <literal> n x m </literal>  entries, the command  <literal> y=matrix(v,n,m) </literal>  or similarily  
+<literal> y=matrix(v,[n,m]) </literal> transforms the <literal> v </literal> interval vector (or matrix) into an <literal> n x m </literal> interval matrix by 
+stacking columnwise the entries of <literal> v </literal> .
+</para><para>
+If one of the dimension m or n is equal to -1 it is automatically assigned to the quotient of size(v,'*') by the other dimension.
+</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2;-3,-4];
+B=[2,3;-2,-3];
+C = interval(A,B); 
+
+D = matrix(C,1,4); // D is a row vector
+E = matrix(D,[2,2]); // E is C
+
+]]></programlisting></refsection>
+
+
+
+<refsynopsisdiv><title>Calling Sequence</title><synopsis>x &gt; y
+x &gt; = y
+x &lt; y
+x &lt; = y</synopsis></refsynopsisdiv>
+
+<refsection><title>Parameters</title><variablelist><varlistentry><term>x,y</term><listitem><para>interval vectors or matrices </para></listitem></varlistentry></variablelist></refsection>
+
+<refsection><title>Description</title><itemizedlist><listitem><para> An order for intervals has been implemented with these functionnalities. There are many ways to define an order for intervals [Hansen03]
+, [Moore66]. Here, we have  choosen this definition for two intervals <literal> x = |xi,xs| </literal> and <literal> y = |yi,ys| </literal> :</para><para> - <literal> x &gt; y</literal> if <literal>xi &gt; ys</literal>.
+</para><para> - <literal> x &gt;= y</literal> if <literal>xi &gt;= ys</literal>.
+</para><para> - <literal> x &lt; y</literal> if <literal>xs &lt; yi</literal>.
+</para><para> - <literal> x &lt;= y</literal> if <literal>xs &lt;= yi</literal>.
+</para><para>
+Here again, this definition is extended to interval matrix and vectors, where each component with the same indexes will be compared. A boolean 
+matrix or vector (with the same size than the inputs) is returned.</para><para>
+We can note that the comparison for orders defined above are different than comparison for equality of two intervals (<literal> == </literal> or <literal>
+ ~= </literal>). Indeed, <literal> == </literal> will check the equality of the six components of the interval structure (dimensions, inferior and superior
+bounds matrix or vector and modes, see <link linkend="interval">interval</link> for more details). It returns then a boolean six elements row vector.
+</para></listitem></itemizedlist></refsection>
+
+<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+
+A=[1,2;-3,-4];
+B=[2,3;-2,-3];
+C = interval(A,B); 
+
+C(1,1) >= C(2,1); // returns the true boolean
+C(1,1) >= C(1,2); // returns the true boolean
+C(1,1) > C(1,2); //  returns the false boolean
+
+C > #(0*ones(2,2)); // returns a 2*2 boolean matrix with false
+]]></programlisting></refsection>
+
+  <refsection><title>See Also</title><simplelist type="inline">
+          <member> <link linkend="interval">interval</link> </member>
+          <member> <link linkend="I4S_Basic_Func">I4S_Basic_Func</link> </member>
+	  <member> <link linkend="I4S_Arith_Op">I4S_Arith_Op</link> </member>
+	  <member> <link linkend="I4S_Arith_Func">I4S_Arith_Func</link> </member>
+  </simplelist></refsection>
+
+  <refsection><title>Authors</title><variablelist><varlistentry><term>Raphael PEREIRA, David DANEY</term><listitem><para>
+   	<para>COPRIN Project</para>
+    	<para>INRIA Sophia Antipolis</para> 
+    </para></listitem></varlistentry></variablelist></refsection>
+
+  <refsection><title>Bibliography</title><para>
+   <para> [Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003. </para> 
+   <para> [Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
+    Robust Control and Robotics, Springer-Verlag, 2001.</para>
+   <para> [Rump99] S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999. </para>
+   <para> [Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996. </para> 
+   <para> [Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990. </para> 
+   <para> [Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966. </para>
+    </para></refsection>
+
+  
+</refentry>

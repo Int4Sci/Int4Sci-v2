@@ -1,0 +1,94 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>interval</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="I4Slinearsolve.html">&lt;&lt; I4Slinearsolve</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_dd5e08ec50fb2bf523768e8605e0575d.html">Int4Sci</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">Int4Sci</a> &gt;&gt; <a href="section_dd5e08ec50fb2bf523768e8605e0575d.html">Int4Sci</a> &gt; interval</span>
+
+    <br /><br />
+    <div class="info"></div><div class="refnamediv"><h1 class="refname">interval</h1><p class="refpurpose">Creation of an interval vector or matrix</p></div>
+  
+  
+  
+  
+  
+
+  <div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">t</span><span class="default">=</span><span class="functionid">interval</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">y</span><span class="default">)</span></pre></div></div>
+
+  <div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">x,y</span><dd><p class="para">:similar size real vectors or matrices</p></dd></dt><dt><span class="term">t</span><dd><p class="para">interval vector or matrix</p></dd></dt></dl></div>
+ 
+  <div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para"><code class="literal">interval(x,y)</code> is the interval vector or matrix created with the inferior bound vector or matrix <code class="literal">x</code> and the superior bound vector or matrix <code class="literal">y</code>. The component <code class="literal">t(i,j)</code> of <code class="literal">t</code> is printed <code class="literal">|x(i,j),y(i,j)|</code>. Mathematicaly, it represents any real included in the interval <code class="literal">|x(i,j),y(i,j)|</code> [Hansen 03].</p><p class="para">The notation <code class="literal">interval(x)</code> is equivalent to <code class="literal">interval(x,x)</code>. Such an interval <code class="literal">|x,x|</code> is called a degenrate interval [Hansen 03].
+If <code class="literal">x</code> or  <code class="literal">y</code> are single reals, it&#0039;s assumed that the lower or upper bound is constant for each <code class="literal">t</code> component.</p><p class="para"><code class="literal">t</code> is stored as a &#0034;mlist&#0034; named &#0034;InterM&#0034;. <code class="literal">t</code> elements are :
+
+  <dl><dt><span class="term">t.dims</span><dd><p class="para">returns the bounds size matrix, considered as the interval size matrix.</p></dd></dt><dt><span class="term">t.inf</span><dd><p class="para">returns the inferior bound. Here t.inf is x.</p></dd></dt><dt><span class="term">t.sup</span><dd><p class="para">returns the inferior bound. Here t.sup is y.</p></dd></dt><dt><span class="term">t.arith</span><dd><p class="para">returns the arithmetic type.</p></dd></dt><dt><span class="term">t.mode</span><dd><p class="para">returns the rounding precision mode.</p></dd></dt></dl></p></li></ul></div>
+
+  <div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+            
+<span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// degenerate interval matrix</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+  
+  <div class="refsection"><h3 class="title">See Also</h3><ul class="itemizedlist"><li class="member"><a href="I4S_Functions.html" class="link">I4S_Functions</a></li>
+	  <li class="member"><a href="I4S_Basic_Func.html" class="link">I4S_Basic_Func</a></li>
+	  <li class="member"></li>
+	  <li class="member"><a href="I4S_Arith_Func.html" class="link">I4S_Arith_Func</a></li></ul></div>
+  
+
+  <div class="refsection"><h3 class="title">Authors</h3><dl><dt><span class="term">Raphael PEREIRA, David DANEY</span><dd><p class="para"><p class="para">COPRIN Project</p>
+    	<p class="para">INRIA Sophia Antipolis</p></p></dd></dt></dl></div>
+
+ <div class="refsection"><h3 class="title">Bibliography</h3><p class="para"><p class="para">[Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003.</p> 
+   <p class="para">[Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
+    Robust Control and Robotics, Springer-Verlag, 2001.</p>
+   <p class="para">[Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</p>
+   <p class="para">[Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996.</p> 
+   <p class="para">[Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990.</p> 
+   <p class="para">[Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966.</p></p></div>
+
+
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="I4Slinearsolve.html">&lt;&lt; I4Slinearsolve</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_dd5e08ec50fb2bf523768e8605e0575d.html">Int4Sci</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

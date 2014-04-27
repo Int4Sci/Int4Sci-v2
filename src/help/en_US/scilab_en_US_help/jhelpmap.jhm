@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_1_0.dtd">
+<map version="1.0">
+<mapID target="index" url="index.html"/>
+<mapID target="section_dd5e08ec50fb2bf523768e8605e0575d" url="section_dd5e08ec50fb2bf523768e8605e0575d.html"/>
+<mapID target="I4S_Arith_Func" url="I4S_Arith_Func.html"/>
+<mapID target="scilab_sum" url="scilab_sum.html"/>
+<mapID target="I4S_Authors" url="I4S_Authors.html"/>
+<mapID target="I4S_Basic_Func" url="I4S_Basic_Func.html"/>
+<mapID target="I4S_Basic_Tools" url="I4S_Basic_Tools.html"/>
+<mapID target="I4S_Bibliography" url="I4S_Bibliography.html"/>
+<mapID target="I4S_Error" url="I4S_Error.html"/>
+<mapID target="I4S_Functions" url="I4S_Functions.html"/>
+<mapID target="I4S_Poly" url="I4S_Poly.html"/>
+<mapID target="I4Slinearsolve" url="I4Slinearsolve.html"/>
+<mapID target="interval" url="interval.html"/>
+</map>
