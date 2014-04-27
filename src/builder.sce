@@ -42,6 +42,7 @@ CURRENT_PATH = pwd();
 TOOLBOX_NAME  = "int4sci";
 TOOLBOX_TITLE = "Int4Sci";
 toolbox_dir   = get_absolute_file_path("builder.sce");
+CURRENT_PATH = toolbox_dir;
 
 // Action
 // =============================================================================
