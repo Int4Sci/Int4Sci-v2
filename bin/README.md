@@ -24,3 +24,9 @@ You can access Int4Sci on line documentation by typing in your Scilab window :
 Finally, a set of tests for Int4sci is available by typing in your Scilab window :
 
 --> I4Stest();
+
+Installation only tested with :
+-------------------------------
+
+Scilab 5.4.1 binary files downloaded ( http://www.scilab.org/download/index_download.php)
+and compiled on Linux (Ubuntu 12.04).
