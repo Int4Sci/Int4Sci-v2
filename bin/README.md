@@ -4,6 +4,7 @@ Basic Int4Sci installation
 Note that for Windows OS, the Microsft Visual C software is needed if you have downloaded a source version of Int4Sci. If you don't have this software, download the binary version of Int4Sci.
 
 For the first use :
+=================
 
 1 Unpack the archive with the required version
 
@@ -12,6 +13,7 @@ For the first use :
 3 Run Scilab.
 
 Basic use
+=================
 
 To get started with Int4Sci, see the Tutorial.
 
