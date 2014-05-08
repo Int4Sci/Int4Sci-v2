@@ -20,9 +20,7 @@ Scilab 5.4.1 binary files downloaded ( http://www.scilab.org/download/index_down
 Basic Int4Sci installation
 --------------------------
 
-Windows
---------------------------
-1. You must download the source Profil-2.0.8 and apply to them the patch ( https://github.com/Int4Sci/Profil-2.0.8-patch ) 
+1. You must download the source Profil-2.0.8 and apply to them the patch ( https://github.com/Int4Sci/Profil-2.0.8-patch )
 2. Copy the folder "lib" and "include" from Profil-2.0.8 to Int4Sci_Folder/Profil
 3. You should have installed gcc and g++ compiler on Linux or you shoud have MinGW compiler for Windows.
 4. Copy the folder "int4sci-v2" to the folder $SCIHOME/contrib/
@@ -33,19 +31,6 @@ Windows
 8. To run the tests for Int4sci
    --> I4Stest();
 
-
-Linux
---------------------------
-1
-2
-3
- You should have installed gcc and g++ compiler
- Copy the folder "int4sci-v2" to the folder $SCIHOME/contrib/
- Run Scilab
- Run 
-	--> exec builder.sce;
- To run the tests for Int4sci
-  --> I4Stest();
 
 
 Basic use
