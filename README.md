@@ -21,9 +21,9 @@ Basic Int4Sci installation
 --------------------------
 
 1. You must download the source Profil-2.0.8 and apply to them the patch ( https://github.com/Int4Sci/Profil-2.0.8-patch )
-2. Copy the folder "lib" and "include" from Profil-2.0.8 to Int4Sci-v2.0.8/Profil
-3. You should have installed gcc and g++ compiler on Linux or you shoud have MinGW compiler for Windows.
-4. Copy the folder "int4sci-v2" to the folder $SCIHOME/contrib/
+2. Compile Profil-v2.0.8 with parameter x86-ASM (You should have installed gcc and g++ compiler on Linux or you shoud have MinGW compiler for Windows.)
+3. Copy the folder "lib" and "include" from Profil-2.0.8 to Int4Sci-v2.0.1/Profil
+4. Copy the folder "int4sci-v2.0.1" to the folder $SCIHOME/contrib/
 5. Run Scilab
 6. Install Mingw Compiler for Scilab
 7. Run 
