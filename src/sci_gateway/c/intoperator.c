@@ -22,7 +22,8 @@
 //   06902 Sophia Antipolis Cedex
 //   FRANCE
 
-#include <stack-c.h>
+//#include <stack-c.h>
+#include <api_scilab.h>
 
 #include "intoperator.h"
 
@@ -214,4 +215,23 @@ intunary (char *fname)
 
   return 0;
 
+}
+
+int
+introundmode (char *fname)
+{
+  int orien;
+  int t, u, v;
+
+  CheckRhs (1, 1);
+  CheckLhs (1, 1);
+  
+  GetRhsVar (1, "i", &t, &u, &orien);
+  CreateVar (2, "i", &t, &u, &v);
+  
+  *istk (v) = roundmode(istk (orien)); 
+  
+  LhsVar (1) = 2;
+  
+  return 0;
 }

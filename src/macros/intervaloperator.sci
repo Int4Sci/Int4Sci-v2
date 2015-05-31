@@ -40,6 +40,12 @@ function I4Stest()
 
 endfunction
 
+function x = SetRoundMode(x)
+
+  x = sciroundmode(x);
+  
+endfunction
+
 //Definition of the type interval Matrix  with inferior and superior bound matrices
 
 function x=interval(varargin)

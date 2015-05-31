@@ -22,7 +22,8 @@
 //   06902 Sophia Antipolis Cedex
 //   FRANCE
 
-#include <stack-c.h>
+//#include <stack-c.h>
+#include <api_scilab.h>
 
 #include "intILSR.h"
 

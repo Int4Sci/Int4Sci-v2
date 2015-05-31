@@ -40,6 +40,7 @@ extern "C"
 	int unary (const double *, const double *, const int *,
 						 char, double *, double *, int *);
 
+    int roundmode (const int *);
 #if defined (__cplusplus)
 }
 #endif

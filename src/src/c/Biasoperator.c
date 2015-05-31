@@ -438,6 +438,28 @@ operate (const double *ainf, const double *asup, const int *sa,
     }
 }
 
+int roundmode (const int *orien){
+	if ( *orien == 1 )
+    {
+		BiasRoundUp();
+		return 1;
+	}
+	else if ( *orien == -1 )
+    {
+		BiasRoundDown();
+		return 1;
+	}
+	else if ( *orien == 0 )
+    {
+		BiasRoundNear();
+		return 1;
+	}
+	else
+	{
+	  return 0;
+	}
+}
+
 int
 biasaddII4sci (const double *ainf, const double *asup, const int *sa,
 	       const double *binf, const double *bsup, const int *sb,

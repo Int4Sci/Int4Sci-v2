@@ -4,7 +4,7 @@ libname = "libI4S";
 makename = "Makelib";
 
 table = ["scioperator","intoperator";"scipower","intpower" ; "sciunary", ..
-         "intunary";"sciILSR","intILSR"; ..
+         "intunary";"sciroundmode","introundmode";"sciILSR","intILSR"; ..
          "sciI4Svarsend","intI4Svarsend"; ..
 	 "sciI4Svarget","intI4Svarget"];
 

@@ -5,12 +5,14 @@ static int direct_gateway(char *fname,void F(void)) { F();return 0;};
 extern Gatefunc intoperator;
 extern Gatefunc intpower;
 extern Gatefunc intunary;
+extern Gatefunc introundmode;
 extern Gatefunc intI4Svarsend;
 extern Gatefunc intI4Svarget;
 static GenericTable Tab[]={
   {(Myinterfun)sci_gateway,intoperator,"scioperator"},
   {(Myinterfun)sci_gateway,intpower,"scipower"},
   {(Myinterfun)sci_gateway,intunary,"sciunary"},
+  {(Myinterfun)sci_gateway,introundmode,"sciroundmode"},
   {(Myinterfun)sci_gateway,intI4Svarsend,"sciI4Svarsend"},
   {(Myinterfun)sci_gateway,intI4Svarget,"sciI4Svarget"},
 };
