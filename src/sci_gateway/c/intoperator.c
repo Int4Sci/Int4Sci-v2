@@ -220,16 +220,16 @@ intunary (char *fname)
 int
 introundmode (char *fname)
 {
-  int orien;
+  int direct;
   int t, u, v;
 
   CheckRhs (1, 1);
   CheckLhs (1, 1);
   
-  GetRhsVar (1, "i", &t, &u, &orien);
+  GetRhsVar (1, "i", &t, &u, &direct);
   CreateVar (2, "i", &t, &u, &v);
   
-  *istk (v) = roundmode(istk (orien)); 
+  *istk (v) = roundmode(istk (direct)); 
   
   LhsVar (1) = 2;
   

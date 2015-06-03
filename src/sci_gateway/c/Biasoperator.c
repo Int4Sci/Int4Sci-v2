@@ -438,18 +438,18 @@ operate (const double *ainf, const double *asup, const int *sa,
     }
 }
 
-int roundmode (const int *orien){
-	if ( *orien == 1 )
+int roundmode (const int *direct){
+	if ( *direct == 1 )
     {
 		BiasRoundUp();
 		return 1;
 	}
-	else if ( *orien == -1 )
+	else if ( *direct == -1 )
     {
 		BiasRoundDown();
 		return 1;
 	}
-	else if ( *orien == 0 )
+	else if ( *direct == 0 )
     {
 		BiasRoundNear();
 		return 1;

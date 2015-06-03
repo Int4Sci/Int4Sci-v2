@@ -40,7 +40,7 @@ function I4Stest()
 
 endfunction
 
-function x = SetRoundMode(x)
+function x = setround(x)
 
   x = sciroundmode(x);
   
