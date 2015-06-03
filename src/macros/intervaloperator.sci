@@ -46,6 +46,108 @@ function x = setround(x)
   
 endfunction
 
+//Computing Statistics functions under Interval and Fuzzy Uncertainty
+
+function [ m ] = imean( x, orien )
+	
+    if argn(2)<2 then
+		setround(-1);
+		Xi = mean( x.inf );
+		setround(1);
+		Xs = mean( x.sup );
+		setround(0);
+        m = #(Xi, Xs);
+    else
+		setround(-1);
+		Xi = mean( x.inf, orien );
+		setround(1);
+		Xs = mean( x.sup, orien );
+		setround(0);
+        m = #( Xi, Xs );
+    end
+
+endfunction
+
+function [ m ] = imeanf( x,  fre, orien )
+
+    if argn(2)<3 then
+		setround(-1);
+		Xi = meanf( x.inf, fre.inf );
+		setround(1);
+		Xs = meanf( x.sup, fre.sup );
+		setround(0);
+        m = #( Xi, Xs );
+    else
+		setround(-1);
+		Xi = meanf( x.inf, fre.inf, orien );
+		setround(1);
+		Xs = meanf( x.sup, fre.sup, orien );
+		setround(0);
+        m = #( Xi, Xs );
+    end
+
+endfunction
+
+function [ m ] = imedian( x, orien )
+
+    Xi = gsort( x.inf, "g", "i" );
+    Xs = gsort( x.sup, "g", "i" );
+
+    if argn(2) < 2 then
+		setround(-1);
+		Xi = median( Xi );
+		setround(1);
+		Xs = median( Xs );
+		setround(0);
+        m = #( Xi, Xs );
+    else
+		setround(-1);
+		Xi = median( Xi, orien );
+		setround(1);
+		Xs = median( Xs, orien );
+		setround(0);
+        m = #( Xi, Xs );
+    end
+
+endfunction
+
+function [ m ] = iquart( x, orien )
+
+    if argn(2) < 2 then 
+		setround(-1);
+		Xi = quart( x.inf );
+		setround(1);
+		Xs = quart( x.sup );
+		setround(0);
+        m = #( Xi, Xs );
+    else
+		setround(-1);
+		Xi = quart( x.inf, orien );
+		setround(1);
+		Xs = quart( x.sup, orien );
+		setround(0);
+        m = #( Xi, Xs );
+    end
+
+endfunction
+
+function [ yesno ] = nosubset( X )
+
+	m = repmat(mid(X)',size(X));
+	r = repmat(rad(X)',size(X));
+
+	md = m-m';
+	rd = r-r';
+
+	t = abs(md) >= abs(rd)/length(X);
+		
+	yesno = and(t(1:$));
+
+endfunction
+
+// end Computing Statistics functions -----------------------------
+
+
 //Definition of the type interval Matrix  with inferior and superior bound matrices
 
 function x=interval(varargin)
