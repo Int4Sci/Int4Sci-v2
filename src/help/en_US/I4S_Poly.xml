@@ -1,38 +1,81 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Poly"><info><pubdate>21-Sep-2008</pubdate></info><refnamediv><refname>I4S_Poly</refname><refpurpose>  add short decription here</refpurpose></refnamediv>
-  
-  
-  
-  
-  
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Poly">
+	<info>
+		<pubdate>21-Sep-2008</pubdate>
+	</info>
+	<refnamediv>
+		<refname>I4S_Poly</refname>
+		<refpurpose>  add short decription here</refpurpose>
+	</refnamediv>
 
-  <refsynopsisdiv><title>Calling Sequence</title><synopsis>I4S_Poly</synopsis></refsynopsisdiv>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>I4S_Poly</synopsis>
+	</refsynopsisdiv>
 
-  <refsection><title>Description</title><itemizedlist><listitem><para>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>
       Add here a paragraph of the function description. 
       Other paragraph can be added 
-     </para></listitem><listitem><para>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
       Add here a paragraph of the function description 
-     </para></listitem></itemizedlist></refsection>
+				</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
 
-  <refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
    Add here scilab instructions and comments
-  ]]></programlisting></refsection>
+  ]]>
+		</programlisting>
+	</refsection>
 
-  <refsection><title>See Also</title><simplelist type="inline">
-    <member> <link linkend="addakeyhere"> add a key here</link> </member>
-    <member> <link linkend="addakeyhere"> add a key here</link> </member>
-  </simplelist></refsection>
+	<refsection>
+		<title>See Also</title>
+		<simplelist type="inline">
+			<member>
+				<link linkend="addakeyhere"> add a key here</link>
+			</member>
+			<member>
+				<link linkend="addakeyhere"> add a key here</link>
+			</member>
+		</simplelist>
+	</refsection>
 
-  <refsection><title>Authors</title><variablelist><varlistentry><term>enter here the author name</term><listitem><para>
+	<refsection>
+		<title>Authors</title>
+		<variablelist>
+			<varlistentry>
+				<term>enter here the author name</term>
+				<listitem>
+					<para>
     Add here the author  references
-    </para></listitem></varlistentry></variablelist></refsection>
+					</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
 
-  <refsection><title>Bibliography</title><para>
+	<refsection>
+		<title>Bibliography</title>
+		<para>
     Add here the function bibliography if any
-    </para></refsection>
+		</para>
+	</refsection>
 
-  <refsection><title>Used Functions</title><para>
+	<refsection>
+		<title>Used Functions</title>
+		<para>
      Add here the used function name and  references
-     </para></refsection>
+		</para>
+	</refsection>
 </refentry>

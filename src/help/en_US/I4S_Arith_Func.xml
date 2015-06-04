@@ -1,44 +1,88 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Arith_Func"><info><pubdate>10-Feb-2007</pubdate></info><refnamediv><refname>I4S_Arith_Func</refname><refpurpose> List all elementary functions that can be exactly interval evaluated </refpurpose></refnamediv>
-  
-  
-  
-  
-  
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Arith_Func">
+	<info>
+		<pubdate>10-Feb-2007</pubdate>
+	</info>
+	<refnamediv>
+		<refname>I4S_Arithmetic_Functions</refname>
+		<refpurpose> List all elementary functions that can be exactly interval evaluated </refpurpose>
+	</refnamediv>
 
-  <refsynopsisdiv><title>Calling Sequence</title><synopsis>I4S_Arith_Func</synopsis></refsynopsisdiv>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>I4S_Arithmetic Functions</synopsis>
+	</refsynopsisdiv>
 
-  <refsection><title>Description</title><itemizedlist><listitem><para>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>
       Add here a paragraph of the function description. 
       Other paragraph can be added 
-     </para></listitem><listitem><para>
+				</para>
+			</listitem>
+			<listitem>
+				<para>
       Add here a paragraph of the function description 
-     </para></listitem></itemizedlist></refsection>
+				</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
 
-  <refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
    Add here scilab instructions and comments
-  ]]></programlisting></refsection>
+  ]]>
+		</programlisting>
+	</refsection>
 
-   <refsection><title>See Also</title><simplelist type="inline">
-    <member> <link linkend="interval">interval</link> </member>
-	 <member> <link linkend="I4S_Functions">I4S_Functions</link> </member>
-	  <member> <link linkend="I4S_Basic_Func">I4S_Basic_Func</link> </member>
-	  <member> <link linkend="I4S_Arith_Op">I4S_Arith_Op</link> </member>
-	  </simplelist></refsection>
+	<refsection>
+		<title>See Also</title>
+		<simplelist type="inline">
+			<member>
+				<link linkend="interval">interval</link>
+			</member>
+			<member>
+				<link linkend="I4S_Functions">I4S_Functions</link>
+			</member>
+			<member>
+				<link linkend="I4S_Basic_Func">I4S_Basic_Func</link>
+			</member>
+			<member>
+				<link linkend="I4S_Arith_Op">I4S_Arith_Op</link>
+			</member>
+		</simplelist>
+	</refsection>
 
-  <refsection><title>Authors</title><variablelist><varlistentry><term>Raphael PEREIRA, David DANEY</term><listitem><para>
-  	<para>COPRIN Project</para>
-	<para>INRIA Sophia Antipolis</para>
-    </para></listitem></varlistentry></variablelist></refsection>
+	<refsection>
+		<title>Authors</title>
+		<variablelist>
+			<varlistentry>
+				<term>Raphael PEREIRA, David DANEY</term>
+				<listitem>
+					<para>
+						<para>COPRIN Project</para>
+						<para>INRIA Sophia Antipolis</para>
+					</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
 
-  <refsection><title>Bibliography</title><para>
-     <para> [Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003. </para> 
-   <para> [Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
+	<refsection>
+		<title>Bibliography</title>
+		<para>
+			<para> [Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003. </para> 
+			<para> [Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
     Robust Control and Robotics, Springer-Verlag, 2001.</para>
-   <para> [Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</para>
-   <para> [Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996. </para> 
-   <para> [Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990. </para> 
-   <para> [Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966. </para>
-     </para></refsection>
+			<para> [Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</para>
+			<para> [Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996. </para> 
+			<para> [Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990. </para> 
+			<para> [Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966. </para>
+		</para>
+	</refsection>
 
 </refentry>

@@ -16,7 +16,7 @@
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_dd5e08ec50fb2bf523768e8605e0575d.html">Int4Sci</a></span>
+      	<span class="top"><a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a></span>
 
       </td>
       <td width="30%" class="next">
@@ -29,31 +29,48 @@
 
 
 
-    <span class="path"><a href="index.html">Int4Sci</a> &gt;&gt; <a href="section_dd5e08ec50fb2bf523768e8605e0575d.html">Int4Sci</a> &gt; I4S_Functions</span>
+    <span class="path"><a href="index.html">Int4Sci</a> &gt;&gt; <a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a> &gt; I4S_Functions</span>
 
     <br /><br />
-    <div class="info"></div><div class="refnamediv"><h1 class="refname">I4S_Functions</h1><p class="refpurpose">List all Scilab functions applied to interval analysis available with Int4Sci</p></div>
-  
-  
-  
-  
-  
+    <div class="info"></div>
+	<div class="refnamediv"><h1 class="refname">I4S_Functions</h1>
+		<p class="refpurpose">List all Scilab functions applied to interval analysis available with Int4Sci</p></div>
 
- <div class="refsection"><h3 class="title">Functions list</h3>
-  <p class="para"><code class="literal">size</code></p><p class="para"><code class="literal">lengthInt</code></p><p class="para"><code class="literal">Transposition</code></p><p class="para"><code class="literal">diag</code></p><p class="para"><code class="literal">sum</code></p><p class="para"><code class="literal">norm</code></p><p class="para"><code class="literal">Insertion and extraction for interval matrices or vectors</code></p><p class="para"><code class="literal">matrix</code></p><p class="para"><code class="literal">Interval order</code></p></div>
+	<div class="refsection"><h3 class="title">Functions list</h3>
+		<p class="para"><code class="literal">size</code></p>
+		<p class="para"><code class="literal">lengthInt</code></p>
+		<p class="para"><code class="literal">Transposition</code></p>
+		<p class="para"><code class="literal">diag</code></p>
+		<p class="para"><code class="literal">sum</code></p>
+		<p class="para"><code class="literal">norm</code></p>
+		<p class="para"><code class="literal">Insertion and extraction for interval matrices or vectors</code></p>
+		<p class="para"><code class="literal">matrix</code></p>
+		<p class="para"><code class="literal">Interval order</code></p></div>
 
-<div class="refsection"><h3 class="title">size</h3>
-<p class="para"><code class="literal">size</code>: returns the size of an interval matrix or vector</p></div>
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">size</span><span class="default">(</span><span class="default">t</span><span class="default"> [,</span><span class="default">sel</span><span class="default">])</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">1x2 integer vector or integer number</p></dd></dt><dt><span class="term">t</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">sel</span><dd><p class="para">a scalar or a character string</p></dd></dt></dl></div>
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This function is an overloading for intervals of the classical 
- scilab function. It returns by default an 1x2 integer vector with the numbers of row and columns of the interval matrix or vector 
-<code class="literal">t</code>. The interval analysis theory assumes that the size of an interval is the size of its bounds [Moore 66]. 
-<code class="literal">size</code> is also used with the 
-<code class="literal">sel</code> string to specify which dimension to get :</p><p class="para"><code class="literal">1</code> or 
-<code class="literal">&#0039;r&#0039;</code>: to get the number of rows</p><p class="para"><code class="literal">2</code> or 
-<code class="literal">&#0039;c&#0039;</code>: to get the number of columns</p><p class="para"><code class="literal">&#0039;*&#0039;</code>: to get the product of rows and column numbers</p></li></ul></div>
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">size</h3>
+		<p class="para"><code class="literal">size</code>: returns the size of an interval matrix or vector</p></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">size</span><span class="default">(</span><span class="default">t</span><span class="default"> [,</span><span class="default">sel</span><span class="default">])</span></pre></div></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">1x2 integer vector or integer number</p></dd></dt>
+			<dt><span class="term">t</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">sel</span>
+				<dd><p class="para">a scalar or a character string</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This function is an overloading for intervals of the classical 
+					<a href="scilab://size" class="link">size</a> scilab function. It returns by default an 1x2 integer vector with the numbers of row and columns of the interval matrix or vector 
+					<code class="literal">t</code>. The interval analysis theory assumes that the size of an interval is the size of its bounds [Moore 66]. 
+					<code class="literal">size</code> is also used with the 
+					<code class="literal">sel</code> string to specify which dimension to get :</p>
+				<p class="para"><code class="literal">1</code> or 
+					<code class="literal">&#0039;r&#0039;</code>: to get the number of rows</p>
+				<p class="para"><code class="literal">2</code> or 
+					<code class="literal">&#0039;c&#0039;</code>: to get the number of columns</p>
+				<p class="para"><code class="literal">&#0039;*&#0039;</code>: to get the product of rows and column numbers</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">6</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
@@ -62,13 +79,20 @@
 <span class="scilabid">r</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://size">size</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">*</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns 6</span>
 
 <a class="scilabcommand" href="scilab://size">size</a><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns the vector [1,1]</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
-<div class="refsection"><h3 class="title">lengthInt</h3>
-<p class="para"><code class="literal">lengthInt</code>: returns the length of an interval or real matrix/vector</p></div>
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">length</span><span class="default">(</span><span class="default">t</span><span class="default">)</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">integer number</p></dd></dt><dt><span class="term">t</span><dd><p class="para">interval or real matrix/vector</p></dd></dt></dl></div>
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This function returns the length of an interval matrix or vector. It&#0039;s also can be used as the classical 
- scilab function.</p></li></ul></div>
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">lengthInt</h3>
+		<p class="para"><code class="literal">lengthInt</code>: returns the length of an interval or real matrix/vector</p></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">length</span><span class="default">(</span><span class="default">t</span><span class="default">)</span></pre></div></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">integer number</p></dd></dt>
+			<dt><span class="term">t</span>
+				<dd><p class="para">interval or real matrix/vector</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This function returns the length of an interval matrix or vector. It&#0039;s also can be used as the classical 
+					<a href="scilab://length" class="link">length</a> scilab function.</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">6</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
@@ -76,14 +100,21 @@
 <span class="scilabid">r</span> <span class="scilaboperator">=</span> <span class="scilabid">lengthInt</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns 6</span>
 
 <span class="scilabid">lengthInt</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns 1</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
-<div class="refsection"><h3 class="title">Transposition</h3>
-<p class="para"><code class="literal">Transposition</code>: returns the Transpose of an interval matrix or vector</p></div>
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">t</span>&#0039;</pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">t</span><dd><p class="para">interval matrix or vector</p></dd></dt></dl></div>
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical transposition 
-<code class="literal">&#0039;</code> scilab function ( cf 
-).</p></li></ul></div>
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Transposition</h3>
+		<p class="para"><code class="literal">Transposition</code>: returns the Transpose of an interval matrix or vector</p></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">t</span>&#0039;</pre></div></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">t</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical transposition 
+					<code class="literal">&#0039;</code> scilab function ( cf 
+					<a href="scilab://quote" class="link">quote</a>).</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">6</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// C is a 2*3 matrix</span>
 
@@ -91,25 +122,34 @@
 
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">//C is a row vector</span>
 <span class="scilabid">D</span><span class="scilaboperator">=</span> <span class="scilabid">C</span><span class="scilaboperator">&#0039;</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is a column vector</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
-<div class="refsection"><h3 class="title">diag</h3>
-<p class="para"><code class="literal">diag</code>: returns the diagonal of an interval matrix or creates a diagonal interval matrix based on a interval vector</p></div>
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">[</span><span class="default">y</span><span class="default">]=</span><span class="default">diag</span><span class="default">(</span><span class="default">t</span><span class="default">,[</span><span class="default">k</span><span class="default">])</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">t</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">k</span><dd><p class="para">integer (default value 0)</p></dd></dt></dl></div>
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical 
- scilab function. If the input 
-<code class="literal">t</code> is an interval vector, the ouptut 
-<code class="literal">y</code> returned is an interval matrix with its 
-<code class="literal">k</code>th diagonal equal to 
-<code class="literal">t</code> and the other components set to the degenerate interval 
-<code class="literal">|0,0|</code>. By convention, 
-<code class="literal">k = 0</code> is for the main diagonal (default value), 
-<code class="literal">k&gt;0</code> is for upper diagonals and 
-<code class="literal">k&lt;0</code> for lower diagonals.In the other hand, if the input 
-<code class="literal">t</code> is an interval matrix, the output 
-<code class="literal">y</code> is a column vector storing the 
-<code class="literal">k</code>th diagonal of 
-<code class="literal">t</code>.</p></li></ul></div>
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">diag</h3>
+		<p class="para"><code class="literal">diag</code>: returns the diagonal of an interval matrix or creates a diagonal interval matrix based on a interval vector</p></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">[</span><span class="default">y</span><span class="default">]=</span><span class="default">diag</span><span class="default">(</span><span class="default">t</span><span class="default">,[</span><span class="default">k</span><span class="default">])</span></pre></div></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">t</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">k</span>
+				<dd><p class="para">integer (default value 0)</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical 
+					<a href="scilab://diag" class="link">diag</a> scilab function. If the input 
+					<code class="literal">t</code> is an interval vector, the ouptut 
+					<code class="literal">y</code> returned is an interval matrix with its 
+					<code class="literal">k</code>th diagonal equal to 
+					<code class="literal">t</code> and the other components set to the degenerate interval 
+					<code class="literal">|0,0|</code>. By convention, 
+					<code class="literal">k = 0</code> is for the main diagonal (default value), 
+					<code class="literal">k&gt;0</code> is for upper diagonals and 
+					<code class="literal">k&lt;0</code> for lower diagonals.In the other hand, if the input 
+					<code class="literal">t</code> is an interval matrix, the output 
+					<code class="literal">y</code> is a column vector storing the 
+					<code class="literal">k</code>th diagonal of 
+					<code class="literal">t</code>.</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// C is a 2*3 matrix</span>
 
@@ -121,101 +161,151 @@
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">//C is a row vector</span>
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://diag">diag</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is a 2*2 interval matrix</span>
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://diag">diag</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is 4*4 interval matrix</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
-<div class="refsection"><h3 class="title">sum</h3>
-<p class="para"><code class="literal">sum</code>: returns the sum of the components of an interval matrix or vector</p></div>
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">sum</span><span class="default">(</span><span class="default">t</span><span class="default">)</span>
+	<div class="refsection"><h3 class="title">sum</h3>
+		<p class="para"><code class="literal">sum</code>: returns the sum of the components of an interval matrix or vector</p></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">sum</span><span class="default">(</span><span class="default">t</span><span class="default">)</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">sum</span><span class="default">(</span><span class="default">t</span><span class="default">,</span>&#0039;<span class="default">r</span>&#0039;<span class="default">) </span><span class="default">or</span> <span class="default">y</span><span class="default"> = </span><span class="default">sum</span><span class="default">(</span><span class="default">t</span><span class="default">,1)</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">sum</span><span class="default">(</span><span class="default">t</span><span class="default">,</span>&#0039;<span class="default">c</span>&#0039;<span class="default">) </span><span class="default">or</span> <span class="default">y</span><span class="default"> = </span><span class="default">sum</span><span class="default">(</span><span class="default">t</span><span class="default">,2)</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">sum</span><span class="default">(</span><span class="default">t</span><span class="default">,</span>&#0039;<span class="default">m</span>&#0039;<span class="default">)</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">single interval or interval vector</p></dd></dt><dt><span class="term">t</span><dd><p class="para">interval matrix or vector</p></dd></dt></dl></div>
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical 
- scilab function. For an interval matrix or vector 
-<code class="literal">t</code>, the default action of 
-<code class="literal">y = sum(t)</code> is to return the sum of all 
-<code class="literal">t</code>&#0039;s components in the interval 
-<code class="literal">y</code> (cf addition of intervals in Int4Sci_Arith).</p><p class="para"><code class="literal">y=sum(t,&#0039;r&#0039;)</code> (or, equivalently, 
-<code class="literal">y=sum(t,1)</code> ) is the rowwise sum: 
-<code class="literal">y(j)= sum(t(:,j))</code> . 
-<code class="literal">y</code> is a row vector.</p><p class="para"><code class="literal">y=sum(t,&#0039;c&#0039;)</code>(or, equivalently, 
-<code class="literal">y=sum(t,2)</code>) is the columnwise sum. It returns in each entry of the column vector 
-<code class="literal">y</code> the sum : 
-<code class="literal">y(i)= sum(t(i,:)) ))</code>.</p><p class="para"><code class="literal">y=sum(t,&#0039;m&#0039;)</code> is the sum along the first non singleton dimension of 
-<code class="literal">t</code>.</p></li></ul></div>
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">single interval or interval vector</p></dd></dt>
+			<dt><span class="term">t</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical 
+					<a href="scilab://sum" class="link">sum</a> scilab function. For an interval matrix or vector 
+					<code class="literal">t</code>, the default action of 
+					<code class="literal">y = sum(t)</code> is to return the sum of all 
+					<code class="literal">t</code>&#0039;s components in the interval 
+					<code class="literal">y</code> (cf addition of intervals in Int4Sci_Arith).</p>
+				<p class="para"><code class="literal">y=sum(t,&#0039;r&#0039;)</code> (or, equivalently, 
+					<code class="literal">y=sum(t,1)</code> ) is the rowwise sum: 
+					<code class="literal">y(j)= sum(t(:,j))</code> . 
+					<code class="literal">y</code> is a row vector.</p>
+				<p class="para"><code class="literal">y=sum(t,&#0039;c&#0039;)</code>(or, equivalently, 
+					<code class="literal">y=sum(t,2)</code>) is the columnwise sum. It returns in each entry of the column vector 
+					<code class="literal">y</code> the sum : 
+					<code class="literal">y(i)= sum(t(i,:)) ))</code>.</p>
+				<p class="para"><code class="literal">y=sum(t,&#0039;m&#0039;)</code> is the sum along the first non singleton dimension of 
+					<code class="literal">t</code>.</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// C is a 2*3 matrix</span>
 
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://sum">sum</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is |-6,0|</span>
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://sum">sum</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is column vector</span>
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://sum">sum</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">//D is a row vector</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
-<div class="refsection"><h3 class="title">norm</h3>
-<p class="para"><code class="literal">norm</code>: returns the norm of an interval matrix or vector</p></div>
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">[</span><span class="default">y</span><span class="default">]=</span><span class="default">norm</span><span class="default">(</span><span class="default">t</span><span class="default"> [,</span><span class="default">flag</span><span class="default">])</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">single interval or real value</p></dd></dt><dt><span class="term">t</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">flag</span><dd><p class="para">string or integer</p></dd></dt></dl></div>
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical 
- scilab function.</p><p class="para">For an interval matrix 
-<code class="literal">t</code>, there are two different norms defined [Hansen 03]:</p><dl><dt><dd><p class="para">The 
-<code class="literal">infinite norm</code> : a real defined as the largest row magnitude sum ( 
-<code class="literal">max(sum(mag(t),&#0039;c&#0039;))</code> ). It&#0039;s obtained by the default use of the 
-<code class="literal">norm</code> function or setting 
-<code class="literal">flag</code> as 
-<code class="literal">&#0039;inf&#0039;</code> or 
-<code class="literal">%inf</code> : 
-<code class="literal">norm(t)</code>, 
-<code class="literal">norm(t,&#0039;inf&#0039;)</code> or 
-<code class="literal">norm(t,%inf)</code>.</p></dd></dt><dt><dd><p class="para">The 
-<code class="literal">1_norm</code> : a real defined as the largest column magnitude sum ( 
-<code class="literal">max(sum(mag(t),&#0039;r&#0039;))</code> ). It&#0039;s obtained with 
-<code class="literal">flag</code> equal to 1 : 
-<code class="literal">norm(t,1)</code>.</p></dd></dt></dl><p class="para">For an interval vector 
-<code class="literal">t</code>, the infinite norm exists too (obtained with the same call than for interval matrices : 
-<code class="literal">norm(t,&#0039;inf&#0039;)</code> or 
-<code class="literal">norm(t,%inf)</code> ) and is the largest magnitude of 
-<code class="literal">t</code>&#0039;s components ( 
-<code class="literal">max(mag(t))</code> )[Hansen 03]. The 
-<code class="literal">1_norm</code> is totally different : it&#0039;s generalized to the 
-<code class="literal">p_norm</code> (called by 
-<code class="literal">norm(t,p)</code> with 
-<code class="literal">p</code> an integer) and it&#0039;s defined as the interval 
-<code class="literal">y</code> such as:</p><dl><dt><dd><p class="para"><code class="literal">y=sum(t(i)^p))^(1/p)</code> (cf power of intervals in Int4Sci_Arith). The default norm returned (called by 
-<code class="literal">norm(t)</code> ) is for 
-<code class="literal">p = 2</code>.</p></dd></dt></dl></li></ul></div>
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">norm</h3>
+		<p class="para"><code class="literal">norm</code>: returns the norm of an interval matrix or vector</p></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">[</span><span class="default">y</span><span class="default">]=</span><span class="default">norm</span><span class="default">(</span><span class="default">t</span><span class="default"> [,</span><span class="default">flag</span><span class="default">])</span></pre></div></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">single interval or real value</p></dd></dt>
+			<dt><span class="term">t</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">flag</span>
+				<dd><p class="para">string or integer</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This function is an overload for interval matrices or vectors of the classical 
+					<a href="scilab://norm" class="link">norm</a> scilab function.</p>
+				<p class="para">For an interval matrix 
+					<code class="literal">t</code>, there are two different norms defined [Hansen 03]:</p>
+				<dl><dt><dd><p class="para">The 
+								<code class="literal">infinite norm</code> : a real defined as the largest row magnitude sum ( 
+								<code class="literal">max(sum(mag(t),&#0039;c&#0039;))</code> ). It&#0039;s obtained by the default use of the 
+								<code class="literal">norm</code> function or setting 
+								<code class="literal">flag</code> as 
+								<code class="literal">&#0039;inf&#0039;</code> or 
+								<code class="literal">%inf</code> : 
+								<code class="literal">norm(t)</code>, 
+								<code class="literal">norm(t,&#0039;inf&#0039;)</code> or 
+								<code class="literal">norm(t,%inf)</code>.</p></dd></dt>
+					<dt><dd><p class="para">The 
+								<code class="literal">1_norm</code> : a real defined as the largest column magnitude sum ( 
+								<code class="literal">max(sum(mag(t),&#0039;r&#0039;))</code> ). It&#0039;s obtained with 
+								<code class="literal">flag</code> equal to 1 : 
+								<code class="literal">norm(t,1)</code>.</p></dd></dt></dl>
+				<p class="para">For an interval vector 
+					<code class="literal">t</code>, the infinite norm exists too (obtained with the same call than for interval matrices : 
+					<code class="literal">norm(t,&#0039;inf&#0039;)</code> or 
+					<code class="literal">norm(t,%inf)</code> ) and is the largest magnitude of 
+					<code class="literal">t</code>&#0039;s components ( 
+					<code class="literal">max(mag(t))</code> )[Hansen 03]. The 
+					<code class="literal">1_norm</code> is totally different : it&#0039;s generalized to the 
+					<code class="literal">p_norm</code> (called by 
+					<code class="literal">norm(t,p)</code> with 
+					<code class="literal">p</code> an integer) and it&#0039;s defined as the interval 
+					<code class="literal">y</code> such as:</p>
+				<dl><dt><dd><p class="para"><code class="literal">y=sum(t(i)^p))^(1/p)</code> (cf power of intervals in Int4Sci_Arith). The default norm returned (called by 
+								<code class="literal">norm(t)</code> ) is for 
+								<code class="literal">p = 2</code>.</p></dd></dt></dl></li></ul></div>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// C is a 2*3 matrix</span>
 
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// infinite norm</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// infinite norm</span>
 <span class="scilabcomment">//equivalent to :</span>
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">inf);</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">inf);</span>
 
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// 1_norm</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// 1_norm</span>
 
 <span class="scilabid">C</span><span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// 2_norm</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// 2_norm</span>
 <span class="scilabcomment">//equivalent to</span>
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
 
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabconstants">%inf</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// infinite norm</span>
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">56</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//56_norm, which is mathematicaly useless..</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabconstants">%inf</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// infinite norm</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <a class="scilabcommand" href="scilab://norm">norm</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabnumber">56</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//56_norm, which is mathematicaly useless..</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="comment">//For extraction from t or v :</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="comment">//For extraction from t or v :</span>
 <span class="default">a</span><span class="default"> = </span><span class="default">t</span><span class="default">(</span><span class="default">i</span><span class="default">,</span><span class="default">j</span><span class="default">)</span>
 <span class="default">a</span><span class="default"> = </span><span class="default">v</span><span class="default">(</span><span class="default">i</span><span class="default">)</span>
 <span class="default">b</span><span class="default"> = </span><span class="default">t</span><span class="default">(</span><span class="default">i</span><span class="default">:</span><span class="default">j</span><span class="default">,</span><span class="default">k</span><span class="default">)</span>
 <span class="default">b</span><span class="default"> = </span><span class="default">t</span><span class="default">(</span><span class="default">i</span><span class="default">,</span><span class="default">j</span><span class="default">:</span><span class="default">k</span><span class="default">)</span>
 <span class="default">c</span><span class="default"> = </span><span class="default">t</span><span class="default">(</span><span class="default">i</span><span class="default">:</span><span class="default">j</span><span class="default">,</span><span class="default">k</span><span class="default">:</span><span class="default">l</span><span class="default">)</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">i,j,k,l</span><dd><p class="para">integers</p></dd></dt><dt><span class="term">a</span><dd><p class="para">single interval</p></dd></dt><dt><span class="term">b</span><dd><p class="para">interval vector</p></dd></dt><dt><span class="term">t,c</span><dd><p class="para">interval matrices</p></dd></dt><dt><span class="term">v</span><dd><p class="para">interval matrix or vector</p></dd></dt></dl></div>
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="comment">//For insertion in x or s:</span>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">i,j,k,l</span>
+				<dd><p class="para">integers</p></dd></dt>
+			<dt><span class="term">a</span>
+				<dd><p class="para">single interval</p></dd></dt>
+			<dt><span class="term">b</span>
+				<dd><p class="para">interval vector</p></dd></dt>
+			<dt><span class="term">t,c</span>
+				<dd><p class="para">interval matrices</p></dd></dt>
+			<dt><span class="term">v</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt></dl></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="comment">//For insertion in x or s:</span>
 <span class="default">x</span><span class="default">(</span><span class="default">i</span><span class="default">,</span><span class="default">j</span><span class="default">) = </span><span class="default">d</span>
 <span class="default">s</span><span class="default">(</span><span class="default">i</span><span class="default">) = </span><span class="default">d</span>
 <span class="default">x</span><span class="default">(</span><span class="default">i</span><span class="default">:</span><span class="default">j</span><span class="default">,</span><span class="default">k</span><span class="default">) = </span><span class="default">e</span> <span class="default">or</span> <span class="default">x</span><span class="default">(</span><span class="default">i</span><span class="default">,</span><span class="default">j</span><span class="default">:</span><span class="default">k</span><span class="default">) = </span><span class="default">e</span> <span class="default">or</span> <span class="default">x</span><span class="default">(</span><span class="default">i</span><span class="default">:</span><span class="default">j</span><span class="default">,</span><span class="default">k</span><span class="default">:</span><span class="default">l</span><span class="default">) = </span><span class="default">f</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">i,j,k,l</span><dd><p class="para">integers</p></dd></dt><dt><span class="term">d</span><dd><p class="para">single interval or real</p></dd></dt><dt><span class="term">e</span><dd><p class="para">interval or real vector</p></dd></dt><dt><span class="term">x,f</span><dd><p class="para">interval or real matrices</p></dd></dt><dt><span class="term">s</span><dd><p class="para">interval or real matrix/vector</p></dd></dt></dl></div>
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">These functionnalities are overloads for interval matrices or vectors of classical 
- and 
- scilab functions. They allow to extract/insert intervals submatrices or subvectors from/in an interval matrix or vector. It&#0039;s possible too to insert a real matrix/vector in an interval matrix/vector, and vice-versa; in all the cases, it will always return a interval matrix or vector.</p><p class="para">We can notice that the insertion of an empty submatrix
-<code class="literal">[]</code> at the indexes <code class="literal">[i1,..,in],[j1,...,jm]</code> will delete the entries with such indexes and return a column vector with the entries left. Exceptions are for a row vector (that will still remain a row vector) and a single interval that will become the <code class="literal">|0,0|</code> degenerate interval.</p><p class="para">An error is returned when the submatrix to insert does not have a conform size (cf examples just below).</p></li></ul></div>
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">i,j,k,l</span>
+				<dd><p class="para">integers</p></dd></dt>
+			<dt><span class="term">d</span>
+				<dd><p class="para">single interval or real</p></dd></dt>
+			<dt><span class="term">e</span>
+				<dd><p class="para">interval or real vector</p></dd></dt>
+			<dt><span class="term">x,f</span>
+				<dd><p class="para">interval or real matrices</p></dd></dt>
+			<dt><span class="term">s</span>
+				<dd><p class="para">interval or real matrix/vector</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">These functionnalities are overloads for interval matrices or vectors of classical 
+					<a href="scilab://insertion" class="link">insertion</a> and 
+					<a href="scilab://extraction" class="link">extraction</a> scilab functions. They allow to extract/insert intervals submatrices or subvectors from/in an interval matrix or vector. It&#0039;s possible too to insert a real matrix/vector in an interval matrix/vector, and vice-versa; in all the cases, it will always return a interval matrix or vector.</p>
+				<p class="para">We can notice that the insertion of an empty submatrix
+					<code class="literal">[]</code> at the indexes <code class="literal">[i1,..,in],[j1,...,jm]</code> will delete the entries with such indexes and return a column vector with the entries left. Exceptions are for a row vector (that will still remain a row vector) and a single interval that will become the <code class="literal">|0,0|</code> degenerate interval.</p>
+				<p class="para">An error is returned when the submatrix to insert does not have a conform size (cf examples just below).</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> 
 
@@ -231,19 +321,32 @@
 
 
 
-<div class="refsection"><h3 class="title">matrix</h3>
-<p class="para"><code class="literal">matrix</code> : reshape an interval vector or matrix to a different size interval matrix</p></div>
+	<div class="refsection"><h3 class="title">matrix</h3>
+		<p class="para"><code class="literal">matrix</code> : reshape an interval vector or matrix to a different size interval matrix</p></div>
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default">=</span><span class="default">matrix</span><span class="default">(</span><span class="default">v</span><span class="default">,</span><span class="default">n</span><span class="default">,</span><span class="default">m</span><span class="default">)</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default">=</span><span class="default">matrix</span><span class="default">(</span><span class="default">v</span><span class="default">,</span><span class="default">n</span><span class="default">,</span><span class="default">m</span><span class="default">)</span>
 <span class="default">y</span><span class="default">=</span><span class="default">matrix</span><span class="default">(</span><span class="default">v</span><span class="default">,[</span><span class="default">sizes</span><span class="default">])</span></pre></div></div>
 
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">v</span><dd><p class="para">an interval vector or matrix</p></dd></dt><dt><span class="term">n,m</span><dd><p class="para">integers</p></dd></dt><dt><span class="term">sizes</span><dd><p class="para">vector of integers</p></dd></dt><dt><span class="term">y</span><dd><p class="para">an interval vector or matrix</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">v</span>
+				<dd><p class="para">an interval vector or matrix</p></dd></dt>
+			<dt><span class="term">n,m</span>
+				<dd><p class="para">integers</p></dd></dt>
+			<dt><span class="term">sizes</span>
+				<dd><p class="para">vector of integers</p></dd></dt>
+			<dt><span class="term">y</span>
+				<dd><p class="para">an interval vector or matrix</p></dd></dt></dl></div>
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This function has the same use than the classical Scilab function  :</p><p class="para">For an interval vector or a matrix with <code class="literal">n x m</code>  entries, the command  <code class="literal">y=matrix(v,n,m)</code>  or similarily  
-<code class="literal">y=matrix(v,[n,m])</code> transforms the <code class="literal">v</code> interval vector (or matrix) into an <code class="literal">n x m</code> interval matrix by 
-stacking columnwise the entries of <code class="literal">v</code> .</p><p class="para">If one of the dimension m or n is equal to -1 it is automatically assigned to the quotient of size(v,&#0039;*&#0039;) by the other dimension.</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This function has the same use than the classical Scilab function <a href="scilab://matrix" class="link">matrix</a> :</p>
+				<p class="para">For an interval vector or a matrix with <code class="literal">n x m</code>  entries, the command  <code class="literal">y=matrix(v,n,m)</code>  or similarily  
+					<code class="literal">y=matrix(v,[n,m])</code> transforms the <code class="literal">v</code> interval vector (or matrix) into an <code class="literal">n x m</code> interval matrix by 
+stacking columnwise the entries of <code class="literal">v</code> .</p>
+				<p class="para">If one of the dimension m or n is equal to -1 it is automatically assigned to the quotient of size(v,&#0039;*&#0039;) by the other dimension.</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> 
 
@@ -252,19 +355,30 @@ stacking columnwise the entries of <code class="literal">v</code> .</p><p class=
 
 
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">x</span> &gt; <span class="default">y</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">x</span> &gt; <span class="default">y</span>
 <span class="default">x</span> &gt;<span class="default"> = </span><span class="default">y</span>
 <span class="default">x</span> &lt; <span class="default">y</span>
 <span class="default">x</span> &lt;<span class="default"> = </span><span class="default">y</span></pre></div></div>
 
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">x,y</span><dd><p class="para">interval vectors or matrices</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">x,y</span>
+				<dd><p class="para">interval vectors or matrices</p></dd></dt></dl></div>
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">An order for intervals has been implemented with these functionnalities. There are many ways to define an order for intervals [Hansen03]
-, [Moore66]. Here, we have  choosen this definition for two intervals <code class="literal">x = |xi,xs|</code> and <code class="literal">y = |yi,ys|</code> :</p><p class="para">- <code class="literal">x &gt; y</code> if <code class="literal">xi &gt; ys</code>.</p><p class="para">- <code class="literal">x &gt;= y</code> if <code class="literal">xi &gt;= ys</code>.</p><p class="para">- <code class="literal">x &lt; y</code> if <code class="literal">xs &lt; yi</code>.</p><p class="para">- <code class="literal">x &lt;= y</code> if <code class="literal">xs &lt;= yi</code>.</p><p class="para">Here again, this definition is extended to interval matrix and vectors, where each component with the same indexes will be compared. A boolean 
-matrix or vector (with the same size than the inputs) is returned.</p><p class="para">We can note that the comparison for orders defined above are different than comparison for equality of two intervals (<code class="literal">==</code> or <code class="literal">~=</code>). Indeed, <code class="literal">==</code> will check the equality of the six components of the interval structure (dimensions, inferior and superior
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">An order for intervals has been implemented with these functionnalities. There are many ways to define an order for intervals [Hansen03]
+, [Moore66]. Here, we have  choosen this definition for two intervals <code class="literal">x = |xi,xs|</code> and <code class="literal">y = |yi,ys|</code> :</p>
+				<p class="para">- <code class="literal">x &gt; y</code> if <code class="literal">xi &gt; ys</code>.</p>
+				<p class="para">- <code class="literal">x &gt;= y</code> if <code class="literal">xi &gt;= ys</code>.</p>
+				<p class="para">- <code class="literal">x &lt; y</code> if <code class="literal">xs &lt; yi</code>.</p>
+				<p class="para">- <code class="literal">x &lt;= y</code> if <code class="literal">xs &lt;= yi</code>.</p>
+				<p class="para">Here again, this definition is extended to interval matrix and vectors, where each component with the same indexes will be compared. A boolean 
+matrix or vector (with the same size than the inputs) is returned.</p>
+				<p class="para">We can note that the comparison for orders defined above are different than comparison for equality of two intervals (<code class="literal">==</code> or <code class="literal">~=</code>). Indeed, <code class="literal">==</code> will check the equality of the six components of the interval structure (dimensions, inferior and superior
 bounds matrix or vector and modes, see <a href="interval.html" class="link">interval</a> for more details). It returns then a boolean six elements row vector.</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> 
 
@@ -274,31 +388,37 @@ bounds matrix or vector and modes, see <a href="interval.html" class="link">inte
 
 <span class="scilabid">C</span> <span class="scilaboperator">&#0062;</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilaboperator">*</span><a class="scilabcommand" href="scilab://ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns a 2*2 boolean matrix with false</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
 
-  <div class="refsection"><h3 class="title">See Also</h3><ul class="itemizedlist"><li class="member"><a href="interval.html" class="link">interval</a></li>
-          <li class="member"><a href="I4S_Basic_Func.html" class="link">I4S_Basic_Func</a></li>
-	  <li class="member"></li>
-	  <li class="member"><a href="I4S_Arith_Func.html" class="link">I4S_Arith_Func</a></li></ul></div>
+	<div class="refsection"><h3 class="title">See Also</h3>
+		<ul class="itemizedlist"><li class="member"><a href="interval.html" class="link">interval</a></li>
+			<li class="member"><a href="I4S_Basic_Func.html" class="link">I4S_Basic_Func</a></li>
+			<li class="member"><a href="scilab://I4S_Arith_Op" class="link">I4S_Arith_Op</a></li>
+			<li class="member"><a href="I4S_Arith_Func.html" class="link">I4S_Arith_Func</a></li></ul></div>
 
-  <div class="refsection"><h3 class="title">Authors</h3><dl><dt><span class="term">Raphael PEREIRA, David DANEY</span><dd><p class="para"><p class="para">COPRIN Project</p>
-    	<p class="para">INRIA Sophia Antipolis</p></p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Authors</h3>
+		<dl><dt><span class="term">Raphael PEREIRA, David DANEY</span>
+				<dd><p class="para"><p class="para">COPRIN Project</p>
+						<p class="para">INRIA Sophia Antipolis</p></p></dd></dt></dl></div>
 
-  <div class="refsection"><h3 class="title">Bibliography</h3><p class="para"><p class="para">[Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003.</p> 
-   <p class="para">[Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
+	<div class="refsection"><h3 class="title">Bibliography</h3>
+		<p class="para"><p class="para">[Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003.</p> 
+			<p class="para">[Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
     Robust Control and Robotics, Springer-Verlag, 2001.</p>
-   <p class="para">[Rump99] S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</p>
-   <p class="para">[Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996.</p> 
-   <p class="para">[Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990.</p> 
-   <p class="para">[Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966.</p></p></div>
-
+			<p class="para">[Rump99] S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</p>
+			<p class="para">[Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996.</p> 
+			<p class="para">[Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990.</p> 
+			<p class="para">[Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966.</p></p></div>
+    <br />
 
     <div class="manualnavbar">
-    <table width="100%"><tr>
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
       <td width="30%">
     	<span class="previous"><a href="I4S_Error.html">&lt;&lt; I4S_Error</a></span>
 
       </td>
       <td width="40%" class="center">
-      	<span class="top"><a href="section_dd5e08ec50fb2bf523768e8605e0575d.html">Int4Sci</a></span>
+      	<span class="top"><a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a></span>
 
       </td>
       <td width="30%" class="next">

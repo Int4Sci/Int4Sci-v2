@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book [
 <!--Begin Entities-->
-<!ENTITY a0cdbe676a561d43282d69335347d1b86 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Arith_Func.xml">
-<!ENTITY a641201075fc2773187425efc357f7775 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Arith_Op.xml">
-<!ENTITY a51be963a01c8cfe34952aa5f6e1c0227 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Authors.xml">
-<!ENTITY aa9575fce3a2bc1e892476adf6845b9ab SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Basic_Func.xml">
-<!ENTITY ac9232a6665a938fdc7afb71eee8cae76 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Basic_Tools.xml">
-<!ENTITY a30a5239b39d3715438e4160efe212148 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Bibliography.xml">
-<!ENTITY a88f1894f580a8e7da43555faf8ecf07b SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Error.xml">
-<!ENTITY ad68c4017ce50e4afb49322e9a92797c5 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Functions.xml">
-<!ENTITY a2cd1e65f5eb033e0dcd93ba5f24d56f0 SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4S_Poly.xml">
-<!ENTITY ae202d68832669dd00438d4f0a11ab10f SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/I4Slinearsolve.xml">
-<!ENTITY af2e9891857c6a618ac4fa8c2a079052c SYSTEM "/Users/ddaney/works/lib/int4sci-5.3/help/en_US/interval.xml">
+<!ENTITY a5e15ec3ef34cf807ef37c21dac46237a SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Arith_Func.xml">
+<!ENTITY a0439978197540a20b620fcf7af513949 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Arith_Op.xml">
+<!ENTITY a0bc29e5843f56a92a1edf592c92445de SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Authors.xml">
+<!ENTITY a2f6d8e21a043456eda49251b4e6ed36f SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Basic_Func.xml">
+<!ENTITY ac55ddbe9771c1008f3bc3cbdb8c1cc08 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Basic_Tools.xml">
+<!ENTITY a59078ccccffe97a5f9ec98b56b440386 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Bibliography.xml">
+<!ENTITY a042409c013c4f75a67222aa74dbaf6d5 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Error.xml">
+<!ENTITY a614233a214d0d13d5ab6b624e8424b83 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Functions.xml">
+<!ENTITY a047087ef48b9cc4c8435a03a67fb1b4f SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Poly.xml">
+<!ENTITY aa08ba626b9c95c3345956e118a8d9fdc SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Stat_Func.xml">
+<!ENTITY ab46b87f44310a184d883f7f80b0f11ad SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4Slinearsolve.xml">
+<!ENTITY a615b9623dd2632003e9b79a86ce85d02 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/interval.xml">
 <!--End Entities-->
 ]>
 <book version="5.0-subset Scilab" xml:lang="en_US"
@@ -26,18 +27,19 @@
     <title>Int4Sci</title>
   </info>
 
-<part xml:id='section_dd5e08ec50fb2bf523768e8605e0575d'>
+<part xml:id='section_eda3296bd86503db9c4ac7494fcb0982'>
 <title>Int4Sci</title>
-&a0cdbe676a561d43282d69335347d1b86;
-&a641201075fc2773187425efc357f7775;
-&a51be963a01c8cfe34952aa5f6e1c0227;
-&aa9575fce3a2bc1e892476adf6845b9ab;
-&ac9232a6665a938fdc7afb71eee8cae76;
-&a30a5239b39d3715438e4160efe212148;
-&a88f1894f580a8e7da43555faf8ecf07b;
-&ad68c4017ce50e4afb49322e9a92797c5;
-&a2cd1e65f5eb033e0dcd93ba5f24d56f0;
-&ae202d68832669dd00438d4f0a11ab10f;
-&af2e9891857c6a618ac4fa8c2a079052c;
+&a5e15ec3ef34cf807ef37c21dac46237a;
+&a0439978197540a20b620fcf7af513949;
+&a0bc29e5843f56a92a1edf592c92445de;
+&a2f6d8e21a043456eda49251b4e6ed36f;
+&ac55ddbe9771c1008f3bc3cbdb8c1cc08;
+&a59078ccccffe97a5f9ec98b56b440386;
+&a042409c013c4f75a67222aa74dbaf6d5;
+&a614233a214d0d13d5ab6b624e8424b83;
+&a047087ef48b9cc4c8435a03a67fb1b4f;
+&aa08ba626b9c95c3345956e118a8d9fdc;
+&ab46b87f44310a184d883f7f80b0f11ad;
+&a615b9623dd2632003e9b79a86ce85d02;
 </part>
 </book>

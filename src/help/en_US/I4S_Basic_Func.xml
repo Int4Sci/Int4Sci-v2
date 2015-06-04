@@ -1,58 +1,148 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Basic_Func"><info><pubdate>10-Feb-2007</pubdate></info><refnamediv><refname>I4S_Basic_Func</refname><refpurpose> Lists all basic functions of Int4Sci for the manipulation of intervals </refpurpose></refnamediv>
-  
-  
-  
-  
-  
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:lang="en" xml:id="I4S_Basic_Func">
+	<info>
+		<pubdate>10-Feb-2007</pubdate>
+	</info>
+	<refnamediv>
+		<refname>I4S_Basic_Functions</refname>
+		<refpurpose> Lists all basic functions of Int4Sci for the manipulation of intervals </refpurpose>
+	</refnamediv>
 
-  <refsection><title>Functions list</title>
-  <para>
-  <literal>interval</literal></para><para>
-  <literal>#</literal></para><para>
-  <literal>inf,sup</literal></para><para>
-  <literal>mradius</literal></para><para>
-  <literal>mid</literal></para><para>
-  <literal>rad</literal></para><para>
-  <literal>wid</literal></para><para>
-  <literal>mag</literal></para><para>
-  <literal>mig</literal></para><para>
-  <literal>Interval bissection</literal></para>
-  <para><literal>intersection</literal></para>
-  <para><literal>in</literal> </para>
-  </refsection>
+	<refsection>
+		<title>Functions list</title>
+		<para>
+			<literal>interval</literal>
+		</para>
+		<para>
+			<literal>#</literal>
+		</para>
+		<para>
+			<literal>inf,sup</literal>
+		</para>
+		<para>
+			<literal>mradius</literal>
+		</para>
+		<para>
+			<literal>mid</literal>
+		</para>
+		<para>
+			<literal>rad</literal>
+		</para>
+		<para>
+			<literal>wid</literal>
+		</para>
+		<para>
+			<literal>mag</literal>
+		</para>
+		<para>
+			<literal>mig</literal>
+		</para>
+		<para>
+			<literal>Interval bissection</literal>
+		</para>
+		<para>
+			<literal>intersection</literal>
+		</para>
+		<para>
+			<literal>in</literal>
+		</para>
+	</refsection>
 
-  <refsection><title>interval</title>
-  <para>
-  <literal>interval</literal>: Creation of an interval vector or matrix with its inferior and superior bounds</para></refsection>
+	<refsection>
+		<title>interval</title>
+		<para>
+			<literal>interval</literal>: Creation of an interval vector or matrix with its inferior and superior bounds</para>
+	</refsection>
 
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>t=interval(x,y)</synopsis></refsynopsisdiv>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>t=interval(x,y)</synopsis>
+	</refsynopsisdiv>
 
-  <refsection><title>Parameters</title><variablelist><varlistentry><term>x,y</term><listitem><para>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>x,y</term>
+				<listitem>
+					<para>
 	       :similar size real vectors or matrices
-       </para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval vector or matrix
-       </para></listitem></varlistentry></variablelist></refsection>
- 
-  <refsection><title>Description</title><itemizedlist><listitem><para>
-<literal>interval(x,y) </literal> is the interval vector or matrix created with the inferior bound vector or matrix <literal>x </literal> and the superior bound vector or matrix
- <literal>y</literal>. The component <literal>t(i,j)</literal> of <literal>t </literal> is printed <literal>|x(i,j),y(i,j)|</literal>. Mathematicaly, it represents any real included in the interval
- <literal>|x(i,j),y(i,j)|</literal> [Hansen 03][Moore66].
-     </para><para>
+					</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval vector or matrix
+					</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>
+					<literal>interval(x,y) </literal> is the interval vector or matrix created with the inferior bound vector or matrix <literal>x </literal> and the superior bound vector or matrix
+					<literal>y</literal>. The component <literal>t(i,j)</literal> of <literal>t </literal> is printed <literal>|x(i,j),y(i,j)|</literal>. Mathematicaly, it represents any real included in the interval
+					<literal>|x(i,j),y(i,j)|</literal> [Hansen 03][Moore66].
+				</para>
+				<para>
 The notation <literal>interval(x) </literal> is equivalent to <literal>interval(x,x) </literal>. Such an interval <literal>|x,x|</literal> is called a degenerate interval [Hansen 03].
 If <literal>x </literal> or  <literal>y</literal> are single reals, it's assumed that the lower or upper bound is constant for each <literal>t </literal> component.
-	</para><para>
-<literal>t </literal> is stored as a "mlist" named "InterM". <literal>t </literal> elements are :
+				</para>
+				<para>
+					<literal>t </literal> is stored as a "mlist" named "InterM". <literal>t </literal> elements are :
 
-  <variablelist><varlistentry><term>t.dims </term><listitem><para>returns the bounds size matrix, considered as the interval size matrix.
-       </para></listitem></varlistentry><varlistentry><term>t.inf</term><listitem><para>returns the inferior bound. Here t.inf is x.
-	</para></listitem></varlistentry><varlistentry><term>t.sup </term><listitem><para>returns the inferior bound. Here t.sup is y.
-	</para></listitem></varlistentry><varlistentry><term>t.arith</term><listitem><para>returns the arithmetic type.
-	</para></listitem></varlistentry><varlistentry><term>t.mode </term><listitem><para>returns the rounding precision mode.
-	</para></listitem></varlistentry></variablelist>
- 
-     </para></listitem></itemizedlist></refsection>
+					<variablelist>
+						<varlistentry>
+							<term>t.dims </term>
+							<listitem>
+								<para>returns the bounds size matrix, considered as the interval size matrix.
+								</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>t.inf</term>
+							<listitem>
+								<para>returns the inferior bound. Here t.inf is x.
+								</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>t.sup </term>
+							<listitem>
+								<para>returns the inferior bound. Here t.sup is y.
+								</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>t.arith</term>
+							<listitem>
+								<para>returns the arithmetic type.
+								</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>t.mode </term>
+							<listitem>
+								<para>returns the rounding precision mode.
+								</para>
+							</listitem>
+						</varlistentry>
+					</variablelist>
 
-  <refsection><title>Examples</title><programlisting role="example"><![CDATA[
+				</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 t=interval(1,2);
 		    
 A=[1,2;3,4];
@@ -60,17 +150,50 @@ B=[2,3;4,5];
 interval(A,B);
 interval(A,5);
 C=interval(A); // degenerate interval matrix
-  ]]></programlisting></refsection>
+  ]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>#</title>
-<para>
-<literal>#</literal>:Creation of an interval vector or matrix with its inferior and superior bounds</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>t = #(x,y)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>x,y</term><listitem><para>similar size real vectors or matrices</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval vector or matrix</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>The function 
-<literal>#</literal> is a shortcut equivalent to the function 
-<literal>interval</literal>.</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>#</title>
+		<para>
+			<literal>#</literal>:Creation of an interval vector or matrix with its inferior and superior bounds</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>t = #(x,y)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>x,y</term>
+				<listitem>
+					<para>similar size real vectors or matrices</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval vector or matrix</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>The function 
+					<literal>#</literal> is a shortcut equivalent to the function 
+					<literal>interval</literal>.</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 t=#(1,2);
 
@@ -78,23 +201,57 @@ A=[1,2;3,4];
 B=[2,3;4,5];
 #(A,B);
 C=#(A);
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>inf , sup</title>
-<para>
-<literal>inf</literal> and 
-<literal>sup</literal>: returns respectively the inferior and superior bound of an interval matrix or vector</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>x = inf(t)
-x = sup(t)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>x</term><listitem><para>real vector or matrix</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval vector or matrix</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>The function 
-<literal>inf</literal> returns the inferior bound matrix or vector of an interval matrix or vector. In a same way, 
-<literal>sup</literal> returns the superior bound matrix or vector.</para><para> Warning : for direct allocations on the bounds, <literal>inf</literal> and <literal>sup</literal> can't be used. You'd better 
+	<refsection>
+		<title>inf , sup</title>
+		<para>
+			<literal>inf</literal> and 
+			<literal>sup</literal>: returns respectively the inferior and superior bound of an interval matrix or vector</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>x = inf(t)
+x = sup(t)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>x</term>
+				<listitem>
+					<para>real vector or matrix</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval vector or matrix</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>The function 
+					<literal>inf</literal> returns the inferior bound matrix or vector of an interval matrix or vector. In a same way, 
+					<literal>sup</literal> returns the superior bound matrix or vector.</para>
+				<para> Warning : for direct allocations on the bounds, <literal>inf</literal> and <literal>sup</literal> can't be used. You'd better 
 use the elements of the interval structure (see <link linkend="interval">interval</link>) <literal>.inf</literal> and <literal>.sup</literal>. 
 For example, for an interval matrix <literal>a</literal>, a direct allocation of the inferior bound will be written with <literal>a.inf = M</literal> 
 with M a real matrix with the same size than <literal>a</literal>.
-</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+				</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 // inf and sup use
 t=#(1,2);
@@ -113,24 +270,64 @@ C.inf = [-1,-2;-3,-4] // Same C's size matrix for inferior bound
 C.sup(1,1) = 20 // Change the superior bound of the first element of C
 C.inf(:) = 0 // Set the inferior bound to 0
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>mradius</title>
-<para>
-<literal>mradius</literal>:Creation of an interval vector or matrix with its middle value and its radius</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>t = mradius(x,e)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>x</term><listitem><para>real or interval vector/matrix</para></listitem></varlistentry><varlistentry><term>e</term><listitem><para>real vector or matrix</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval vector or matrix</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>The function 
-<literal>mradius</literal> creates an interval based on a middle value and a radius. Basicly, for a single real middle value 
-<literal>x</literal> and a single real radius value 
-<literal>e</literal>, 
-<literal>mradius(x,e)</literal> is the interval 
-<literal>|x-e,x+e|</literal>[Moore 66]. 
-<literal>x</literal> can also be an interval, in which case 
-<literal>mradius(x,e)</literal> returns the interval 
-<literal>|x.inf-e,x.sup+e|</literal>.</para><para>This definition is extended for this function to a real or interval middle value matrix 
-<literal>x</literal> and a same size real radius matrix or a single real radius.</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>mradius</title>
+		<para>
+			<literal>mradius</literal>:Creation of an interval vector or matrix with its middle value and its radius</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>t = mradius(x,e)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>x</term>
+				<listitem>
+					<para>real or interval vector/matrix</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>e</term>
+				<listitem>
+					<para>real vector or matrix</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval vector or matrix</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>The function 
+					<literal>mradius</literal> creates an interval based on a middle value and a radius. Basicly, for a single real middle value 
+					<literal>x</literal> and a single real radius value 
+					<literal>e</literal>, 
+					<literal>mradius(x,e)</literal> is the interval 
+					<literal>|x-e,x+e|</literal>[Moore 66]. 
+					<literal>x</literal> can also be an interval, in which case 
+					<literal>mradius(x,e)</literal> returns the interval 
+					<literal>|x.inf-e,x.sup+e|</literal>.</para>
+				<para>This definition is extended for this function to a real or interval middle value matrix 
+					<literal>x</literal> and a same size real radius matrix or a single real radius.</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 t=mradius(0,1);//returns the |-1,1| interval
 t=mradius(#(-1,1),1);//returns the |-2,2| interval
@@ -141,21 +338,54 @@ mradius(A,B);
 mradius(A,1);
 C=#(B,A);
 mradius(C,B);
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
 
-<refsection><title>mid</title>
-<para>
-<literal>mid</literal>:returns the middle value matrix or vector of an interval matrix or vector.</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>x = mid(t)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>x</term><listitem><para>real vector or matrix</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval vector or matrix</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>The function 
-<literal>mid</literal> returns the middle value of an interval vector or matrix. For a single interval 
-<literal>|x,y|</literal>, the middle value is mathematically defined as 
-<literal>(y+x)/2</literal> [Hansen 03]. For an interval matrix or vector 
-<literal>t</literal>, this function will return a same size real matrix or vector of the middle value of each 
-<literal>t</literal> component.</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>mid</title>
+		<para>
+			<literal>mid</literal>:returns the middle value matrix or vector of an interval matrix or vector.</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>x = mid(t)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>x</term>
+				<listitem>
+					<para>real vector or matrix</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval vector or matrix</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>The function 
+					<literal>mid</literal> returns the middle value of an interval vector or matrix. For a single interval 
+					<literal>|x,y|</literal>, the middle value is mathematically defined as 
+					<literal>(y+x)/2</literal> [Hansen 03]. For an interval matrix or vector 
+					<literal>t</literal>, this function will return a same size real matrix or vector of the middle value of each 
+					<literal>t</literal> component.</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 t=#(0,2);
 mid(t); // returns 1
@@ -164,27 +394,61 @@ A=[1,2;-3,4];
 B=[2,3;4,20];
 mid(#(A,B)); // returns [1.5,2.5;0.5,12]
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>rad</title>
-<para>
-<literal>rad</literal>:returns the radius matrix or vector of an interval matrix or vector.</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>x = rad(t)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>x</term><listitem><para>real vector or matrix</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval vector or matrix</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>The function 
-<literal>rad</literal> returns the radius value of an interval vector or matrix. For a single interval 
-<literal>|x,y|</literal>, the radius value 
-<literal>e</literal>is a positive real mathematically defined as 
-<literal>e = |y-x|/2</literal> [Hansen 03]. This definition, added with the middle value 
-<literal>M</literal> definition (function 
-<literal>mid</literal>) allows to write the interval 
-<literal>|x,y|</literal> as 
-<literal>|x,y| = |M-e,M+e|</literal> (function 
-<literal>mradius</literal>).</para><para>For an interval matrix or vector 
-<literal>t</literal>, 
-<literal>rad</literal> function will return a same size real matrix or vector of the radius of each 
-<literal>t</literal> component.</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>rad</title>
+		<para>
+			<literal>rad</literal>:returns the radius matrix or vector of an interval matrix or vector.</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>x = rad(t)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>x</term>
+				<listitem>
+					<para>real vector or matrix</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval vector or matrix</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>The function 
+					<literal>rad</literal> returns the radius value of an interval vector or matrix. For a single interval 
+					<literal>|x,y|</literal>, the radius value 
+					<literal>e</literal>is a positive real mathematically defined as 
+					<literal>e = |y-x|/2</literal> [Hansen 03]. This definition, added with the middle value 
+					<literal>M</literal> definition (function 
+					<literal>mid</literal>) allows to write the interval 
+					<literal>|x,y|</literal> as 
+					<literal>|x,y| = |M-e,M+e|</literal> (function 
+					<literal>mradius</literal>).</para>
+				<para>For an interval matrix or vector 
+					<literal>t</literal>, 
+					<literal>rad</literal> function will return a same size real matrix or vector of the radius of each 
+					<literal>t</literal> component.</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 t=#(0,2);
 rad(t); // returns 1
@@ -193,23 +457,56 @@ A=[1,2;-3,4];
 B=[2,3;4,20];
 rad(#(A,B)); // returns [0.5,0.5;3.5,8]
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>wid</title>
-<para>
-<literal>wid</literal>:returns the width real matrix or vector of an interval matrix or vector.</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>x = wid(t)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>x</term><listitem><para>real vector or matrix</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval vector or matrix</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>The function 
-<literal>wid</literal> returns the width value of an interval vector or matrix. For a single interval 
-<literal>|x,y|</literal>, the width 
-<literal>l</literal> is a positive real mathematically defined as the absolute value of the difference between the superior bound and the inferioi bound 
-<literal>l = |y-x|</literal> [Hansen 03]. It corresponds too as the double of the interval's radius (function 
-<literal>rad</literal>).For an interval matrix or vector 
-<literal>t</literal>, 
-<literal>wid</literal> function will return a same size real matrix or vector of the width of each 
-<literal>t</literal> component.</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>wid</title>
+		<para>
+			<literal>wid</literal>:returns the width real matrix or vector of an interval matrix or vector.</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>x = wid(t)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>x</term>
+				<listitem>
+					<para>real vector or matrix</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval vector or matrix</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>The function 
+					<literal>wid</literal> returns the width value of an interval vector or matrix. For a single interval 
+					<literal>|x,y|</literal>, the width 
+					<literal>l</literal> is a positive real mathematically defined as the absolute value of the difference between the superior bound and the inferioi bound 
+					<literal>l = |y-x|</literal> [Hansen 03]. It corresponds too as the double of the interval's radius (function 
+					<literal>rad</literal>).For an interval matrix or vector 
+					<literal>t</literal>, 
+					<literal>wid</literal> function will return a same size real matrix or vector of the width of each 
+					<literal>t</literal> component.</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 t=#(0,2);
 wid(t); // returns 2
@@ -218,17 +515,50 @@ A=[1,2;-3,4];
 B=[2,3;4,20];
 wid(#(A,B)); // returns [1,1;7,16]
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>mag</title>
-<para>
-<literal>mag</literal>: returns the magnitude of an interval matrix or vector</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = mag(t)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>real matrix of vector</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>This function returns the magnitude of an interval matrix or vector. The magnitude of an interval is mathematically defined by the maximum of the absolute value of its bounds [Hansen 03]. For an interval matrix 
-<literal>t</literal>, it returns a same size matrix with the magnitude of each component 
-<literal>|t(i,j)|</literal>.</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>mag</title>
+		<para>
+			<literal>mag</literal>: returns the magnitude of an interval matrix or vector</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>y = mag(t)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>y</term>
+				<listitem>
+					<para>real matrix of vector</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval matrix or vector</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>This function returns the magnitude of an interval matrix or vector. The magnitude of an interval is mathematically defined by the maximum of the absolute value of its bounds [Hansen 03]. For an interval matrix 
+					<literal>t</literal>, it returns a same size matrix with the magnitude of each component 
+					<literal>|t(i,j)|</literal>.</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 A=[1,2];
 B=[2,3];
@@ -240,17 +570,50 @@ E = interval(C,B); // E = [|1,2|,|-20,3|]
 r = mag(D) //returns [2,3]
 r = mag(E) //returns [2,20]
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>mig</title>
-<para>
-<literal>mig</literal>: returns the mignitude of an interval matrix or vector</para></refsection>
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>y = mig(t)</synopsis></refsynopsisdiv>
-<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>real matrix of vector</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
-<refsection><title>Description</title><itemizedlist><listitem><para>This function returns the mignitude of an interval matrix or vector. The mignitude of an interval is mathematically defined by the minimum of the absolute value of any real contained in this interval [Hansen 03]. For an interval matrix 
-<literal>t</literal>, it returns a same size matrix with the mignitude of each component 
-<literal>|t(i,j)|</literal>.</para></listitem></itemizedlist></refsection>
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>mig</title>
+		<para>
+			<literal>mig</literal>: returns the mignitude of an interval matrix or vector</para>
+	</refsection>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>y = mig(t)</synopsis>
+	</refsynopsisdiv>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>y</term>
+				<listitem>
+					<para>real matrix of vector</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval matrix or vector</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>This function returns the mignitude of an interval matrix or vector. The mignitude of an interval is mathematically defined by the minimum of the absolute value of any real contained in this interval [Hansen 03]. For an interval matrix 
+					<literal>t</literal>, it returns a same size matrix with the mignitude of each component 
+					<literal>|t(i,j)|</literal>.</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 A=[1,2];
 B=[2,3];
@@ -262,21 +625,59 @@ E = interval(C,B); // E = [|1,2|,|-20,3|]
 r = mig(D) //returns [1,2]
 r = mig(E) //returns [1,0]
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
 
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>t:k
-t:l:k</synopsis></refsynopsisdiv>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>t:k
+t:l:k</synopsis>
+	</refsynopsisdiv>
 
-<refsection><title>Parameters</title><variablelist><varlistentry><term>k</term><listitem><para>integer</para></listitem></varlistentry><varlistentry><term>t</term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term>l</term><listitem><para>integer vector</para></listitem></varlistentry></variablelist></refsection>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>k</term>
+				<listitem>
+					<para>integer</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>t</term>
+				<listitem>
+					<para>interval matrix or vector</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>l</term>
+				<listitem>
+					<para>integer vector</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
 
-<refsection><title>Description</title><itemizedlist><listitem><para>This functionnality allows to bissect any component of an interval matrix or vector. <literal>t:k</literal> will bissect <literal>k</literal> times all the components
-of <literal>t</literal>. The result is stored in a <literal>k</literal> element list.</para><para>It's poosible to choose which <literal>t</literal> component will be bissected by executing <literal>t:l:k</literal>, where <literal>l</literal> is a <literal>t</literal>'s index vector.
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>This functionnality allows to bissect any component of an interval matrix or vector. <literal>t:k</literal> will bissect <literal>k</literal> times all the components
+of <literal>t</literal>. The result is stored in a <literal>k</literal> element list.</para>
+				<para>It's poosible to choose which <literal>t</literal> component will be bissected by executing <literal>t:l:k</literal>, where <literal>l</literal> is a <literal>t</literal>'s index vector.
 In this case, the list returned will contain all the combinations of the <literal>k</literal> bissections for each choosen component; meaning a <literal>k^length(l)</literal> element list
  including the non-bissected components.
-</para></listitem></itemizedlist></refsection>
+				</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
 
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 A=[1,2;-3,-4];
 B=[2,3;-2,-3];
@@ -285,28 +686,55 @@ C = interval(A,B);
 D = C:1:3; // D is a 3 element list with each bissection of C(1) interval
 D = C:2; // D is a 2 element list with each bissection of all C components
 D = C:[1,2,4]:2 // D is a 8 element list with each bissection combination of C(1),C(2) and C(3) intervals
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>intersection</title>
-<para>
-<literal>intersection </literal> : returns the intersection of two intervals
-</para>
-</refsection>
+	<refsection>
+		<title>intersection</title>
+		<para>
+			<literal>intersection </literal> : returns the intersection of two intervals
+		</para>
+	</refsection>
 
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>t = intersection(x,y)</synopsis></refsynopsisdiv>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>t = intersection(x,y)</synopsis>
+	</refsynopsisdiv>
 
-<refsection><title>Parameters</title><variablelist><varlistentry><term>t,x,y</term><listitem><para>interval matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>t,x,y</term>
+				<listitem>
+					<para>interval matrix or vector</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
 
-<refsection><title>Description</title><itemizedlist><listitem><para>This function intersects two interval matrices or vectors. By definition [Moore 66], an intersection of two single intervals is the interval containing all the reals they 
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>This function intersects two interval matrices or vectors. By definition [Moore 66], an intersection of two single intervals is the interval containing all the reals they 
 have in common. This defintion is extended for this function to interval vectors or matices; for two same size intervals matrix or vector <literal>x</literal> and  <literal>y</literal>,
- <literal>t = intersection(x,y)</literal> will return <literal>t</literal> such as each <literal>t</literal>'s components <literal>t(i,j)</literal> is the intersection of <literal>x(i,j)</literal> and
- <literal>y(i,j)</literal>.
-</para><para>
+					<literal>t = intersection(x,y)</literal> will return <literal>t</literal> such as each <literal>t</literal>'s components <literal>t(i,j)</literal> is the intersection of <literal>x(i,j)</literal> and
+					<literal>y(i,j)</literal>.
+				</para>
+				<para>
 In many cases, the intersection of two intervals will return an empty set. In this toolbox's version, such an empty interval is not defined, but it is represented for this 
 function by the interval <literal>|Nan,Nan|</literal>.
-</para></listitem></itemizedlist></refsection>
+				</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
 
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 A=[1,2;-3,-4];
 B=[2,3;-2,-3];
@@ -318,35 +746,75 @@ F = intersection(D,C);
 
 F = intersection(E,C); 
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-<refsection><title>in</title>
-<para>
-<literal>in </literal> : returns a boolean for interval inclusion
-</para>
-</refsection>
+	<refsection>
+		<title>in</title>
+		<para>
+			<literal>in </literal> : returns a boolean for interval inclusion
+		</para>
+	</refsection>
 
-<refsynopsisdiv><title>Calling Sequence</title><synopsis>in(x,y)
-G = in(x,y)</synopsis></refsynopsisdiv>
+	<refsynopsisdiv>
+		<title>Calling Sequence</title>
+		<synopsis>in(x,y)
+G = in(x,y)</synopsis>
+	</refsynopsisdiv>
 
-<refsection><title>Parameters</title><variablelist><varlistentry><term>y</term><listitem><para>interval matrix or vector</para></listitem></varlistentry><varlistentry><term>x</term><listitem><para>interval or real matrix/vector</para></listitem></varlistentry><varlistentry><term>G</term><listitem><para>boolean matrix or vector</para></listitem></varlistentry></variablelist></refsection>
+	<refsection>
+		<title>Parameters</title>
+		<variablelist>
+			<varlistentry>
+				<term>y</term>
+				<listitem>
+					<para>interval matrix or vector</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>x</term>
+				<listitem>
+					<para>interval or real matrix/vector</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term>G</term>
+				<listitem>
+					<para>boolean matrix or vector</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
 
-<refsection><title>Description</title><itemizedlist><listitem><para>This function checks the inclusion of an interval matrix or vector in an other one. 
+	<refsection>
+		<title>Description</title>
+		<itemizedlist>
+			<listitem>
+				<para>This function checks the inclusion of an interval matrix or vector in an other one. 
 By definition [Moore 66], an interval <literal>X = |xi,xs|</literal> is included in the interval <literal> Y = |yi,ys| </literal> if <literal> xi &gt; = yi 
-</literal> and  <literal> xs &lt; = ys </literal> . If such an inclusion is verified, the scilab command <literal>in(X,Y)</literal> returns the boolean true.
+					</literal> and  <literal> xs &lt; = ys </literal> . If such an inclusion is verified, the scilab command <literal>in(X,Y)</literal> returns the boolean true.
  This defintion is extended for this function to interval vectors or matices; for two same size 
 intervals matrix or vector <literal>x</literal> and  <literal>y</literal>, <literal>t = in(x,y)</literal> will check the inclusion of each component <literal>x(i,j)
- </literal> in <literal> y(i,j)</literal>, and return a boolean matrix or vector with <literal>x</literal> and <literal>y</literal> size.
-</para><para>
+					</literal> in <literal> y(i,j)</literal>, and return a boolean matrix or vector with <literal>x</literal> and <literal>y</literal> size.
+				</para>
+				<para>
 It's possible too to check the inclusion of a real in an interval with the same function (meaning check if the real <literal>x</literal> verifies 
-<literal>yi &lt; = x</literal> and <literal>ys &gt; = x</literal> for an inclusion in the interval <literal> Y = |yi,ys| </literal>).
+					<literal>yi &lt; = x</literal> and <literal>ys &gt; = x</literal> for an inclusion in the interval <literal> Y = |yi,ys| </literal>).
  Indeed, the first <literal>in</literal> input can be a real or an interval matrix/vector. 
-</para><para>Finally, an other function has been implemented to check strict inclusion (meaning the interval included has no common bound with the
+				</para>
+				<para>Finally, an other function has been implemented to check strict inclusion (meaning the interval included has no common bound with the
 interval it shall be included in). This function is <literal>Strictin</literal> and has the same functionnalities than <literal>in</literal> (inclusions
  of reals and intervals  matrix or vectors returning a boolean matrix/vector).
-</para></listitem></itemizedlist></refsection>
+				</para>
+			</listitem>
+		</itemizedlist>
+	</refsection>
 
-<refsection><title>Examples</title><programlisting role="example"><![CDATA[
+	<refsection>
+		<title>Examples</title>
+		<programlisting role="example">
+			<![CDATA[
 
 
 in(#(0,1),#(-1,1)) // returns true
@@ -359,28 +827,54 @@ in(0*ones(2,2),C) // returns a 2*2 boolean matrix with false
 in(A,C) // returns a 2*2 boolean matrix with true
 Strictin(A,C) //returns a 2*2 boolean matrix with false
 
-]]></programlisting></refsection>
+]]>
+		</programlisting>
+	</refsection>
 
-  <refsection><title>See Also</title><simplelist type="inline">
-	  <member> <link linkend="interval">interval</link> </member>
-          <member> <link linkend="I4S_Functions">I4S_Functions</link> </member>
-	  <member> <link linkend="I4S_Arith_Op">I4S_Arith_Op</link> </member>
-	  <member> <link linkend="I4S_Arith_Func">I4S_Arith_Func</link> </member>
-  </simplelist></refsection>
+	<refsection>
+		<title>See Also</title>
+		<simplelist type="inline">
+			<member>
+				<link linkend="interval">interval</link>
+			</member>
+			<member>
+				<link linkend="I4S_Functions">I4S_Functions</link>
+			</member>
+			<member>
+				<link linkend="I4S_Arith_Op">I4S_Arith_Op</link>
+			</member>
+			<member>
+				<link linkend="I4S_Arith_Func">I4S_Arith_Func</link>
+			</member>
+		</simplelist>
+	</refsection>
 
-  <refsection><title>Authors</title><variablelist><varlistentry><term>Raphael PEREIRA, David DANEY</term><listitem><para>
-   	<para>COPRIN Project</para>
-    	<para>INRIA Sophia Antipolis</para>  
-    </para></listitem></varlistentry></variablelist></refsection>
+	<refsection>
+		<title>Authors</title>
+		<variablelist>
+			<varlistentry>
+				<term>Raphael PEREIRA, David DANEY</term>
+				<listitem>
+					<para>
+						<para>COPRIN Project</para>
+						<para>INRIA Sophia Antipolis</para>  
+					</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
+	</refsection>
 
-  <refsection><title>Bibliography</title><para>
-    <para> [Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003. </para> 
-   <para> [Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
+	<refsection>
+		<title>Bibliography</title>
+		<para>
+			<para> [Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003. </para> 
+			<para> [Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
     Robust Control and Robotics, Springer-Verlag, 2001.</para>
-   <para> [Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</para>
-   <para> [Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996. </para> 
-   <para> [Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990. </para> 
-   <para> [Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966. </para>
-    </para></refsection>
+			<para> [Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</para>
+			<para> [Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996. </para> 
+			<para> [Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990. </para> 
+			<para> [Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966. </para>
+		</para>
+	</refsection>
 
 </refentry>

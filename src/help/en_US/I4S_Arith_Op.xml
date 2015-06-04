@@ -14,7 +14,7 @@
   <pubdate>10-Feb-2007</pubdate></info>
 
 <refnamediv>
-     <refname> I4S_Arith_Op </refname>
+     <refname>I4S_Arithmetic_Operations</refname>
      <refpurpose>  List all interval arithmetic operations available </refpurpose>
 </refnamediv>
  
