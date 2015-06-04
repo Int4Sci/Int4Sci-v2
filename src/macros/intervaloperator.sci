@@ -131,6 +131,53 @@ function [ m ] = iquart( x, orien )
 
 endfunction
 
+function [ V ] = ivariance( X )
+
+	// Compute Vsup 
+	[Xs,Is] = gsort(mid(X), "g", "i" );
+	X = X(Is);
+
+	n=length(X);
+
+	E = mean(X.sup);
+	M = mean(X.sup.^2);
+	Vsup = M - E.^2; 
+
+	for k=1:n
+	   M = M + ( X(k).inf^2 - X(k).sup^2 )/n;
+	   E = E + ( X(k).inf - X(k).sup )/n;
+	   Vsup = max(Vsup, M - E^2);
+	end
+
+	// Compute Vinf 
+	Xs = gsort([X.inf; X.sup], "g", "i" ); // sorted bounds of X
+	m = imean(X);
+	kmin = find(Xs<=m.inf);
+	kmin = kmin($); 
+	kmax = find(Xs>=m.sup);
+	kmax = kmax(1);
+	//TODO: check non-emptiness of kmin, kmax
+
+	Vprime=zeros(kmax-kmin+1,1); 
+	for k=kmin:kmax
+		I = find(X.inf>=Xs(k+1));
+		J = find(X.sup<=Xs(k));
+		S = sum(X.inf(I)) + sum(X.sup(J));
+		N = length(I)+length(J);    
+		if N~=0
+			r = S/N;
+			S1 = sum((X.inf(I)-r).^2);
+			S2 = sum((X.sup(J)-r).^2);
+			Vprime(k-kmin+1) = (S1+S2)/n; 
+		end
+	end
+
+	Vinf = min(Vprime);
+
+	V = #(Vinf,Vsup);
+
+endfunction
+
 function [ yesno ] = nosubset( X )
 
 	m = repmat(mid(X)',size(X));
