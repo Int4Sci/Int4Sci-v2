@@ -140,6 +140,11 @@ endfunction
 
 function [ V ] = ivariance( X )
 
+	if ~nosubset(X)
+        error('No-subset property is violated for X');
+		return
+    end
+
 	// Compute Vsup 
 	[Xs,Is] = gsort(mid(X), "g", "i" );
 	X = X(Is);
