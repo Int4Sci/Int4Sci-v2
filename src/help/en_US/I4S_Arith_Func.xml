@@ -54,6 +54,9 @@
 			<member>
 				<link linkend="I4S_Arith_Op">I4S_Arith_Op</link>
 			</member>
+			<member>
+				<link linkend="I4S_Stat_Func">I4S_Stat_Func</link>
+			</member>
 		</simplelist>
 	</refsection>
 

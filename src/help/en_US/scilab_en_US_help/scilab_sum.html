@@ -1,59 +1,97 @@
-<html><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>I4S_Arithmetic_Operations</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}" lang="{$lang}">
+  <head{$profile}>
+    <title>I4S_Arithmetic_Operations List all interval arithmetic operations available</title>
     <style type="text/css" media="all">
       @import url("scilab_code.css");
       @import url("xml_code.css");
       @import url("c_code.css");
       @import url("style.css");
     </style>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <!--[if IE]><![endif]><![endif]-->
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
+	 <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
+	 $canonical
+	 <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
+	 -->
   </head>
   <body>
-    <div class="manualnavbar">
-    <table width="100%"><tr>
-      <td width="30%">
-    	<span class="previous"><a href="I4S_Arith_Func.html">&lt;&lt; I4S_Arithmetic_Functions</a></span>
+    <div class="container">
+      <div class="leftpart">
+	<ul class="toc">
+<li class="root"><a href="index.html">Int4Sci</a></li>
+<li class="parent"><a href="section_4a7538c5c5e6eb1bb5ad95b55dcfeeb1.html">Int4Sci</a></li>
+<li><a href="I4S_Arith_Func.html">I4S_Arithmetic_Functions</a></li>
+<li class="list-active"><a href="scilab_sum.html">I4S_Arithmetic_Operations</a></li>
+<li><a href="I4S_Authors.html">I4S_Authors</a></li>
+<li><a href="I4S_Basic_Func.html">I4S_Basic_Functions</a></li>
+<li><a href="I4S_Basic_Tools.html">I4S_Basic_Tools</a></li>
+<li><a href="I4S_Bibliography.html">I4S_Bibliography</a></li>
+<li><a href="I4S_Error.html">I4S_Error</a></li>
+<li><a href="I4S_Functions.html">I4S_Functions</a></li>
+<li><a href="I4S_Poly.html">I4S_Poly</a></li>
+<li><a href="I4S_Stat_Func.html">I4S_Statistic_Functions</a></li>
+<li><a href="I4Slinearsolve.html">I4Slinearsolve</a></li>
+<li><a href="interval.html">interval</a></li>
+</ul>
 
-      </td>
-      <td width="40%" class="center">
-      	<span class="top"><a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a></span>
+      </div>
+      <div class="content">
 
-      </td>
-      <td width="30%" class="next">
-      	<span class="next"><a href="I4S_Authors.html">I4S_Authors &gt;&gt;</a></span>
+	<div class="manualnavbar">
+	  <span class="next">
+	    <span class="next"><a href="I4S_Authors.html">I4S_Authors &gt;&gt;</a></span>
 
-      </td>
-    </tr></table>
-      <hr />
-    </div>
+	  </span>
+	  <span class="prev">
+	    <span class="previous"><a href="I4S_Arith_Func.html">&lt;&lt; I4S_Arithmetic_Functions</a></span>
 
+	  </span>
+	  <hr />
+	</div>
 
+	<div class="info"></div>
 
-    <span class="path"><a href="index.html">Int4Sci</a> &gt;&gt; <a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a> &gt; I4S_Arithmetic_Operations</span>
-
-    <br /><br />
-    <div class="info"></div>
-
-<div class="refnamediv"><h1 class="refname">I4S_Arithmetic_Operations</h1>
-     <p class="refpurpose">List all interval arithmetic operations available</p></div>
- 
-  
-
-<div class="refsection"><h3 class="title">Operations list</h3>
-  <p class="para"><code class="literal">Addition</code></p><p class="para"><code class="literal">Substraction</code></p><p class="para"><code class="literal">Multiplication</code></p><p class="para"><code class="literal">Division</code></p><p class="para"><code class="literal">Power</code></p><p class="para"><code class="literal">Root</code></p><p class="para"><code class="literal">Generalized arithmetic</code></p></div>
+	<div class="refnamediv"><h1 class="refname">I4S_Arithmetic_Operations</h1>
+		<p class="refpurpose">List all interval arithmetic operations available</p></div>
 
 
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> + </span><span class="default">z</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">x,z</span><dd><p class="para">real/interval matrix or vector</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Operations list</h3>
+		<p class="para"><code class="literal">Addition</code></p>
+		<p class="para"><code class="literal">Substraction</code></p>
+		<p class="para"><code class="literal">Multiplication</code></p>
+		<p class="para"><code class="literal">Division</code></p>
+		<p class="para"><code class="literal">Power</code></p>
+		<p class="para"><code class="literal">Root</code></p>
+		<p class="para"><code class="literal">Generalized arithmetic</code></p></div>
 
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This operation allows to add an interval matrix or vector with a same size interval or real matrix/vector. Such an addition is defined 
-([Hansen03], [Moore66]) by an addition of the inferior bounds and an other one of the superior bounds:</p><p class="para"><code class="literal">y = x + z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> gives <code class="literal">y = |xi+zi,xs+zs|</code>.</p><p class="para"><code class="literal">y = x + z</code> with <code class="literal">x</code> real and <code class="literal">z = |zi,zs|</code> gives <code class="literal">y = |x+zi,x+zs|</code>.</p><p class="para">Such an addition is here extended elementwise for same size interval matrices and vectors.</p><p class="para">A Scilab characteristic is the application of basic arithmetic operations between matrices/vectors and single variables 
-(by making the operation between each component of the matrix/vector input and the single varaible). The addition for intervals 
-or for intervals/reals available on Int4Sci can also deal with such operations.</p><p class="para">All these operations are executed by the addition functions for intervals given by the library BIAS [Rump99].</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">+</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> + </span><span class="default">z</span></pre></div></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">x,z</span>
+				<dd><p class="para">real/interval matrix or vector</p></dd></dt></dl></div>
+
+
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This operation allows to add an interval matrix or vector with a same size interval or real matrix/vector. Such an addition is defined 
+					([Hansen03], [Moore66]) by an addition of the inferior bounds and an other one of the superior bounds:</p>
+				<p class="para"><code class="literal">y = x + z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> gives <code class="literal">y = |xi+zi,xs+zs|</code>.</p>
+				<p class="para"><code class="literal">y = x + z</code> with <code class="literal">x</code> real and <code class="literal">z = |zi,zs|</code> gives <code class="literal">y = |x+zi,x+zs|</code>.</p>
+				<p class="para">Such an addition is here extended elementwise for same size interval matrices and vectors.</p>
+				<p class="para">A Scilab characteristic is the application of basic arithmetic operations between matrices/vectors and single variables 
+					(by making the operation between each component of the matrix/vector input and the single varaible). The addition for intervals 
+					or for intervals/reals available on Int4Sci can also deal with such operations.</p>
+				<p class="para">All these operations are executed by the addition functions for intervals given by the library BIAS [Rump99].</p></li></ul></div>
+
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">+</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
 <span class="scilabnumber">9</span> <span class="scilaboperator">+</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">6</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilaboperator">+</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
@@ -66,20 +104,34 @@ or for intervals/reals available on Int4Sci can also deal with such operations.<
 <span class="scilabid">C</span> <span class="scilaboperator">+</span> <span class="scilabnumber">4</span><span class="scilabdefault">;</span>
 
 <span class="scilabid">C</span> <span class="scilaboperator">+</span> <span class="scilabid">D</span><span class="scilabdefault">;</span>
-<span class="scilabid">C</span> <span class="scilaboperator">+</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span> <span class="scilaboperator">+</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span></pre></div></div>
 
 
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> - </span><span class="default">z</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">x,z</span><dd><p class="para">real/interval matrix or vector</p></dd></dt></dl></div>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> - </span><span class="default">z</span></pre></div></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">x,z</span>
+				<dd><p class="para">real/interval matrix or vector</p></dd></dt></dl></div>
 
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">This operation allows to substract an interval matrix or vector to a same size interval or real matrix/vector. Such a substraction is defined 
-([Hansen03], [Moore66]) as the addition with the opposite interval :</p><p class="para"><code class="literal">y = x - z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> is equivalent to  <code class="literal">y = x + (-z)</code> 
-with <code class="literal">- z</code> such as  <code class="literal">-z = |-zs,-zi|</code>.</p><p class="para">Substraction can also be done between intervals and reals :</p><p class="para"><code class="literal">y = x - z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |xi-z,xs-z|</code>.</p><p class="para"><code class="literal">y = x - z</code> with <code class="literal">x</code> real and <code class="literal">z = |zi,zs|</code> gives <code class="literal">y = |x-zi,x-zs|</code>.</p><p class="para">Such a substraction is here extended elementwise for same size interval matrices and vectors.</p><p class="para">The substraction for intervals 
-or for intervals/reals available on Int4Sci can also deal with operations including a single variable and matrix/vector variable.</p><p class="para">All these operations are executed by the addition functions given by the library BIAS [Rump99].</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">This operation allows to substract an interval matrix or vector to a same size interval or real matrix/vector. Such a substraction is defined 
+					([Hansen03], [Moore66]) as the addition with the opposite interval :</p>
+				<p class="para"><code class="literal">y = x - z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> is equivalent to  <code class="literal">y = x + (-z)</code> 
+					with <code class="literal">- z</code> such as  <code class="literal">-z = |-zs,-zi|</code>.</p>
+				<p class="para">Substraction can also be done between intervals and reals :</p>
+				<p class="para"><code class="literal">y = x - z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |xi-z,xs-z|</code>.</p>
+				<p class="para"><code class="literal">y = x - z</code> with <code class="literal">x</code> real and <code class="literal">z = |zi,zs|</code> gives <code class="literal">y = |x-zi,x-zs|</code>.</p>
+				<p class="para">Such a substraction is here extended elementwise for same size interval matrices and vectors.</p>
+				<p class="para">The substraction for intervals 
+					or for intervals/reals available on Int4Sci can also deal with operations including a single variable and matrix/vector variable.</p>
+				<p class="para">All these operations are executed by the addition functions given by the library BIAS [Rump99].</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">-</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">-</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
 <span class="scilabnumber">9</span> <span class="scilaboperator">-</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">6</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilaboperator">-</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
@@ -92,29 +144,44 @@ or for intervals/reals available on Int4Sci can also deal with operations includ
 <span class="scilabid">C</span> <span class="scilaboperator">-</span> <span class="scilabnumber">4</span><span class="scilabdefault">;</span>
 
 <span class="scilabid">C</span> <span class="scilaboperator">-</span> <span class="scilabid">D</span><span class="scilabdefault">;</span>
-<span class="scilabid">C</span> <span class="scilaboperator">-</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span> <span class="scilaboperator">-</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span></pre></div></div>
 
 
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> * </span><span class="default">z</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> * </span><span class="default">z</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .* </span><span class="default">z</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .*. </span><span class="default">z</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">x,z</span><dd><p class="para">real/interval matrix or vector</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">x,z</span>
+				<dd><p class="para">real/interval matrix or vector</p></dd></dt></dl></div>
 
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">A basic multiplication is defined for two single intervals [Moore66], [Hansen03] :</p><p class="para"><code class="literal">y = x * z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> gives  <code class="literal">y = |min(B), max(B)|</code> 
-with <code class="literal">B</code> the set  <code class="literal">B = { xi*zi, xi*zs, xs*zi, xs*zs}</code>.</p><p class="para">An interval can also be multiplicated by a real :</p><p class="para"><code class="literal">y = x * z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |xi*z,xs*z|</code>, which is comutative.</p><p class="para">These operations are the base of the three multiplications implemented on this interface :</p><p class="para">- <code class="literal">*</code> is the matrix/matrix multiplication and the multiplication defined above with single elements. It&#0039;s then possible to multiplicate
- two interval matrices, <code class="literal">A</code> by 
-<code class="literal">B</code> for example ( <code class="literal">A</code> with a number of columns equal to the number of rows of <code class="literal">B</code> ), following the same rules
- than a real matrices multiplication ( scalar product of each row of <code class="literal">A</code> by each column of <code class="literal">B</code>) with interval arithmetic
-operations (addition and multiplication defined above).  <code class="literal">*</code> is available too for interval matrix/vector multiplication and real 
-matrix/interval matrix multiplication (based on the real/interval multiplication defined just above). Finally, a matrix/vector of intervals
- can be multiplicated elementwise by a single interval with <code class="literal">*</code> (and so with intervals and reals).</p><p class="para">- <code class="literal">.*</code> is the elementwise multiplication for two same size interval matrices or vectors. It&#0039;s available too for an interval 
-matrix/vector and a same size real matrix/vector. <code class="literal">.*</code> is equivalent to <code class="literal">*</code> for matrix/vector multiplication with single 
-elements (as for intervals than for reals) and for multiplication defined just above.</p><p class="para">- <code class="literal">.*.</code> is the Kroneker multiplication (see kron function for detailed definition) that is here extended for intervals and
-reals.</p><p class="para">All these operations are executed by the multiplication functions given by the library BIAS [Rump99].</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">A basic multiplication is defined for two single intervals [Moore66], [Hansen03] :</p>
+				<p class="para"><code class="literal">y = x * z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> gives  <code class="literal">y = |min(B), max(B)|</code> 
+					with <code class="literal">B</code> the set  <code class="literal">B = { xi*zi, xi*zs, xs*zi, xs*zs}</code>.</p>
+				<p class="para">An interval can also be multiplicated by a real :</p>
+				<p class="para"><code class="literal">y = x * z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |xi*z,xs*z|</code>, which is comutative.</p>
+				<p class="para">These operations are the base of the three multiplications implemented on this interface :</p>
+				<p class="para">- <code class="literal">*</code> is the matrix/matrix multiplication and the multiplication defined above with single elements. It&#0039;s then possible to multiplicate
+					two interval matrices, <code class="literal">A</code> by 
+					<code class="literal">B</code> for example ( <code class="literal">A</code> with a number of columns equal to the number of rows of <code class="literal">B</code> ), following the same rules
+					than a real matrices multiplication ( scalar product of each row of <code class="literal">A</code> by each column of <code class="literal">B</code>) with interval arithmetic
+					operations (addition and multiplication defined above).  <code class="literal">*</code> is available too for interval matrix/vector multiplication and real 
+					matrix/interval matrix multiplication (based on the real/interval multiplication defined just above). Finally, a matrix/vector of intervals
+					can be multiplicated elementwise by a single interval with <code class="literal">*</code> (and so with intervals and reals).</p>
+				<p class="para">- <code class="literal">.*</code> is the elementwise multiplication for two same size interval matrices or vectors. It&#0039;s available too for an interval 
+					matrix/vector and a same size real matrix/vector. <code class="literal">.*</code> is equivalent to <code class="literal">*</code> for matrix/vector multiplication with single 
+					elements (as for intervals than for reals) and for multiplication defined just above.</p>
+				<p class="para">- <code class="literal">.*.</code> is the Kroneker multiplication (see kron function for detailed definition) that is here extended for intervals and
+					reals.</p>
+				<p class="para">All these operations are executed by the multiplication functions given by the library BIAS [Rump99].</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">*</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">*</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
 <span class="scilabnumber">9</span> <span class="scilaboperator">*</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">6</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilaboperator">*</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
@@ -132,11 +199,12 @@ reals.</p><p class="para">All these operations are executed by the multiplicatio
 
 <span class="scilabid">C</span> <span class="scilaboperator">*</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span> <span class="scilabcomment">// matrix matrix mutiplication for intervals and reals</span>
 <span class="scilabid">C</span> <span class="scilaboperator">.*</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span> <span class="scilabcomment">// elementwise multiplication between reals and intervals</span>
-<span class="scilabid">C</span> <span class="scilaboperator">.*.</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span> <span class="scilabcomment">// Kroneker multiplication between reals and intervals</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span> <span class="scilaboperator">.*.</span> <span class="scilabid">D</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabdefault">;</span> <span class="scilabcomment">// Kroneker multiplication between reals and intervals</span></pre></div></div>
 
 
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span> <span class="default">/</span> <span class="default">v</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">y</span><span class="default"> = </span><span class="default">x</span> <span class="default">/</span> <span class="default">v</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">v</span> <span class="default">/</span> <span class="default">x</span>
 <span class="default">s</span><span class="default"> = </span><span class="default">i</span> <span class="default">/</span> <span class="default">r</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .</span><span class="default">/</span> <span class="default">z</span>
@@ -145,28 +213,57 @@ reals.</p><p class="para">All these operations are executed by the multiplicatio
 <span class="default">s</span><span class="default"> = </span><span class="default">r</span><span class="default"> \ </span><span class="default">i</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .\ </span><span class="default">z</span>
 <span class="default">w</span><span class="default"> = </span><span class="default">listdiv</span><span class="default">(</span><span class="default">v</span><span class="default">,</span><span class="default">u</span><span class="default">)</span></pre></div></div>
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">s, i</span><dd><p class="para">interval square matrix</p></dd></dt><dt><span class="term">r</span><dd><p class="para">real square matrix</p></dd></dt><dt><span class="term">x, z</span><dd><p class="para">real/interval matrix or vector</p></dd></dt><dt><span class="term">v</span><dd><p class="para">single real or interval</p></dd></dt><dt><span class="term">w, u</span><dd><p class="para">single interval</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">s, i</span>
+				<dd><p class="para">interval square matrix</p></dd></dt>
+			<dt><span class="term">r</span>
+				<dd><p class="para">real square matrix</p></dd></dt>
+			<dt><span class="term">x, z</span>
+				<dd><p class="para">real/interval matrix or vector</p></dd></dt>
+			<dt><span class="term">v</span>
+				<dd><p class="para">single real or interval</p></dd></dt>
+			<dt><span class="term">w, u</span>
+				<dd><p class="para">single interval</p></dd></dt></dl></div>
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">A basic division is defined for two single intervals [Moore66], [Hansen03] :</p><p class="para"><code class="literal">y = x / z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> gives  <code class="literal">y = x * 1/z</code> 
-with <code class="literal">1/z</code> such as  <code class="literal">1/z = | 1/zs, 1/zi|</code>. If <code class="literal">zi</code> is zero, <code class="literal">1/zi</code> is assumed to beÂ the infinite 
-value <code class="literal">+inf</code>. In a same way, if <code class="literal">zs</code> is zero, <code class="literal">1/zs</code> is <code class="literal">-inf</code>.</p><p class="para">An interval can also be divided by a real :</p><p class="para"><code class="literal">y = x / z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |xi/z,xs/z|</code>.</p><p class="para">Finaly, a real can be divided by an interval :</p><p class="para"><code class="literal">y = z / x</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |z/xs,z/xi|</code>.</p><p class="para">Such operations for single intervals and reals have mathematical problems when the divider contains or is zero. Different 
-conventions exists to deal with such cases. We have choosen here those :</p><p class="para">- The divsion  by an interval containing zero will return the set of real numbers represented by <code class="literal">|-inf,inf|</code> (Hansen convention
- [Hansen03]).</p><p class="para">- The division of an interval by zero or by the degenerate interval <code class="literal">|0,0|</code> doesn&#0039;t exist (classical mathematic convention) and then
- returns the empty set <code class="literal">|Nan,Nan|</code>.</p><p class="para">- A convention for division by an interval including zero exists too : it gives an union of the division by the positive part and 
-the division by the negative part. The function <code class="literal">listdiv</code> has been implemented to allow such result for single intervals or a real
- divided by an interval. For example, <code class="literal">listdiv(1,#(-a,a))</code> will return the list <code class="literal">|-inf,-1/a| , |1/a,inf|</code>.</p><p class="para">With the two first conventions, we have implemented in this interface operations for interval matrices or vectors :</p><p class="para">- <code class="literal">/</code> : For real square matrices <code class="literal">A</code> and <code class="literal">B</code>, the operation <code class="literal">A/B</code> consists to multiply 
-(matrix/matrix) <code class="literal">A</code> with the inverse matrix of <code class="literal">B</code>. For intervals, the inversion of an interval matrix doesn&#0039;t exist.
- So <code class="literal">/</code> is used to divide the components of an interval matrix or vector by a single interval and divide a single interval
- by the components of an interval matrix or vector. The result is stored in an interval matrix or vector. The same operations are allowed between
-reals and intervals. We can notice that, as a real square matrix can be inversed, the operation <code class="literal">A/B</code>, with <code class="literal">A</code> a square
-interval matrix and <code class="literal">B</code> a same size real matrix, is authorized and is equivalent to <code class="literal">A * B^(-1)</code>.</p><p class="para">- <code class="literal">./</code> : For two same size interval matrices or vectors <code class="literal">A</code> and <code class="literal">B</code>,  <code class="literal">A./B</code> is an elementwise
- division. As allowed by classical Scilab use, this operator can be used with a single interval and an interval matrix/vector, but it&#0039;s here
-equivalent to the use of the <code class="literal">/</code> operator. Here again, we can mix with this operator real and interval values.</p><p class="para">- <code class="literal">\</code> : This operator is comonly used for linear system resolution. In this version, applied to intervals (or intervals and reals 
-between them), this operator is only the &#0034;inverse&#0034; of <code class="literal">/</code> (meaning <code class="literal">A/B</code> is equivalent to <code class="literal">B\A</code>) and keeps then
- the same uses and restrictions than <code class="literal">/</code>.</p><p class="para">- <code class="literal">.\</code> : The operation  <code class="literal">A.\B</code> for intervals or intervals and reals between them is equivalent to <code class="literal">B./A</code>.</p><p class="para">Those operations are of course also working for single intervals and reals, giving the results defined above.  All are executed 
-by the division functions given by the library BIAS [Rump99].</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">A basic division is defined for two single intervals [Moore66], [Hansen03] :</p>
+				<p class="para"><code class="literal">y = x / z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z = |zi,zs|</code> gives  <code class="literal">y = x * 1/z</code> 
+					with <code class="literal">1/z</code> such as  <code class="literal">1/z = | 1/zs, 1/zi|</code>. If <code class="literal">zi</code> is zero, <code class="literal">1/zi</code> is assumed to beÂ the infinite 
+					value <code class="literal">+inf</code>. In a same way, if <code class="literal">zs</code> is zero, <code class="literal">1/zs</code> is <code class="literal">-inf</code>.</p>
+				<p class="para">An interval can also be divided by a real :</p>
+				<p class="para"><code class="literal">y = x / z</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |xi/z,xs/z|</code>.</p>
+				<p class="para">Finaly, a real can be divided by an interval :</p>
+				<p class="para"><code class="literal">y = z / x</code> with <code class="literal">x = |xi,xs|</code> and <code class="literal">z</code> real gives <code class="literal">y = |z/xs,z/xi|</code>.</p>
+				<p class="para">Such operations for single intervals and reals have mathematical problems when the divider contains or is zero. Different 
+					conventions exists to deal with such cases. We have choosen here those :</p>
+				<p class="para">- The divsion  by an interval containing zero will return the set of real numbers represented by <code class="literal">|-inf,inf|</code> (Hansen convention
+					[Hansen03]).</p>
+				<p class="para">- The division of an interval by zero or by the degenerate interval <code class="literal">|0,0|</code> doesn&#0039;t exist (classical mathematic convention) and then
+					returns the empty set <code class="literal">|Nan,Nan|</code>.</p>
+				<p class="para">- A convention for division by an interval including zero exists too : it gives an union of the division by the positive part and 
+					the division by the negative part. The function <code class="literal">listdiv</code> has been implemented to allow such result for single intervals or a real
+					divided by an interval. For example, <code class="literal">listdiv(1,#(-a,a))</code> will return the list <code class="literal">|-inf,-1/a| , |1/a,inf|</code>.</p>
+				<p class="para">With the two first conventions, we have implemented in this interface operations for interval matrices or vectors :</p>
+				<p class="para">- <code class="literal">/</code> : For real square matrices <code class="literal">A</code> and <code class="literal">B</code>, the operation <code class="literal">A/B</code> consists to multiply 
+					(matrix/matrix) <code class="literal">A</code> with the inverse matrix of <code class="literal">B</code>. For intervals, the inversion of an interval matrix doesn&#0039;t exist.
+					So <code class="literal">/</code> is used to divide the components of an interval matrix or vector by a single interval and divide a single interval
+					by the components of an interval matrix or vector. The result is stored in an interval matrix or vector. The same operations are allowed between
+					reals and intervals. We can notice that, as a real square matrix can be inversed, the operation <code class="literal">A/B</code>, with <code class="literal">A</code> a square
+					interval matrix and <code class="literal">B</code> a same size real matrix, is authorized and is equivalent to <code class="literal">A * B^(-1)</code>.</p>
+				<p class="para">- <code class="literal">./</code> : For two same size interval matrices or vectors <code class="literal">A</code> and <code class="literal">B</code>,  <code class="literal">A./B</code> is an elementwise
+					division. As allowed by classical Scilab use, this operator can be used with a single interval and an interval matrix/vector, but it&#0039;s here
+					equivalent to the use of the <code class="literal">/</code> operator. Here again, we can mix with this operator real and interval values.</p>
+				<p class="para">- <code class="literal">\</code> : This operator is comonly used for linear system resolution. In this version, applied to intervals (or intervals and reals 
+					between them), this operator is only the &#0034;inverse&#0034; of <code class="literal">/</code> (meaning <code class="literal">A/B</code> is equivalent to <code class="literal">B\A</code>) and keeps then
+					the same uses and restrictions than <code class="literal">/</code>.</p>
+				<p class="para">- <code class="literal">.\</code> : The operation  <code class="literal">A.\B</code> for intervals or intervals and reals between them is equivalent to <code class="literal">B./A</code>.</p>
+				<p class="para">Those operations are of course also working for single intervals and reals, giving the results defined above.  All are executed 
+					by the division functions given by the library BIAS [Rump99].</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">/</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">/</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
 <span class="scilabnumber">9</span> <span class="scilaboperator">/</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">6</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilaboperator">/</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">listdiv</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
@@ -183,30 +280,50 @@ by the division functions given by the library BIAS [Rump99].</p></li></ul></div
 <span class="scilabid">C</span> <span class="scilaboperator">./</span> <span class="scilabid">D</span><span class="scilabdefault">;</span> <span class="scilabcomment">//elementwise division</span>
 <span class="scilabid">C</span> <span class="scilaboperator">.\</span> <span class="scilabid">D</span><span class="scilabdefault">;</span> <span class="scilabcomment">// equivalent to D ./ C</span>
 
-<span class="scilabid">E</span> <span class="scilaboperator">=</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><a class="scilabcommand" href="scilab://ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// square interval matrix with all components |1,2|</span>
+<span class="scilabid">E</span> <span class="scilaboperator">=</span> <span class="scilabid">#</span><span class="scilabopenclose">(</span><a class="scilabcommand" href="http://help.scilab.org/docs/5.5.2/en_US/ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// square interval matrix with all components |1,2|</span>
 <span class="scilabid">A</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span>  <span class="scilabcomment">// square real matrix</span>
 
-<span class="scilabid">E</span> <span class="scilaboperator">/</span> <span class="scilabid">A</span> <span class="scilabcomment">// equivalent to E * A^(-1)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">E</span> <span class="scilaboperator">/</span> <span class="scilabid">A</span> <span class="scilabcomment">// equivalent to E * A^(-1)</span></pre></div></div>
 
 
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">u</span><span class="default"> = </span><span class="default">v</span><span class="default">^ </span><span class="default">n</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">u</span><span class="default"> = </span><span class="default">v</span><span class="default">^ </span><span class="default">n</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">r</span><span class="default">^ </span><span class="default">n</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">s</span><span class="default">^ </span><span class="default">p</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .^ </span><span class="default">n</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .^ </span><span class="default">p</span></pre></div></div>
 
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y, x</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">r</span><dd><p class="para">interval vector</p></dd></dt><dt><span class="term">u, v</span><dd><p class="para">interval square matrix or vector</p></dd></dt><dt><span class="term">n</span><dd><p class="para">integer</p></dd></dt><dt><span class="term">p</span><dd><p class="para">integer matrix or vector</p></dd></dt><dt><span class="term">s</span><dd><p class="para">single interval</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y, x</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">r</span>
+				<dd><p class="para">interval vector</p></dd></dt>
+			<dt><span class="term">u, v</span>
+				<dd><p class="para">interval square matrix or vector</p></dd></dt>
+			<dt><span class="term">n</span>
+				<dd><p class="para">integer</p></dd></dt>
+			<dt><span class="term">p</span>
+				<dd><p class="para">integer matrix or vector</p></dd></dt>
+			<dt><span class="term">s</span>
+				<dd><p class="para">single interval</p></dd></dt></dl></div>
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">Since the multiplication of intervals is defined, we can then have the definition of the power of a single interval [Hansen03]. It&#0039;s available
- here with the <code class="literal">^</code> and <code class="literal">.^</code> operators.</p><p class="para">These operators are extended for interval matrices and vectors :</p><p class="para">- <code class="literal">^</code> stands for interval square matrices power (with matrix multiplication), elementwise interval vectors power and single interval 
-power. A matrix of powers can be applied to a single interval; it will return a same size matrix with the interval at the power of each element
- of the power matrix.</p><p class="para">- <code class="literal">.^</code> stands for elementwise interval matrices and vectors power (for the power of a single integer or a same size matrix/vector
-integer). For a single interval, it has the same use than <code class="literal">^</code>.</p><p class="para">We notice that the negative power of an interval <code class="literal">A^n with n &lt; 0</code> will return the inverse (with the inverse of an interval defined on the division 
-part above) of <code class="literal">A^(-n)</code>.</p><p class="para">All these operations are executed by the multiplication and single interval power functions given by the library BIAS [Rump99]. For the square 
-matrix power, it&#0039;s based on a decomposition of the power on the base 2, and then calculate the several squares and combine them between each other.</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">Since the multiplication of intervals is defined, we can then have the definition of the power of a single interval [Hansen03]. It&#0039;s available
+					here with the <code class="literal">^</code> and <code class="literal">.^</code> operators.</p>
+				<p class="para">These operators are extended for interval matrices and vectors :</p>
+				<p class="para">- <code class="literal">^</code> stands for interval square matrices power (with matrix multiplication), elementwise interval vectors power and single interval 
+					power. A matrix of powers can be applied to a single interval; it will return a same size matrix with the interval at the power of each element
+					of the power matrix.</p>
+				<p class="para">- <code class="literal">.^</code> stands for elementwise interval matrices and vectors power (for the power of a single integer or a same size matrix/vector
+					integer). For a single interval, it has the same use than <code class="literal">^</code>.</p>
+				<p class="para">We notice that the negative power of an interval <code class="literal">A^n with n &lt; 0</code> will return the inverse (with the inverse of an interval defined on the division 
+					part above) of <code class="literal">A^(-n)</code>.</p>
+				<p class="para">All these operations are executed by the multiplication and single interval power functions given by the library BIAS [Rump99]. For the square 
+					matrix power, it&#0039;s based on a decomposition of the power on the base 2, and then calculate the several squares and combine them between each other.</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">^</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">^</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
 
 <span class="scilabid">A</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
@@ -217,83 +334,119 @@ matrix power, it&#0039;s based on a decomposition of the power on the base 2, an
 <span class="scilabid">C</span> <span class="scilaboperator">^</span> <span class="scilabnumber">4</span> <span class="scilabcomment">// 4th matrix power</span>
 <span class="scilabid">C</span><span class="scilaboperator">^</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// inverse of the 4th matrix power</span>
 <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">)</span> <span class="scilaboperator">^</span> <span class="scilabid">C</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span> <span class="scilabcomment">// returns a 2*2 matrix</span>
-<span class="scilabid">C</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabspecial">:</span><span class="scilabopenclose">)</span><span class="scilaboperator">^</span><span class="scilabnumber">4</span> <span class="scilabcomment">// elemetwise power of the first row of C</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabspecial">:</span><span class="scilabopenclose">)</span><span class="scilaboperator">^</span><span class="scilabnumber">4</span> <span class="scilabcomment">// elemetwise power of the first row of C</span></pre></div></div>
 
 
 
-<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3><div class="synopsis"><pre><span class="default">u</span><span class="default"> = </span><span class="default">v</span><span class="default">^ (1.</span><span class="default">/</span><span class="default">n</span><span class="default">)</span>
+	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
+		<div class="synopsis"><pre><span class="default">u</span><span class="default"> = </span><span class="default">v</span><span class="default">^ (1.</span><span class="default">/</span><span class="default">n</span><span class="default">)</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">s</span><span class="default">^ </span><span class="default">p</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .^ (1.</span><span class="default">/</span><span class="default">n</span><span class="default">)</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">x</span><span class="default"> .^ </span><span class="default">p</span>
 <span class="default">y</span><span class="default"> = </span><span class="default">sqrt</span><span class="default">(</span><span class="default">x</span><span class="default">)</span></pre></div></div>
 
-<div class="refsection"><h3 class="title">Parameters</h3><dl><dt><span class="term">y, x</span><dd><p class="para">interval matrix or vector</p></dd></dt><dt><span class="term">r</span><dd><p class="para">interval vector</p></dd></dt><dt><span class="term">u, v</span><dd><p class="para">interval vector or single interval</p></dd></dt><dt><span class="term">n</span><dd><p class="para">integer</p></dd></dt><dt><span class="term">p</span><dd><p class="para">reals between -1 and 1 matrix or vector</p></dd></dt><dt><span class="term">s</span><dd><p class="para">single interval</p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Parameters</h3>
+		<dl><dt><span class="term">y, x</span>
+				<dd><p class="para">interval matrix or vector</p></dd></dt>
+			<dt><span class="term">r</span>
+				<dd><p class="para">interval vector</p></dd></dt>
+			<dt><span class="term">u, v</span>
+				<dd><p class="para">interval vector or single interval</p></dd></dt>
+			<dt><span class="term">n</span>
+				<dd><p class="para">integer</p></dd></dt>
+			<dt><span class="term">p</span>
+				<dd><p class="para">reals between -1 and 1 matrix or vector</p></dd></dt>
+			<dt><span class="term">s</span>
+				<dd><p class="para">single interval</p></dd></dt></dl></div>
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">With the same syntaxe, uses and restrictions of the power functions <code class="literal">.^</code> defined in the part just above, we can calculate the nth roots by only
-putting 1./n in the power parts of the expressions. It only deals with the positive part of the interval matrix/vector components. If an interval matrix/vectior component
- is negative, an input problem error will be returned. For the use of <code class="literal">A.^n</code> with <code class="literal">A</code> and <code class="literal">n</code> with the same sizes, <code class="literal">n</code>
-can have components for root and power calculations. For root calculation, <code class="literal">^</code> will only be useful for interval vectors (returning elemntwise roots) and
-single intervals.</p><p class="para">Moreover, a function <code class="literal">sqrt</code> has been implemented to calculate the elementwise square roots of an interval vector or matrix. All these operations are executed 
-by the root functions given by the library BIAS [Rump99].</p></li></ul></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">With the same syntaxe, uses and restrictions of the power functions <code class="literal">.^</code> defined in the part just above, we can calculate the nth roots by only
+					putting 1./n in the power parts of the expressions. It only deals with the positive part of the interval matrix/vector components. If an interval matrix/vectior component
+					is negative, an input problem error will be returned. For the use of <code class="literal">A.^n</code> with <code class="literal">A</code> and <code class="literal">n</code> with the same sizes, <code class="literal">n</code>
+					can have components for root and power calculations. For root calculation, <code class="literal">^</code> will only be useful for interval vectors (returning elemntwise roots) and
+					single intervals.</p>
+				<p class="para">Moreover, a function <code class="literal">sqrt</code> has been implemented to calculate the elementwise square roots of an interval vector or matrix. All these operations are executed 
+					by the root functions given by the library BIAS [Rump99].</p></li></ul></div>
 
-<div class="refsection"><h3 class="title">Examples</h3><div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">^</span> <span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilaboperator">/.</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+	<div class="refsection"><h3 class="title">Examples</h3>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span> <span class="scilaboperator">^</span> <span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilaboperator">/.</span><span class="scilabnumber">3</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
 <span class="scilabid">A</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
 <span class="scilabid">C</span> <span class="scilaboperator">.^</span> <span class="scilabopenclose">(</span><span class="scilabnumber">1.</span><span class="scilaboperator">/</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// the square root of each element is calculated</span>
-<a class="scilabcommand" href="scilab://sqrt">sqrt</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//equivalent to the line above</span>
+<a class="scilabcommand" href="http://help.scilab.org/docs/5.5.2/en_US/sqrt">sqrt</a><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//equivalent to the line above</span>
 <span class="scilabid">C</span> <span class="scilaboperator">.^</span> <span class="scilabopenclose">(</span><span class="scilabnumber">1</span> <span class="scilaboperator">./</span><span class="scilabid">C</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// C.inf is the root matrix </span>
 
 <span class="scilabid">C</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabspecial">:</span><span class="scilabopenclose">)</span><span class="scilaboperator">^</span><span class="scilabopenclose">(</span><span class="scilabnumber">1.</span><span class="scilaboperator">/</span><span class="scilabnumber">5</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// elemntwise 5th root</span>
 
 <span class="scilabid">n</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">0</span><span class="scilabdefault">;</span><span class="scilabnumber">1.</span><span class="scilaboperator">/</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">1.</span><span class="scilaboperator">/</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 
-<span class="scilabid">C</span><span class="scilaboperator">.^</span><span class="scilabid">n</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span><span class="scilaboperator">.^</span><span class="scilabid">n</span><span class="scilabdefault">;</span></pre></div></div>
 
 
 
-<div class="refsection"><h3 class="title">Description</h3><ul class="itemizedlist"><li><p class="para">An other arithmetic for intervals exists : the generalized arithmetic. This one has special mathematic properties including defining a group for the
- addition (meaning that <code class="literal">X + opposite(X) =0</code> for <code class="literal">X</code> a generalized interval and with the operation <code class="literal">opposite</code> consisting on inverting
- the bounds ). Such an arithmetic is not available yet and operations with such intervals (defined with the component <code class="literal">arith</code> of the interval structure set
-as <code class="literal">&#0034;generalized&#0034;</code>, see <a href="interval.html" class="link">interval</a> for more details) are blocked with the flag <code class="literal">%I4S_arith</code>.</p></li></ul></div>
- <div class="refsection"><h3 class="title">See Also</h3><ul class="itemizedlist"><li class="member"><a href="interval.html" class="link">interval</a></li>
-          <li class="member"><a href="I4S_Functions.html" class="link">I4S_Functions</a></li>
-	  <li class="member"><a href="I4S_Basic_Func.html" class="link">I4S_Basic_Func</a></li>
-	  <li class="member"><a href="I4S_Arith_Func.html" class="link">I4S_Arith_Func</a></li></ul></div>
+	<div class="refsection"><h3 class="title">Description</h3>
+		<ul class="itemizedlist"><li><p class="para">An other arithmetic for intervals exists : the generalized arithmetic. This one has special mathematic properties including defining a group for the
+					addition (meaning that <code class="literal">X + opposite(X) =0</code> for <code class="literal">X</code> a generalized interval and with the operation <code class="literal">opposite</code> consisting on inverting
+					the bounds ). Such an arithmetic is not available yet and operations with such intervals (defined with the component <code class="literal">arith</code> of the interval structure set
+					as <code class="literal">&#0034;generalized&#0034;</code>, see <a href="interval.html" class="link">interval</a> for more details) are blocked with the flag <code class="literal">%I4S_arith</code>.</p></li></ul></div>
+	<div class="refsection"><h3 class="title">See Also</h3>
+		<ul class="itemizedlist"><li class="member"><a href="interval.html" class="link">interval</a></li>
+			<li class="member"><a href="I4S_Functions.html" class="link">I4S_Functions</a></li>
+			<li class="member"><a href="I4S_Basic_Func.html" class="link">I4S_Basic_Func</a></li>
+			<li class="member"><a href="I4S_Arith_Func.html" class="link">I4S_Arith_Func</a></li>
+			<li class="member"><a href="I4S_Stat_Func.html" class="link">I4S_Stat_Func</a></li></ul></div>
 
 
-  <div class="refsection"><h3 class="title">Authors</h3><dl><dt><span class="term">Raphael PEREIRA, David DANEY</span><dd><p class="para"><p class="para">COPRIN Project</p>
-	<p class="para">INRIA Sophia Antipolis</p></p></dd></dt></dl></div>
+	<div class="refsection"><h3 class="title">Authors</h3>
+		<dl><dt><span class="term">Raphael PEREIRA, David DANEY</span>
+				<dd><p class="para"><p class="para">COPRIN Project</p>
+						<p class="para">INRIA Sophia Antipolis</p></p></dd></dt></dl></div>
 
-  <div class="refsection"><h3 class="title">Bibliography</h3><p class="para"><p class="para">[Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003.</p> 
-   <p class="para">[Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
-    Robust Control and Robotics, Springer-Verlag, 2001.</p>
-   <p class="para">[Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</p>
-   <p class="para">[Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996.</p> 
-   <p class="para">[Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990.</p> 
-   <p class="para">[Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966.</p></p></div>
-    <br />
+	<div class="refsection"><h3 class="title">Bibliography</h3>
+		<p class="para"><p class="para">[Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003.</p> 
+			<p class="para">[Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
+				Robust Control and Robotics, Springer-Verlag, 2001.</p>
+			<p class="para">[Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</p>
+			<p class="para">[Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996.</p> 
+			<p class="para">[Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990.</p> 
+			<p class="para">[Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966.</p></p></div>
 
-    <div class="manualnavbar">
-    <table width="100%">
-    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
-<tr>
-      <td width="30%">
-    	<span class="previous"><a href="I4S_Arith_Func.html">&lt;&lt; I4S_Arithmetic_Functions</a></span>
+	<div class="manualnavbar">
+	  <span class="next">
+	    <span class="next"><a href="I4S_Authors.html">I4S_Authors &gt;&gt;</a></span>
 
-      </td>
-      <td width="40%" class="center">
-      	<span class="top"><a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a></span>
+	  </span>
+	  <span class="prev">
+	    <span class="previous"><a href="I4S_Arith_Func.html">&lt;&lt; I4S_Arithmetic_Functions</a></span>
 
-      </td>
-      <td width="30%" class="next">
-      	<span class="next"><a href="I4S_Authors.html">I4S_Authors &gt;&gt;</a></span>
+	  </span>
+	  <hr />
+	</div>
 
-      </td>
-    </tr></table>
-      <hr />
+	<div id="footnav">
+	  <span class="version">scilab-5.5.2</span>
+
+	</div>
+
+	<div id="pagefooter">
+	  <div id="pagefooterleft">
+	    <a href="http://www.scilab.org/">Scilab Enterprises</a><br />
+	    Copyright (c) 2011-2014 (Scilab Enterprises)<br />
+	    Copyright (c) 1989-2012 (INRIA)<br />
+	    Copyright (c) 1989-2007 (ENPC)<br />
+	    with <a href="https://www.scilab.org/development/contribute/contributors">contributors</a>
+	  </div>
+
+	  <div id="pagefooterright">
+	    Last updated:<br /><span class="generationdate">Wed Jun 17 02:54:14 NOVT 2015</span>
+
+	    <br /><br /><br />
+	  </div>
+	</div>
+      </div>
     </div>
   </body>
 </html>

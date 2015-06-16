@@ -1,38 +1,58 @@
-<html><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>I4S_Basic_Functions</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}" lang="{$lang}">
+  <head{$profile}>
+    <title>I4S_Basic_Functions Lists all basic functions of Int4Sci for the manipulation of intervals</title>
     <style type="text/css" media="all">
       @import url("scilab_code.css");
       @import url("xml_code.css");
       @import url("c_code.css");
       @import url("style.css");
     </style>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <!--[if IE]><![endif]><![endif]-->
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
+	 <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
+	 $canonical
+	 <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
+	 -->
   </head>
   <body>
-    <div class="manualnavbar">
-    <table width="100%"><tr>
-      <td width="30%">
-    	<span class="previous"><a href="I4S_Authors.html">&lt;&lt; I4S_Authors</a></span>
+    <div class="container">
+      <div class="leftpart">
+	<ul class="toc">
+<li class="root"><a href="index.html">Int4Sci</a></li>
+<li class="parent"><a href="section_4a7538c5c5e6eb1bb5ad95b55dcfeeb1.html">Int4Sci</a></li>
+<li><a href="I4S_Arith_Func.html">I4S_Arithmetic_Functions</a></li>
+<li><a href="scilab_sum.html">I4S_Arithmetic_Operations</a></li>
+<li><a href="I4S_Authors.html">I4S_Authors</a></li>
+<li class="list-active"><a href="I4S_Basic_Func.html">I4S_Basic_Functions</a></li>
+<li><a href="I4S_Basic_Tools.html">I4S_Basic_Tools</a></li>
+<li><a href="I4S_Bibliography.html">I4S_Bibliography</a></li>
+<li><a href="I4S_Error.html">I4S_Error</a></li>
+<li><a href="I4S_Functions.html">I4S_Functions</a></li>
+<li><a href="I4S_Poly.html">I4S_Poly</a></li>
+<li><a href="I4S_Stat_Func.html">I4S_Statistic_Functions</a></li>
+<li><a href="I4Slinearsolve.html">I4Slinearsolve</a></li>
+<li><a href="interval.html">interval</a></li>
+</ul>
 
-      </td>
-      <td width="40%" class="center">
-      	<span class="top"><a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a></span>
+      </div>
+      <div class="content">
 
-      </td>
-      <td width="30%" class="next">
-      	<span class="next"><a href="I4S_Basic_Tools.html">I4S_Basic_Tools &gt;&gt;</a></span>
+	<div class="manualnavbar">
+	  <span class="next">
+	    <span class="next"><a href="I4S_Basic_Tools.html">I4S_Basic_Tools &gt;&gt;</a></span>
 
-      </td>
-    </tr></table>
-      <hr />
-    </div>
+	  </span>
+	  <span class="prev">
+	    <span class="previous"><a href="I4S_Authors.html">&lt;&lt; I4S_Authors</a></span>
 
+	  </span>
+	  <hr />
+	</div>
 
-
-    <span class="path"><a href="index.html">Int4Sci</a> &gt;&gt; <a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a> &gt; I4S_Basic_Functions</span>
-
-    <br /><br />
-    <div class="info"></div>
+	<div class="info"></div>
 	<div class="refnamediv"><h1 class="refname">I4S_Basic_Functions</h1>
 		<p class="refpurpose">Lists all basic functions of Int4Sci for the manipulation of intervals</p></div>
 
@@ -67,7 +87,7 @@
 					<code class="literal">y</code>. The component <code class="literal">t(i,j)</code> of <code class="literal">t</code> is printed <code class="literal">|x(i,j),y(i,j)|</code>. Mathematicaly, it represents any real included in the interval
 					<code class="literal">|x(i,j),y(i,j)|</code> [Hansen 03][Moore66].</p>
 				<p class="para">The notation <code class="literal">interval(x)</code> is equivalent to <code class="literal">interval(x,x)</code>. Such an interval <code class="literal">|x,x|</code> is called a degenerate interval [Hansen 03].
-If <code class="literal">x</code> or  <code class="literal">y</code> are single reals, it&#0039;s assumed that the lower or upper bound is constant for each <code class="literal">t</code> component.</p>
+					If <code class="literal">x</code> or  <code class="literal">y</code> are single reals, it&#0039;s assumed that the lower or upper bound is constant for each <code class="literal">t</code> component.</p>
 				<p class="para"><code class="literal">t</code> is stored as a &#0034;mlist&#0034; named &#0034;InterM&#0034;. <code class="literal">t</code> elements are :
 
 					<dl><dt><span class="term">t.dims</span>
@@ -82,13 +102,13 @@ If <code class="literal">x</code> or  <code class="literal">y</code> are single 
 							<dd><p class="para">returns the rounding precision mode.</p></dd></dt></dl></p></li></ul></div>
 
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
             
 <span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// degenerate interval matrix</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// degenerate interval matrix</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">#</h3>
 		<p class="para"><code class="literal">#</code>:Creation of an interval vector or matrix with its inferior and superior bounds</p></div>
@@ -104,12 +124,12 @@ If <code class="literal">x</code> or  <code class="literal">y</code> are single 
 					<code class="literal">#</code> is a shortcut equivalent to the function 
 					<code class="literal">interval</code>.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
 <span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">inf , sup</h3>
 		<p class="para"><code class="literal">inf</code> and 
@@ -127,11 +147,11 @@ If <code class="literal">x</code> or  <code class="literal">y</code> are single 
 					<code class="literal">inf</code> returns the inferior bound matrix or vector of an interval matrix or vector. In a same way, 
 					<code class="literal">sup</code> returns the superior bound matrix or vector.</p>
 				<p class="para">Warning : for direct allocations on the bounds, <code class="literal">inf</code> and <code class="literal">sup</code> can&#0039;t be used. You&#0039;d better 
-use the elements of the interval structure (see <a href="interval.html" class="link">interval</a>) <code class="literal">.inf</code> and <code class="literal">.sup</code>. 
-For example, for an interval matrix <code class="literal">a</code>, a direct allocation of the inferior bound will be written with <code class="literal">a.inf = M</code> 
-with M a real matrix with the same size than <code class="literal">a</code>.</p></li></ul></div>
+					use the elements of the interval structure (see <a href="interval.html" class="link">interval</a>) <code class="literal">.inf</code> and <code class="literal">.sup</code>. 
+					For example, for an interval matrix <code class="literal">a</code>, a direct allocation of the inferior bound will be written with <code class="literal">a.inf = M</code> 
+					with M a real matrix with the same size than <code class="literal">a</code>.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// inf and sup use</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabcomment">// inf and sup use</span>
 <span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">inf</span><span class="scilabopenclose">(</span><span class="scilabid">t</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">//returns 1</span>
 <span class="scilabid">sup</span><span class="scilabopenclose">(</span><span class="scilabid">t</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">//returns 2</span>
@@ -146,7 +166,7 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 
 <span class="scilabid">C</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span> <span class="scilabcomment">// Same C</span><span class="scilabcomment">&#0039;</span><span class="scilabcomment">s size matrix for inferior bound</span>
 <span class="scilabid">C</span><span class="scilaboperator">.</span><span class="scilabfield">sup</span><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span> <span class="scilaboperator">=</span> <span class="scilabnumber">20</span> <span class="scilabcomment">// Change the superior bound of the first element of C</span>
-<span class="scilabid">C</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabopenclose">(</span><span class="scilabspecial">:</span><span class="scilabopenclose">)</span> <span class="scilaboperator">=</span> <span class="scilabnumber">0</span> <span class="scilabcomment">// Set the inferior bound to 0</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">C</span><span class="scilaboperator">.</span><span class="scilabfield">inf</span><span class="scilabopenclose">(</span><span class="scilabspecial">:</span><span class="scilabopenclose">)</span> <span class="scilaboperator">=</span> <span class="scilabnumber">0</span> <span class="scilabcomment">// Set the inferior bound to 0</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">mradius</h3>
 		<p class="para"><code class="literal">mradius</code>:Creation of an interval vector or matrix with its middle value and its radius</p></div>
@@ -172,7 +192,7 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 				<p class="para">This definition is extended for this function to a real or interval middle value matrix 
 					<code class="literal">x</code> and a same size real radius matrix or a single real radius.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">mradius</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabcomment">//returns the |-1,1| interval</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">mradius</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabcomment">//returns the |-1,1| interval</span>
 <span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">mradius</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span><span class="scilabcomment">//returns the |-2,2| interval</span>
 
 <span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
@@ -180,7 +200,7 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 <span class="scilabid">mradius</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">mradius</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">B</span><span class="scilabdefault">,</span><span class="scilabid">A</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabid">mradius</span><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">mradius</span><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></div></div>
 
 
 	<div class="refsection"><h3 class="title">mid</h3>
@@ -200,12 +220,12 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 					<code class="literal">t</code>, this function will return a same size real matrix or vector of the middle value of each 
 					<code class="literal">t</code> component.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">mid</span><span class="scilabopenclose">(</span><span class="scilabid">t</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns 1</span>
 
 <span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">20</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
-<span class="scilabid">mid</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns [1.5,2.5;0.5,12]</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">mid</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns [1.5,2.5;0.5,12]</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">rad</h3>
 		<p class="para"><code class="literal">rad</code>:returns the radius matrix or vector of an interval matrix or vector.</p></div>
@@ -232,12 +252,12 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 					<code class="literal">rad</code> function will return a same size real matrix or vector of the radius of each 
 					<code class="literal">t</code> component.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">rad</span><span class="scilabopenclose">(</span><span class="scilabid">t</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns 1</span>
 
 <span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">20</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
-<span class="scilabid">rad</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns [0.5,0.5;3.5,8]</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">rad</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns [0.5,0.5;3.5,8]</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">wid</h3>
 		<p class="para"><code class="literal">wid</code>:returns the width real matrix or vector of an interval matrix or vector.</p></div>
@@ -259,12 +279,12 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 					<code class="literal">wid</code> function will return a same size real matrix or vector of the width of each 
 					<code class="literal">t</code> component.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">t</span><span class="scilaboperator">=</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 <span class="scilabid">wid</span><span class="scilabopenclose">(</span><span class="scilabid">t</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns 2</span>
 
 <span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">20</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
-<span class="scilabid">wid</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns [1,1;7,16]</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">wid</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// returns [1,1;7,16]</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">mag</h3>
 		<p class="para"><code class="literal">mag</code>: returns the magnitude of an interval matrix or vector</p></div>
@@ -280,14 +300,14 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 					<code class="literal">t</code>, it returns a same size matrix with the magnitude of each component 
 					<code class="literal">|t(i,j)|</code>.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">20</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D = [|1,2|,|2,3|]</span>
 <span class="scilabid">E</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// E = [|1,2|,|-20,3|]</span>
 
 <span class="scilabid">r</span> <span class="scilaboperator">=</span> <span class="scilabid">mag</span><span class="scilabopenclose">(</span><span class="scilabid">D</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns [2,3]</span>
-<span class="scilabid">r</span> <span class="scilaboperator">=</span> <span class="scilabid">mag</span><span class="scilabopenclose">(</span><span class="scilabid">E</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns [2,20]</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">r</span> <span class="scilaboperator">=</span> <span class="scilabid">mag</span><span class="scilabopenclose">(</span><span class="scilabid">E</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns [2,20]</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">mig</h3>
 		<p class="para"><code class="literal">mig</code>: returns the mignitude of an interval matrix or vector</p></div>
@@ -303,14 +323,14 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 					<code class="literal">t</code>, it returns a same size matrix with the mignitude of each component 
 					<code class="literal">|t(i,j)|</code>.</p></li></ul></div>
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">20</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D = [|1,2|,|2,3|]</span>
 <span class="scilabid">E</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">C</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// E = [|1,2|,|-20,3|]</span>
 
 <span class="scilabid">r</span> <span class="scilaboperator">=</span> <span class="scilabid">mig</span><span class="scilabopenclose">(</span><span class="scilabid">D</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns [1,2]</span>
-<span class="scilabid">r</span> <span class="scilaboperator">=</span> <span class="scilabid">mig</span><span class="scilabopenclose">(</span><span class="scilabid">E</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns [1,0]</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">r</span> <span class="scilaboperator">=</span> <span class="scilabid">mig</span><span class="scilabopenclose">(</span><span class="scilabid">E</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns [1,0]</span></pre></div></div>
 
 
 	<div class="refsynopsisdiv"><h3 class="title">Calling Sequence</h3>
@@ -327,19 +347,19 @@ with M a real matrix with the same size than <code class="literal">a</code>.</p>
 
 	<div class="refsection"><h3 class="title">Description</h3>
 		<ul class="itemizedlist"><li><p class="para">This functionnality allows to bissect any component of an interval matrix or vector. <code class="literal">t:k</code> will bissect <code class="literal">k</code> times all the components
-of <code class="literal">t</code>. The result is stored in a <code class="literal">k</code> element list.</p>
+					of <code class="literal">t</code>. The result is stored in a <code class="literal">k</code> element list.</p>
 				<p class="para">It&#0039;s poosible to choose which <code class="literal">t</code> component will be bissected by executing <code class="literal">t:l:k</code>, where <code class="literal">l</code> is a <code class="literal">t</code>&#0039;s index vector.
-In this case, the list returned will contain all the combinations of the <code class="literal">k</code> bissections for each choosen component; meaning a <code class="literal">k^length(l)</code> element list
- including the non-bissected components.</p></li></ul></div>
+					In this case, the list returned will contain all the combinations of the <code class="literal">k</code> bissections for each choosen component; meaning a <code class="literal">k^length(l)</code> element list
+					including the non-bissected components.</p></li></ul></div>
 
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> 
 
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">C</span><span class="scilabspecial">:</span><span class="scilabnumber">1</span><span class="scilabspecial">:</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is a 3 element list with each bissection of C(1) interval</span>
 <span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">C</span><span class="scilabspecial">:</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is a 2 element list with each bissection of all C components</span>
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">C</span><span class="scilabspecial">:</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabspecial">:</span><span class="scilabnumber">2</span> <span class="scilabcomment">// D is a 8 element list with each bissection combination of C(1),C(2) and C(3) intervals</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">C</span><span class="scilabspecial">:</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabspecial">:</span><span class="scilabnumber">2</span> <span class="scilabcomment">// D is a 8 element list with each bissection combination of C(1),C(2) and C(3) intervals</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">intersection</h3>
 		<p class="para"><code class="literal">intersection</code> : returns the intersection of two intervals</p></div>
@@ -353,22 +373,22 @@ In this case, the list returned will contain all the combinations of the <code c
 
 	<div class="refsection"><h3 class="title">Description</h3>
 		<ul class="itemizedlist"><li><p class="para">This function intersects two interval matrices or vectors. By definition [Moore 66], an intersection of two single intervals is the interval containing all the reals they 
-have in common. This defintion is extended for this function to interval vectors or matices; for two same size intervals matrix or vector <code class="literal">x</code> and  <code class="literal">y</code>,
+					have in common. This defintion is extended for this function to interval vectors or matices; for two same size intervals matrix or vector <code class="literal">x</code> and  <code class="literal">y</code>,
 					<code class="literal">t = intersection(x,y)</code> will return <code class="literal">t</code> such as each <code class="literal">t</code>&#0039;s components <code class="literal">t(i,j)</code> is the intersection of <code class="literal">x(i,j)</code> and
 					<code class="literal">y(i,j)</code>.</p>
 				<p class="para">In many cases, the intersection of two intervals will return an empty set. In this toolbox&#0039;s version, such an empty interval is not defined, but it is represented for this 
-function by the interval <code class="literal">|Nan,Nan|</code>.</p></li></ul></div>
+					function by the interval <code class="literal">|Nan,Nan|</code>.</p></li></ul></div>
 
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilaboperator">*</span><a class="scilabcommand" href="scilab://ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><a class="scilabcommand" href="scilab://ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is a 2*2 interval matrix with |-3,2|</span>
-<span class="scilabid">E</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><a class="scilabcommand" href="scilab://ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><a class="scilabcommand" href="scilab://ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// E is a 2*2 interval matrix with |-1,1|</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilaboperator">*</span><a class="scilabcommand" href="http://help.scilab.org/docs/5.5.2/en_US/ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilaboperator">*</span><a class="scilabcommand" href="http://help.scilab.org/docs/5.5.2/en_US/ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// D is a 2*2 interval matrix with |-3,2|</span>
+<span class="scilabid">E</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><a class="scilabcommand" href="http://help.scilab.org/docs/5.5.2/en_US/ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><a class="scilabcommand" href="http://help.scilab.org/docs/5.5.2/en_US/ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span> <span class="scilabcomment">// E is a 2*2 interval matrix with |-1,1|</span>
 
 <span class="scilabid">F</span> <span class="scilaboperator">=</span> <span class="scilabid">intersection</span><span class="scilabopenclose">(</span><span class="scilabid">D</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
 
-<span class="scilabid">F</span> <span class="scilaboperator">=</span> <span class="scilabid">intersection</span><span class="scilabopenclose">(</span><span class="scilabid">E</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">F</span> <span class="scilaboperator">=</span> <span class="scilabid">intersection</span><span class="scilabopenclose">(</span><span class="scilabid">E</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">in</h3>
 		<p class="para"><code class="literal">in</code> : returns a boolean for interval inclusion</p></div>
@@ -387,32 +407,33 @@ function by the interval <code class="literal">|Nan,Nan|</code>.</p></li></ul></
 
 	<div class="refsection"><h3 class="title">Description</h3>
 		<ul class="itemizedlist"><li><p class="para">This function checks the inclusion of an interval matrix or vector in an other one. 
-By definition [Moore 66], an interval <code class="literal">X = |xi,xs|</code> is included in the interval <code class="literal">Y = |yi,ys|</code> if <code class="literal">xi &gt; = yi</code> and  <code class="literal">xs &lt; = ys</code> . If such an inclusion is verified, the scilab command <code class="literal">in(X,Y)</code> returns the boolean true.
- This defintion is extended for this function to interval vectors or matices; for two same size 
-intervals matrix or vector <code class="literal">x</code> and  <code class="literal">y</code>, <code class="literal">t = in(x,y)</code> will check the inclusion of each component <code class="literal">x(i,j)</code> in <code class="literal">y(i,j)</code>, and return a boolean matrix or vector with <code class="literal">x</code> and <code class="literal">y</code> size.</p>
+					By definition [Moore 66], an interval <code class="literal">X = |xi,xs|</code> is included in the interval <code class="literal">Y = |yi,ys|</code> if <code class="literal">xi &gt; = yi</code> and  <code class="literal">xs &lt; = ys</code> . If such an inclusion is verified, the scilab command <code class="literal">in(X,Y)</code> returns the boolean true.
+					This defintion is extended for this function to interval vectors or matices; for two same size 
+					intervals matrix or vector <code class="literal">x</code> and  <code class="literal">y</code>, <code class="literal">t = in(x,y)</code> will check the inclusion of each component <code class="literal">x(i,j)</code> in <code class="literal">y(i,j)</code>, and return a boolean matrix or vector with <code class="literal">x</code> and <code class="literal">y</code> size.</p>
 				<p class="para">It&#0039;s possible too to check the inclusion of a real in an interval with the same function (meaning check if the real <code class="literal">x</code> verifies 
 					<code class="literal">yi &lt; = x</code> and <code class="literal">ys &gt; = x</code> for an inclusion in the interval <code class="literal">Y = |yi,ys|</code>).
- Indeed, the first <code class="literal">in</code> input can be a real or an interval matrix/vector.</p>
+					Indeed, the first <code class="literal">in</code> input can be a real or an interval matrix/vector.</p>
 				<p class="para">Finally, an other function has been implemented to check strict inclusion (meaning the interval included has no common bound with the
-interval it shall be included in). This function is <code class="literal">Strictin</code> and has the same functionnalities than <code class="literal">in</code> (inclusions
- of reals and intervals  matrix or vectors returning a boolean matrix/vector).</p></li></ul></div>
+					interval it shall be included in). This function is <code class="literal">Strictin</code> and has the same functionnalities than <code class="literal">in</code> (inclusions
+					of reals and intervals  matrix or vectors returning a boolean matrix/vector).</p></li></ul></div>
 
 	<div class="refsection"><h3 class="title">Examples</h3>
-		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">in</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// returns true</span>
+		<div class="programlisting"><pre class="scilabcode"><span class="scilabid">in</span><span class="scilabopenclose">(</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// returns true</span>
 <span class="scilabid">in</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabid">#</span><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// returns true</span>
 
 <span class="scilabid">A</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">B</span><span class="scilaboperator">=</span><span class="scilabopenclose">[</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">;</span><span class="scilaboperator">-</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilaboperator">-</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
 <span class="scilabid">C</span> <span class="scilaboperator">=</span> <span class="scilabid">interval</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">B</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
-<span class="scilabid">in</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilaboperator">*</span><a class="scilabcommand" href="scilab://ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// returns a 2*2 boolean matrix with false</span>
+<span class="scilabid">in</span><span class="scilabopenclose">(</span><span class="scilabnumber">0</span><span class="scilaboperator">*</span><a class="scilabcommand" href="http://help.scilab.org/docs/5.5.2/en_US/ones">ones</a><span class="scilabopenclose">(</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// returns a 2*2 boolean matrix with false</span>
 <span class="scilabid">in</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span> <span class="scilabcomment">// returns a 2*2 boolean matrix with true</span>
-<span class="scilabid">Strictin</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns a 2*2 boolean matrix with false</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+<span class="scilabid">Strictin</span><span class="scilabopenclose">(</span><span class="scilabid">A</span><span class="scilabdefault">,</span><span class="scilabid">C</span><span class="scilabopenclose">)</span> <span class="scilabcomment">//returns a 2*2 boolean matrix with false</span></pre></div></div>
 
 	<div class="refsection"><h3 class="title">See Also</h3>
 		<ul class="itemizedlist"><li class="member"><a href="interval.html" class="link">interval</a></li>
 			<li class="member"><a href="I4S_Functions.html" class="link">I4S_Functions</a></li>
-			<li class="member"><a href="scilab://I4S_Arith_Op" class="link">I4S_Arith_Op</a></li>
-			<li class="member"><a href="I4S_Arith_Func.html" class="link">I4S_Arith_Func</a></li></ul></div>
+			<li class="member"><a href="http://help.scilab.org/docs/5.5.2/en_US/I4S_Arith_Op.html" class="link">I4S_Arith_Op</a></li>
+			<li class="member"><a href="I4S_Arith_Func.html" class="link">I4S_Arith_Func</a></li>
+			<li class="member"><a href="I4S_Stat_Func.html" class="link">I4S_Stat_Func</a></li></ul></div>
 
 	<div class="refsection"><h3 class="title">Authors</h3>
 		<dl><dt><span class="term">Raphael PEREIRA, David DANEY</span>
@@ -422,31 +443,45 @@ interval it shall be included in). This function is <code class="literal">Strict
 	<div class="refsection"><h3 class="title">Bibliography</h3>
 		<p class="para"><p class="para">[Hansen03] E. Hansen, and G. W. Walster, Global Optimization Using Interval Analysis Marcel Dekker, 2003.</p> 
 			<p class="para">[Jaulin01] L. Jaulin, M. Kieffer, O. Didrit and E. Walter, Applied Interval Analysis with Examples in Parameter and State Estimation,
-    Robust Control and Robotics, Springer-Verlag, 2001.</p>
+				Robust Control and Robotics, Springer-Verlag, 2001.</p>
 			<p class="para">[Rump99]  S. M. Rump, Fast And Parallel Interval Arithmetic, Springer Netherlands, 1999.</p>
 			<p class="para">[Kearfott96] R. Baker Kearfott, Rigorous Global Search: Continuous Problems, Kluwer Academic Publishers, 1996.</p> 
 			<p class="para">[Neumaier90] A. Neumaier, Interval Methods For Systems Of Equations, Cambridge Univ. Press, 1990.</p> 
 			<p class="para">[Moore66] R. E. Moore, Interval Analysis, Prentice Hall, 1966.</p></p></div>
-    <br />
 
-    <div class="manualnavbar">
-    <table width="100%">
-    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
-<tr>
-      <td width="30%">
-    	<span class="previous"><a href="I4S_Authors.html">&lt;&lt; I4S_Authors</a></span>
+	<div class="manualnavbar">
+	  <span class="next">
+	    <span class="next"><a href="I4S_Basic_Tools.html">I4S_Basic_Tools &gt;&gt;</a></span>
 
-      </td>
-      <td width="40%" class="center">
-      	<span class="top"><a href="section_eda3296bd86503db9c4ac7494fcb0982.html">Int4Sci</a></span>
+	  </span>
+	  <span class="prev">
+	    <span class="previous"><a href="I4S_Authors.html">&lt;&lt; I4S_Authors</a></span>
 
-      </td>
-      <td width="30%" class="next">
-      	<span class="next"><a href="I4S_Basic_Tools.html">I4S_Basic_Tools &gt;&gt;</a></span>
+	  </span>
+	  <hr />
+	</div>
 
-      </td>
-    </tr></table>
-      <hr />
+	<div id="footnav">
+	  <span class="version">scilab-5.5.2</span>
+
+	</div>
+
+	<div id="pagefooter">
+	  <div id="pagefooterleft">
+	    <a href="http://www.scilab.org/">Scilab Enterprises</a><br />
+	    Copyright (c) 2011-2014 (Scilab Enterprises)<br />
+	    Copyright (c) 1989-2012 (INRIA)<br />
+	    Copyright (c) 1989-2007 (ENPC)<br />
+	    with <a href="https://www.scilab.org/development/contribute/contributors">contributors</a>
+	  </div>
+
+	  <div id="pagefooterright">
+	    Last updated:<br /><span class="generationdate">Wed Jun 17 02:54:14 NOVT 2015</span>
+
+	    <br /><br /><br />
+	  </div>
+	</div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book [
 <!--Begin Entities-->
-<!ENTITY a5e15ec3ef34cf807ef37c21dac46237a SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Arith_Func.xml">
-<!ENTITY a0439978197540a20b620fcf7af513949 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Arith_Op.xml">
-<!ENTITY a0bc29e5843f56a92a1edf592c92445de SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Authors.xml">
-<!ENTITY a2f6d8e21a043456eda49251b4e6ed36f SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Basic_Func.xml">
-<!ENTITY ac55ddbe9771c1008f3bc3cbdb8c1cc08 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Basic_Tools.xml">
-<!ENTITY a59078ccccffe97a5f9ec98b56b440386 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Bibliography.xml">
-<!ENTITY a042409c013c4f75a67222aa74dbaf6d5 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Error.xml">
-<!ENTITY a614233a214d0d13d5ab6b624e8424b83 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Functions.xml">
-<!ENTITY a047087ef48b9cc4c8435a03a67fb1b4f SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Poly.xml">
-<!ENTITY aa08ba626b9c95c3345956e118a8d9fdc SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4S_Stat_Func.xml">
-<!ENTITY ab46b87f44310a184d883f7f80b0f11ad SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/I4Slinearsolve.xml">
-<!ENTITY a615b9623dd2632003e9b79a86ce85d02 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.0.1/help/en_US/interval.xml">
+<!ENTITY ac258d9da7c4e093b0949c7fedbee0c7c SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Arith_Func.xml">
+<!ENTITY a647e881a7efd9a9489f274971cebcfd2 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Arith_Op.xml">
+<!ENTITY a4e6181384d17523406b0e58ced1d3280 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Authors.xml">
+<!ENTITY abf183b8d919f9e7c44b51dcae9cda1e0 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Basic_Func.xml">
+<!ENTITY a553ac3a845c3ec0a1f9ece0b7d615154 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Basic_Tools.xml">
+<!ENTITY a8d5b8fa2af0277cfb1d0301c5019ee0c SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Bibliography.xml">
+<!ENTITY a4420ddfb065fff80e4db14733d6a8d4c SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Error.xml">
+<!ENTITY ab3d0ef4e298eacb596719db6f624f691 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Functions.xml">
+<!ENTITY a3442fd57afb423bd2df33b496af677fc SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Poly.xml">
+<!ENTITY a916de0970d2c3a15d9b31754123d038e SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4S_Stat_Func.xml">
+<!ENTITY a50784c307fc6f7224d2fd7ce172fc50e SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/I4Slinearsolve.xml">
+<!ENTITY ab1c171ccba35ae7d96f605ad16276277 SYSTEM "file:///C:/Program Files/scilab-5.5.2/contrib/int4sci-v2.111/help/en_US/interval.xml">
 <!--End Entities-->
 ]>
 <book version="5.0-subset Scilab" xml:lang="en_US"
@@ -27,19 +27,19 @@
     <title>Int4Sci</title>
   </info>
 
-<part xml:id='section_eda3296bd86503db9c4ac7494fcb0982'>
+<part xml:id='section_4a7538c5c5e6eb1bb5ad95b55dcfeeb1'>
 <title>Int4Sci</title>
-&a5e15ec3ef34cf807ef37c21dac46237a;
-&a0439978197540a20b620fcf7af513949;
-&a0bc29e5843f56a92a1edf592c92445de;
-&a2f6d8e21a043456eda49251b4e6ed36f;
-&ac55ddbe9771c1008f3bc3cbdb8c1cc08;
-&a59078ccccffe97a5f9ec98b56b440386;
-&a042409c013c4f75a67222aa74dbaf6d5;
-&a614233a214d0d13d5ab6b624e8424b83;
-&a047087ef48b9cc4c8435a03a67fb1b4f;
-&aa08ba626b9c95c3345956e118a8d9fdc;
-&ab46b87f44310a184d883f7f80b0f11ad;
-&a615b9623dd2632003e9b79a86ce85d02;
+&ac258d9da7c4e093b0949c7fedbee0c7c;
+&a647e881a7efd9a9489f274971cebcfd2;
+&a4e6181384d17523406b0e58ced1d3280;
+&abf183b8d919f9e7c44b51dcae9cda1e0;
+&a553ac3a845c3ec0a1f9ece0b7d615154;
+&a8d5b8fa2af0277cfb1d0301c5019ee0c;
+&a4420ddfb065fff80e4db14733d6a8d4c;
+&ab3d0ef4e298eacb596719db6f624f691;
+&a3442fd57afb423bd2df33b496af677fc;
+&a916de0970d2c3a15d9b31754123d038e;
+&a50784c307fc6f7224d2fd7ce172fc50e;
+&ab1c171ccba35ae7d96f605ad16276277;
 </part>
 </book>

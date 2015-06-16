@@ -753,6 +753,9 @@ C > #(0*ones(2,2)); // returns a 2*2 boolean matrix with false
 			<member>
 				<link linkend="I4S_Arith_Func">I4S_Arith_Func</link>
 			</member>
+			<member>
+				<link linkend="I4S_Stat_Func">I4S_Stat_Func</link>
+			</member>
 		</simplelist>
 	</refsection>
 
