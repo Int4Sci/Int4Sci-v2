@@ -190,6 +190,59 @@ function [ V ] = ivariance( X )
 
 endfunction
 
+function [mom]= imoment(x,ord,orien)
+
+    [lhs,rhs]=argn(0)
+
+	if pmodulo(ord,2)==0 then
+		if rhs==2 then
+			if x==[] then mom=%nan, return, end
+			le=max(size(x))
+			setround(1);
+			mom.sup=sum((max(abs(x.inf),abs(x.sup))).^ord)/le
+			x(find(in(0,x)==%t)) = 0;
+			setround(-1);
+			mom.inf=sum((min(abs(x.inf),abs(x.sup))).^ord)/le;
+			setround(0);
+			mom = #(mom.inf,mom.sup);
+		elseif rhs==3 then
+			if x==[] then mom=%nan, return, end
+			le=size(x,orien)
+			setround(1);
+			mom.sup=sum(((max(abs(x.inf),abs(x.sup))).^ord),orien)/le
+			x(find(in(0,x)==%t)) = 0
+			setround(-1);
+			mom.inf=sum(((min(abs(x.inf),abs(x.sup))).^ord),orien)/le
+			setround(0);
+			mom = #(mom.inf,mom.sup)
+		else
+			error(msprintf(gettext("%s: Wrong number of input argument: %d to %d expected.\n"),"moment",2,3)),
+		end
+	else
+		if rhs==2 then
+			if x==[] then mom=%nan, return, end
+			le=max(size(x))
+			setround(-1);
+			mom.inf=sum(x.inf.^ord)/le
+			setround(1);
+			mom.sup=sum(x.sup.^ord)/le
+			setround(0);
+			mom = #(mom.inf,mom.sup)
+		elseif rhs==3 then
+			if x==[] then mom=%nan, return, end
+			le=size(x,orien)
+			setround(-1);
+			mom.inf=sum((x.inf.^ord),orien)/le
+			setround(1);
+			mom.sup=sum((x.sup.^ord),orien)/le
+			setround(0);
+			mom = #(mom.inf,mom.sup)
+		else
+			error(msprintf(gettext("%s: Wrong number of input argument: %d to %d expected.\n"),"moment",2,3)),
+		end
+	end
+endfunction
+
 function [ yesno ] = nosubset( X )
 
 	m = repmat(mid(X)',size(X));
