@@ -454,6 +454,14 @@ int roundmode (const int *direct){
 		BiasRoundNear();
 		return 1;
 	}
+	else if ( *direct == 1000 ){
+		switch (fegetround()) {
+			case FE_DOWNWARD: return -1;  break;
+			case FE_TONEAREST: return 0; break;
+			case FE_UPWARD: return 1; break;
+			case default: return -1000; break;
+		}
+	}
 	else
 	{
 	  return 0;

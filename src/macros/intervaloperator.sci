@@ -46,6 +46,13 @@ function x = setround(x)
   
 endfunction
 
+function x = getround()
+
+  x = sciroundmode(1000);
+  
+endfunction
+
+
 //Computing Statistics functions under Interval and Fuzzy Uncertainty
 
 function [ m ] = imean( x, orien )

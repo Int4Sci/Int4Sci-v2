@@ -29,7 +29,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-//#include <fenv.h>
+#include <fenv.h>
 
 #include <BIAS/Bias2.h>
 #include <BIAS/BiasF.h>
